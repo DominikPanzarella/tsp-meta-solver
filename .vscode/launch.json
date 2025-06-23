@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug Qt Application (macOS LLDB)",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/build-debug/TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER",
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "args": [],
+        "environment": [
+          {
+            "name": "QT_QPA_PLATFORM_PLUGIN_PATH",
+            "value": "${env:HOME}/Qt/6.9.1/macos/plugins/platforms"
+          }
+        ],
+        "externalConsole": false
+      },
+      {
+        "name": "Run Qt Application (Release)",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/build-release/TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER",
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "args": [],
+        "environment": [
+          {
+            "name": "QT_QPA_PLATFORM_PLUGIN_PATH",
+            "value": "${env:HOME}/Qt/6.9.1/macos/plugins/platforms"
+          }
+        ],
+        "externalConsole": false
+      }
+    ]
+  }
+  
