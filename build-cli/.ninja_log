@@ -1,0 +1,5 @@
+# ninja log v7
+0	22	1750677544037815667	backend/CMakeFiles/tsp_backend.dir/solver.cpp.o	52ab79be79fc59bb
+22	38	1750677544060038373	backend/libtsp_backend.a	baad096f18727884
+1	290	1750677679089101073	backend/CMakeFiles/tsp_cli.dir/main_cli.cpp.o	92a1233731743254
+292	320	1750677679379793903	backend/tsp_cli	fc86f4db26ba3e63

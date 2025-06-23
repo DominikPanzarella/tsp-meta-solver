@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+      "*.ui": "xml"
+    },
+    "qttools.qtInstallation": "/Users/dominikpanzarella/Qt/6.9.1/macos",
+    "qttools.designerPath": "/Users/dominikpanzarella/Qt/6.9.1/macos/bin/designer"
+  }
+  

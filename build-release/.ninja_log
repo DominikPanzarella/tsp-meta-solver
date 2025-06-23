@@ -1,0 +1,11 @@
+# ninja log v7
+1	17	1750677457720680671	backend/CMakeFiles/tsp_backend.dir/solver.cpp.o	52ab79be79fc59bb
+17	32	1750677457736888571	backend/libtsp_backend.a	baad096f18727884
+32	420	1750677458131085311	frontend/TSP-META-SOLVER_autogen/timestamp	4ac271ebd0b5696c
+32	420	1750677458131085311	frontend/TSP-META-SOLVER_autogen/mocs_compilation.cpp	4ac271ebd0b5696c
+32	420	1750677458131085311	/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/timestamp	4ac271ebd0b5696c
+32	420	1750677458131085311	/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/mocs_compilation.cpp	4ac271ebd0b5696c
+422	1081	1750677458142047270	frontend/CMakeFiles/TSP-META-SOLVER.dir/main.cpp.o	3425b1d979ed3643
+422	1084	1750677458141852898	frontend/CMakeFiles/TSP-META-SOLVER.dir/TSP-META-SOLVER_autogen/mocs_compilation.cpp.o	fe3ad4fe73a48bf7
+422	1165	1750677458142157186	frontend/CMakeFiles/TSP-META-SOLVER.dir/mainwindow.cpp.o	33e6f2ca0c1cf8e3
+1165	1249	1750677458884811686	frontend/TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER	81133bb78cf21b
