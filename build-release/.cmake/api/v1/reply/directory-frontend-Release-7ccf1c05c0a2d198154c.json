@@ -1,0 +1,60 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"frontend/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : ".",
+			"paths" : 
+			[
+				{
+					"from" : "frontend/TSP-META-SOLVER.app",
+					"to" : "TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER"
+				}
+			],
+			"targetId" : "TSP-META-SOLVER::@73e8a6b9a3e1c0d3809b",
+			"targetIndex" : 0,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"scriptFile" : "build-release/.qt/deploy_TSP_META_SOLVER_631e2f660e.cmake",
+			"type" : "script"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "frontend",
+		"source" : "frontend"
+	}
+}

@@ -1,6 +1,0 @@
-set(__QT_DEPLOY_TARGET_tsp_backend_FILE /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build/backend/libtsp_backend.a)
-set(__QT_DEPLOY_TARGET_tsp_backend_TYPE STATIC_LIBRARY)
-set(__QT_DEPLOY_TARGET_tsp_cli_FILE /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build/backend/tsp_cli)
-set(__QT_DEPLOY_TARGET_tsp_cli_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_TSP-META-SOLVER_FILE /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build/frontend/TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER)
-set(__QT_DEPLOY_TARGET_TSP-META-SOLVER_TYPE EXECUTABLE)

@@ -1,0 +1,111 @@
+Start testing: Jun 24 15:40 CEST
+----------------------------------------------------------
+1/4 Testing: SymmetricGraphTest.InitGraph
+1/4 Test: SymmetricGraphTest.InitGraph
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.InitGraph" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"SymmetricGraphTest.InitGraph" start time: Jun 24 15:40 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SymmetricGraphTest.InitGraph
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SymmetricGraphTest
+[ RUN      ] SymmetricGraphTest.InitGraph
+[       OK ] SymmetricGraphTest.InitGraph (0 ms)
+[----------] 1 test from SymmetricGraphTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SymmetricGraphTest.InitGraph" end time: Jun 24 15:40 CEST
+"SymmetricGraphTest.InitGraph" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: SymmetricGraphTest.EdgeInsertion
+2/4 Test: SymmetricGraphTest.EdgeInsertion
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.EdgeInsertion" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"SymmetricGraphTest.EdgeInsertion" start time: Jun 24 15:40 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SymmetricGraphTest.EdgeInsertion
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SymmetricGraphTest
+[ RUN      ] SymmetricGraphTest.EdgeInsertion
+[       OK ] SymmetricGraphTest.EdgeInsertion (0 ms)
+[----------] 1 test from SymmetricGraphTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SymmetricGraphTest.EdgeInsertion" end time: Jun 24 15:40 CEST
+"SymmetricGraphTest.EdgeInsertion" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: SymmetricGraphTest.Completeness
+3/4 Test: SymmetricGraphTest.Completeness
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.Completeness" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"SymmetricGraphTest.Completeness" start time: Jun 24 15:40 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SymmetricGraphTest.Completeness
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SymmetricGraphTest
+[ RUN      ] SymmetricGraphTest.Completeness
+[       OK ] SymmetricGraphTest.Completeness (0 ms)
+[----------] 1 test from SymmetricGraphTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SymmetricGraphTest.Completeness" end time: Jun 24 15:40 CEST
+"SymmetricGraphTest.Completeness" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: SymmetricGraphTest.Symmetry
+4/4 Test: SymmetricGraphTest.Symmetry
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.Symmetry" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"SymmetricGraphTest.Symmetry" start time: Jun 24 15:40 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SymmetricGraphTest.Symmetry
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SymmetricGraphTest
+[ RUN      ] SymmetricGraphTest.Symmetry
+[       OK ] SymmetricGraphTest.Symmetry (0 ms)
+[----------] 1 test from SymmetricGraphTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SymmetricGraphTest.Symmetry" end time: Jun 24 15:40 CEST
+"SymmetricGraphTest.Symmetry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 24 15:40 CEST

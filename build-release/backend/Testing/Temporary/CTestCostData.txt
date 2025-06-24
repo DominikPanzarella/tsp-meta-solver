@@ -1,0 +1,5 @@
+SymmetricGraphTest.InitGraph 4 0.00044526
+SymmetricGraphTest.EdgeInsertion 2 0.000643813
+SymmetricGraphTest.Completeness 2 0.000494854
+SymmetricGraphTest.Symmetry 4 0.000249261
+---

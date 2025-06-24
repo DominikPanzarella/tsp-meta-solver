@@ -37,7 +37,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend",
+		"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/lib/QtCore.framework/Headers",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/lib/QtCore.framework",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/mkspecs/macx-clang",
