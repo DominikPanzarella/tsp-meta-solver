@@ -34,6 +34,11 @@ void Euc2DReader::parseHeader() {
             else if (key == "TYPE") type = value;
             else if (key == "DIMENSION") dimension = std::stoi(value);
             else if (key == "EDGE_WEIGHT_TYPE") ew_type = value;
+            else if (key == "EDGE_WEIGHT_FORMAT") ew_format = value;
+            else if (key == "EDGE_DATA_FORMAT") ed_format = value;
+            else if (key == "NODE_COORD_TYPE") node_coord = value;
+            else if (key == "DISPLAY_DATA_TYPE") disp_type = value;
+            else if (key == "CAPACITY") capacity = std::stoi(value);
         }
     }
 }

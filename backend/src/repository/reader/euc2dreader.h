@@ -26,11 +26,11 @@ protected:
 
     virtual void buildProblem() override;
 
-
 private:
+    std::string ew_format, ed_format, node_coord, disp_type;
     std::string name, comment, type, ew_type;
     int dimension = 0;
+    int capacity = 0;
     std::vector<Node> nodes;
     std::shared_ptr<SymmetricGraph> graph;
-
 };
