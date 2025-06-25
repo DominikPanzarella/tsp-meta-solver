@@ -1,5 +1,9 @@
 #pragma once
 
+
+// nint() function as a macro
+#define nint(x) ((int)((x) + 0.5))
+
 //////////////
 // #INCLUDE //
 //////////////

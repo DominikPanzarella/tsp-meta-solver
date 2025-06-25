@@ -48,10 +48,12 @@ void GeoReader::parseBody() {
 }
 
 double GeoReader::geoToRadians(double coord) {
-    int deg = static_cast<int>(coord);
+    int deg = nint(coord);
     double min = coord - deg;
-    return M_PI * (deg + 5.0 * min / 3.0) / 180.0;
+    return M_PI * (deg + (5.0 * min / 3.0)) / 180.0;
 }
+
+
 
 double GeoReader::geoDistance(const Node& a, const Node& b) {
     const double RRR = 6378.388;

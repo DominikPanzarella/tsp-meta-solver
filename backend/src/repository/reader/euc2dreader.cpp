@@ -69,7 +69,7 @@ void Euc2DReader::buildGraph() {
         for (int j = i + 1; j < dimension; ++j) {
             double dx = nodes[i].x - nodes[j].x;
             double dy = nodes[i].y - nodes[j].y;
-            int dist = static_cast<int>(std::round(std::sqrt(dx * dx + dy * dy)));
+            int dist = nint(std::sqrt(dx * dx + dy * dy));
             graph->setEdge(i, j, dist);
         }
     }
