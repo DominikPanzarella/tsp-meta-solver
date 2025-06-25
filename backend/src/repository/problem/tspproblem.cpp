@@ -90,3 +90,56 @@ void TspProblem::setDisplayDataType(DisplayDataType ddt){
 void TspProblem::setGraph(std::shared_ptr<IGraph> graph){
     this->m_graph = std::move(graph);
 }
+
+
+EdgeWeightType TspProblem::parseEdgeWeightType(const std::string& str) const{
+    if(str == "EXPLICIT") return EdgeWeightType::EXPLICIT;
+    else if(str == "EUC_2D") return EdgeWeightType::EUC_2D;
+    else if(str == "EUC_3D") return EdgeWeightType::EUC_3D;
+    else if(str == "CEIL_2D") return EdgeWeightType::CEIL_2D;
+    else if(str == "ATT") return EdgeWeightType::ATT;
+    else if(str == "GEO") return EdgeWeightType::GEO;
+    else if(str == "MAN_2D") return EdgeWeightType::MAN_2D;
+    else if(str == "MAN_3D") return EdgeWeightType::MAN_3D;
+    else if(str == "MAX_2D") return EdgeWeightType::MAX_2D;
+    else if(str == "MAX_3D") return EdgeWeightType::MAX_3D;
+    else if(str == "XRAY1") return EdgeWeightType::XRAY1;
+    else if(str == "XRAY2") return EdgeWeightType::XRAY2;
+    else if(str == "SPECIAL") return EdgeWeightType::SPECIAL;
+    else return EdgeWeightType::UNKNOWN;
+}
+
+EdgeWeightFormat TspProblem::parseEdgeWeightFormat(const std::string& str) const{
+    if(str == "FUNCTION") return EdgeWeightFormat::FUNCTION;
+    else if(str == "FULL_MATRIX") return EdgeWeightFormat::FULL_MATRIX;
+    else if(str == "UPPER_ROW") return EdgeWeightFormat::UPPER_ROW;
+    else if(str == "LOWER_ROW") return EdgeWeightFormat::LOWER_ROW;
+    else if(str == "UPPER_DIAG_ROW") return EdgeWeightFormat::UPPER_DIAG_ROW;
+    else if(str == "LOWER_DIAG_ROW") return EdgeWeightFormat::LOWER_DIAG_ROW;
+    else if(str == "UPPER_COL") return EdgeWeightFormat::UPPER_COL;
+    else if(str == "LOWER_COL") return EdgeWeightFormat::LOWER_COL;
+    else if(str == "UPPER_DIAG_COL") return EdgeWeightFormat::UPPER_DIAG_COL;
+    else if(str == "LOWER_DIAG_COL") return EdgeWeightFormat::LOWER_DIAG_COL;
+    else return EdgeWeightFormat::UNKNOWN;
+}
+
+EdgeDataFormat TspProblem::parseEdgeDataFormat(const std::string& str) const{
+    if(str == "EDGE_LIST") return EdgeDataFormat::EDGE_LIST;
+    else if(str == "ADJ_LIST") return EdgeDataFormat::ADJ_LIST;
+    else return EdgeDataFormat::UNKNOWN;
+}
+
+NodeCoordType TspProblem::parseNodeCoordType(const std::string& str) const{
+    if(str == "TWOD_COORDS") return NodeCoordType::TWOD_COORDS;
+    else if(str == "THREEED_COORDS") return NodeCoordType::THREEED_COORDS;
+    else if(str == "NO_COORDS") return NodeCoordType::NO_COORDS;
+    else return NodeCoordType::UNKNOWN;
+}
+
+DisplayDataType TspProblem::parseDisplayDataType(const std::string& str) const{
+    if(str == "COORD_DISPLAY") return DisplayDataType::COORD_DISPLAY;
+    else if(str == "TWOD_DISPLAY") return DisplayDataType::TWOD_DISPLAY;
+    else if(str == "NO_DISPLAY") return DisplayDataType::NO_DISPLAY;
+    else return DisplayDataType::UNKNOWN;
+
+}

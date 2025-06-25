@@ -82,6 +82,18 @@ public:
     
     void setGraph(std::shared_ptr<IGraph> graph) override;
 
+
+    EdgeWeightType parseEdgeWeightType(const std::string& str) const;
+
+    EdgeWeightFormat parseEdgeWeightFormat(const std::string& str) const; 
+
+    EdgeDataFormat parseEdgeDataFormat(const std::string& str) const;
+
+    NodeCoordType parseNodeCoordType(const std::string& str) const;
+
+    DisplayDataType parseDisplayDataType(const std::string& str) const;
+
+
 private:
     std::string m_name;
 

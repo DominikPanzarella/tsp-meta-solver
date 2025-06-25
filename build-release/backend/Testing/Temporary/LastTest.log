@@ -1,10 +1,10 @@
-Start testing: Jun 25 13:38 CEST
+Start testing: Jun 25 14:28 CEST
 ----------------------------------------------------------
-1/82 Testing: SymmetricGraphTest.InitGraph
-1/82 Test: SymmetricGraphTest.InitGraph
+1/92 Testing: SymmetricGraphTest.InitGraph
+1/92 Test: SymmetricGraphTest.InitGraph
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.InitGraph" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"SymmetricGraphTest.InitGraph" start time: Jun 25 13:38 CEST
+"SymmetricGraphTest.InitGraph" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -20,18 +20,18 @@ Note: Google Test filter = SymmetricGraphTest.InitGraph
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"SymmetricGraphTest.InitGraph" end time: Jun 25 13:38 CEST
+"SymmetricGraphTest.InitGraph" end time: Jun 25 14:28 CEST
 "SymmetricGraphTest.InitGraph" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/82 Testing: SymmetricGraphTest.EdgeInsertion
-2/82 Test: SymmetricGraphTest.EdgeInsertion
+2/92 Testing: SymmetricGraphTest.EdgeInsertion
+2/92 Test: SymmetricGraphTest.EdgeInsertion
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.EdgeInsertion" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"SymmetricGraphTest.EdgeInsertion" start time: Jun 25 13:38 CEST
+"SymmetricGraphTest.EdgeInsertion" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -47,18 +47,18 @@ Note: Google Test filter = SymmetricGraphTest.EdgeInsertion
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"SymmetricGraphTest.EdgeInsertion" end time: Jun 25 13:38 CEST
+"SymmetricGraphTest.EdgeInsertion" end time: Jun 25 14:28 CEST
 "SymmetricGraphTest.EdgeInsertion" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/82 Testing: SymmetricGraphTest.Completeness
-3/82 Test: SymmetricGraphTest.Completeness
+3/92 Testing: SymmetricGraphTest.Completeness
+3/92 Test: SymmetricGraphTest.Completeness
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.Completeness" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"SymmetricGraphTest.Completeness" start time: Jun 25 13:38 CEST
+"SymmetricGraphTest.Completeness" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -74,18 +74,18 @@ Note: Google Test filter = SymmetricGraphTest.Completeness
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"SymmetricGraphTest.Completeness" end time: Jun 25 13:38 CEST
+"SymmetricGraphTest.Completeness" end time: Jun 25 14:28 CEST
 "SymmetricGraphTest.Completeness" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/82 Testing: SymmetricGraphTest.Symmetry
-4/82 Test: SymmetricGraphTest.Symmetry
+4/92 Testing: SymmetricGraphTest.Symmetry
+4/92 Test: SymmetricGraphTest.Symmetry
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.Symmetry" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"SymmetricGraphTest.Symmetry" start time: Jun 25 13:38 CEST
+"SymmetricGraphTest.Symmetry" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -101,18 +101,18 @@ Note: Google Test filter = SymmetricGraphTest.Symmetry
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"SymmetricGraphTest.Symmetry" end time: Jun 25 13:38 CEST
+"SymmetricGraphTest.Symmetry" end time: Jun 25 14:28 CEST
 "SymmetricGraphTest.Symmetry" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"
-5/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"
+5/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"
+5/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr439" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -128,18 +128,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr439
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr439  # GetParam() = "resources/pr439.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"
-6/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"
+6/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"
+6/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rd100" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -155,18 +155,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rd100
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rd100  # GetParam() = "resources/rd100.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"
-7/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"
+7/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"
+7/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -175,25 +175,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934 (125 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (125 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934 (111 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (111 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (125 ms total)
+[==========] 1 test from 1 test suite ran. (111 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.15 sec
+Test time =   0.16 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934  # GetParam() = "resources/rl5934.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"
-8/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"
+8/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"
+8/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -209,18 +209,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442  # GetParam() = "resources/pcb442.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-9/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"
-9/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"
+9/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"
+9/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/u2319" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -229,25 +229,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/u2319
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/u2319
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/u2319 (12 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (12 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/u2319 (11 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (11 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (12 ms total)
+[==========] 1 test from 1 test suite ran. (11 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/u2319  # GetParam() = "resources/u2319.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-10/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"
-10/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"
+10/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"
+10/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/gil262" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -263,18 +263,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/gil262
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/gil262  # GetParam() = "resources/gil262.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-11/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"
-11/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"
+11/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"
+11/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -283,25 +283,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038 (21 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (21 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038 (20 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (20 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (21 ms total)
+[==========] 1 test from 1 test suite ran. (20 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.04 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038  # GetParam() = "resources/pcb3038.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-12/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"
-12/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"
+12/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"
+12/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/lin105" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -317,18 +317,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/lin105
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/lin105  # GetParam() = "resources/lin105.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-13/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"
-13/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"
+13/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"
+13/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/fl417" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -344,18 +344,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/fl417
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/fl417  # GetParam() = "resources/fl417.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-14/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"
-14/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"
+14/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"
+14/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -371,18 +371,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225  # GetParam() = "resources/tsp225.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-15/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"
-15/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"
+15/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"
+15/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -398,18 +398,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400
 [==========] 1 test from 1 test suite ran. (4 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400  # GetParam() = "resources/fl1400.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-16/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"
-16/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"
+16/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"
+16/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -418,25 +418,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379 (4 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (4 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379 (3 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (3 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (4 ms total)
+[==========] 1 test from 1 test suite ran. (3 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379  # GetParam() = "resources/nrw1379.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-17/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"
-17/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"
+17/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"
+17/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/d2103" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -445,25 +445,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/d2103
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/d2103
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/d2103 (10 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (10 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/d2103 (9 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (9 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (10 ms total)
+[==========] 1 test from 1 test suite ran. (9 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/d2103  # GetParam() = "resources/d2103.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-18/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"
-18/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"
+18/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"
+18/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -479,18 +479,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150  # GetParam() = "resources/kroA150.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-19/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"
-19/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"
+19/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"
+19/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -506,18 +506,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173
 [==========] 1 test from 1 test suite ran. (3 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173  # GetParam() = "resources/pcb1173.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-20/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"
-20/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"
+20/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"
+20/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/d198" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -533,18 +533,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/d198
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/d198  # GetParam() = "resources/d198.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-21/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"
-21/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"
+21/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"
+21/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -553,25 +553,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577 (6 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (6 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577 (5 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (5 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (6 ms total)
+[==========] 1 test from 1 test suite ran. (5 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577  # GetParam() = "resources/fl1577.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-22/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"
-22/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"
+22/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"
+22/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/ch130" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -587,18 +587,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/ch130
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/ch130  # GetParam() = "resources/ch130.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-23/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"
-23/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"
+23/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"
+23/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -614,18 +614,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100  # GetParam() = "resources/kroB100.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-24/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"
-24/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"
+24/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"
+24/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/u1060" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -634,25 +634,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/u1060
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/u1060
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/u1060 (3 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (3 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/u1060 (2 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (2 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (3 ms total)
+[==========] 1 test from 1 test suite ran. (2 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/u1060  # GetParam() = "resources/u1060.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-25/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"
-25/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"
+25/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"
+25/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -668,18 +668,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52  # GetParam() = "resources/berlin52.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-26/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"
-26/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"
+26/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"
+26/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/eil51" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -695,18 +695,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/eil51
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/eil51  # GetParam() = "resources/eil51.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-27/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"
-27/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"
+27/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"
+27/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -722,18 +722,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304
 [==========] 1 test from 1 test suite ran. (4 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304  # GetParam() = "resources/rl1304.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-28/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"
-28/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"
+28/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"
+28/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/u2152" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -749,18 +749,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/u2152
 [==========] 1 test from 1 test suite ran. (10 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/u2152  # GetParam() = "resources/u2152.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-29/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"
-29/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"
+29/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"
+29/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/u724" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -776,18 +776,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/u724
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/u724  # GetParam() = "resources/u724.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-30/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"
-30/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"
+30/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"
+30/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -803,18 +803,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100  # GetParam() = "resources/kroD100.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-31/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"
-31/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"
+31/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"
+31/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -830,18 +830,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318  # GetParam() = "resources/linhp318.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-32/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"
-32/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"
+32/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"
+32/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr299" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -857,18 +857,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr299
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr299  # GetParam() = "resources/pr299.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-33/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"
-33/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"
+33/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"
+33/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rd400" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -884,18 +884,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rd400
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rd400  # GetParam() = "resources/rd400.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-34/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"
-34/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"
+34/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"
+34/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -904,25 +904,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084 (3 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (3 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084 (2 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (2 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (3 ms total)
+[==========] 1 test from 1 test suite ran. (2 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084  # GetParam() = "resources/vm1084.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-35/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"
-35/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"
+35/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"
+35/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rat575" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -935,21 +935,21 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rat575
 [----------] 1 test from Euc2DInstances/Euc2DParamTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rat575  # GetParam() = "resources/rat575.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-36/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"
-36/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"
+36/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"
+36/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/d1655" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -965,18 +965,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/d1655
 [==========] 1 test from 1 test suite ran. (6 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/d1655  # GetParam() = "resources/d1655.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-37/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"
-37/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"
+37/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"
+37/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/ch150" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -992,18 +992,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/ch150
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/ch150  # GetParam() = "resources/ch150.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-38/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"
-38/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"
+38/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"
+38/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/d15112" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1012,25 +1012,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/d15112
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/d15112
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/d15112 (927 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (927 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/d15112 (878 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (878 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (928 ms total)
+[==========] 1 test from 1 test suite ran. (878 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.96 sec
+Test time =   0.94 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/d15112  # GetParam() = "resources/d15112.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-39/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"
-39/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"
+39/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"
+39/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr107" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1046,18 +1046,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr107
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr107  # GetParam() = "resources/pr107.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-40/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"
-40/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"
+40/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"
+40/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1073,18 +1073,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200  # GetParam() = "resources/kroB200.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-41/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"
-41/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"
+41/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"
+41/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1093,25 +1093,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051 (915 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (915 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051 (640 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (640 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (915 ms total)
+[==========] 1 test from 1 test suite ran. (640 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.94 sec
+Test time =   0.70 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051  # GetParam() = "resources/brd14051.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-42/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"
-42/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"
+42/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"
+42/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/a280" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1127,18 +1127,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/a280
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/a280  # GetParam() = "resources/a280.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-43/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"
-43/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"
+43/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"
+43/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/d1291" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1154,18 +1154,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/d1291
 [==========] 1 test from 1 test suite ran. (3 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/d1291  # GetParam() = "resources/d1291.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-44/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"
-44/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"
+44/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"
+44/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr264" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1181,18 +1181,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr264
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr264  # GetParam() = "resources/pr264.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-45/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"
-45/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"
+45/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"
+45/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr76" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1208,18 +1208,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr76
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr76  # GetParam() = "resources/pr76.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-46/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"
-46/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"
+46/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"
+46/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/d493" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1235,18 +1235,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/d493
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/d493  # GetParam() = "resources/d493.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-47/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"
-47/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"
+47/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"
+47/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr136" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1262,18 +1262,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr136
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr136  # GetParam() = "resources/pr136.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-48/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"
-48/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"
+48/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"
+48/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rat195" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1289,18 +1289,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rat195
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rat195  # GetParam() = "resources/rat195.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-49/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"
-49/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"
+49/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"
+49/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1309,25 +1309,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849 (442 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (442 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849 (445 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (445 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (442 ms total)
+[==========] 1 test from 1 test suite ran. (445 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.46 sec
+Test time =   0.50 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849  # GetParam() = "resources/rl11849.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-50/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"
-50/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"
+50/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"
+50/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1343,18 +1343,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100  # GetParam() = "resources/kroA100.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-51/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"
-51/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"
+51/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"
+51/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1370,18 +1370,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150  # GetParam() = "resources/kroB150.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-52/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"
-52/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"
+52/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"
+52/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/bier127" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1397,18 +1397,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/bier127
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/bier127  # GetParam() = "resources/bier127.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-53/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"
-53/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"
+53/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"
+53/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1424,18 +1424,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100  # GetParam() = "resources/kroC100.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-54/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"
-54/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"
+54/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"
+54/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1444,25 +1444,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509 (578 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (578 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509 (620 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (620 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (578 ms total)
+[==========] 1 test from 1 test suite ran. (620 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.60 sec
+Test time =   0.68 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509  # GetParam() = "resources/usa13509.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-55/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"
-55/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"
+55/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"
+55/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/eil76" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1478,18 +1478,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/eil76
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/eil76  # GetParam() = "resources/eil76.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-56/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"
-56/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"
+56/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"
+56/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr124" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1505,18 +1505,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr124
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr124  # GetParam() = "resources/pr124.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-57/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"
-57/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"
+57/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"
+57/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1532,18 +1532,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323
 [==========] 1 test from 1 test suite ran. (4 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323  # GetParam() = "resources/rl1323.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-58/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"
-58/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"
+58/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"
+58/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/p654" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1559,18 +1559,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/p654
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/p654  # GetParam() = "resources/p654.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-59/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"
-59/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"
+59/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"
+59/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1579,25 +1579,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889 (8 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (8 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889 (7 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (7 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (8 ms total)
+[==========] 1 test from 1 test suite ran. (7 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889  # GetParam() = "resources/rl1889.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-60/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"
-60/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"
+60/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"
+60/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/d657" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1613,18 +1613,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/d657
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/d657  # GetParam() = "resources/d657.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-61/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"
-61/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"
+61/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"
+61/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/eil101" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1640,18 +1640,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/eil101
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/eil101  # GetParam() = "resources/eil101.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-62/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"
-62/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"
+62/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"
+62/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1660,25 +1660,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461 (58 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (58 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461 (57 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (57 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (58 ms total)
+[==========] 1 test from 1 test suite ran. (57 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.08 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461  # GetParam() = "resources/fnl4461.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-63/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"
-63/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"
+63/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"
+63/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1694,18 +1694,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392
 [==========] 1 test from 1 test suite ran. (12 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392  # GetParam() = "resources/pr2392.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-64/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"
-64/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"
+64/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"
+64/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rat783" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1721,18 +1721,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rat783
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rat783  # GetParam() = "resources/rat783.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-65/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"
-65/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"
+65/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"
+65/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/ts225" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1748,18 +1748,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/ts225
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/ts225  # GetParam() = "resources/ts225.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-66/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"
-66/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"
+66/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"
+66/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/u1432" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1772,21 +1772,21 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/u1432
 [----------] 1 test from Euc2DInstances/Euc2DParamTest (4 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (4 ms total)
+[==========] 1 test from 1 test suite ran. (5 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/u1432  # GetParam() = "resources/u1432.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-67/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"
-67/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"
+67/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"
+67/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/u1817" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1802,18 +1802,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/u1817
 [==========] 1 test from 1 test suite ran. (7 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/u1817  # GetParam() = "resources/u1817.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-68/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"
-68/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"
+68/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"
+68/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/lin318" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1829,18 +1829,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/lin318
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/lin318  # GetParam() = "resources/lin318.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-69/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"
-69/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"
+69/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"
+69/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/d18512" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1849,25 +1849,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/d18512
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/d18512
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/d18512 (1164 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (1164 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/d18512 (1344 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (1344 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1164 ms total)
+[==========] 1 test from 1 test suite ran. (1344 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   1.20 sec
+Test time =   1.40 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/d18512  # GetParam() = "resources/d18512.tsp"" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-70/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"
-70/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"
+70/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"
+70/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1876,25 +1876,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915 (309 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (309 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915 (104 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (104 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (309 ms total)
+[==========] 1 test from 1 test suite ran. (104 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.34 sec
+Test time =   0.16 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915  # GetParam() = "resources/rl5915.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-71/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"
-71/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"
+71/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"
+71/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/st70" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1910,18 +1910,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/st70
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/st70  # GetParam() = "resources/st70.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-72/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"
-72/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"
+72/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"
+72/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/rat99" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1937,18 +1937,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/rat99
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/rat99  # GetParam() = "resources/rat99.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-73/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"
-73/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"
+73/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"
+73/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1957,25 +1957,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795 (38 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (38 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795 (34 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (34 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (38 ms total)
+[==========] 1 test from 1 test suite ran. (34 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.06 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795  # GetParam() = "resources/fl3795.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-74/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"
-74/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"
+74/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"
+74/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/u159" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -1991,18 +1991,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/u159
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/u159  # GetParam() = "resources/u159.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-75/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"
-75/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"
+75/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"
+75/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -2018,18 +2018,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200  # GetParam() = "resources/kroA200.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-76/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"
-76/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"
+76/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"
+76/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/u574" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -2045,18 +2045,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/u574
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/u574  # GetParam() = "resources/u574.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-77/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"
-77/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"
+77/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"
+77/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -2072,18 +2072,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002
 [==========] 1 test from 1 test suite ran. (2 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002  # GetParam() = "resources/pr1002.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-78/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"
-78/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"
+78/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"
+78/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr152" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -2099,18 +2099,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr152
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr152  # GetParam() = "resources/pr152.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-79/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"
-79/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"
+79/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"
+79/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr226" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -2126,18 +2126,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr226
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr226  # GetParam() = "resources/pr226.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-80/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"
-80/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"
+80/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"
+80/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -2146,25 +2146,25 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748
 [----------] Global test environment set-up.
 [----------] 1 test from Euc2DInstances/Euc2DParamTest
 [ RUN      ] Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748
-[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748 (7 ms)
-[----------] 1 test from Euc2DInstances/Euc2DParamTest (7 ms total)
+[       OK ] Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748 (6 ms)
+[----------] 1 test from Euc2DInstances/Euc2DParamTest (6 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (7 ms total)
+[==========] 1 test from 1 test suite ran. (6 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748  # GetParam() = "resources/vm1748.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-81/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"
-81/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"
+81/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"
+81/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/pr144" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -2180,18 +2180,18 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/pr144
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/pr144  # GetParam() = "resources/pr144.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-82/82 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"
-82/82 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"
+82/92 Testing: Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"
+82/92 Test: Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"" start time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"" start time: Jun 25 14:28 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -2207,11 +2207,281 @@ Note: Google Test filter = Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"" end time: Jun 25 13:38 CEST
+"Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"" end time: Jun 25 14:28 CEST
 "Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100  # GetParam() = "resources/kroE100.tsp"" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 25 13:38 CEST
+83/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/gr96  # GetParam() = "resources/gr96.tsp"
+83/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/gr96  # GetParam() = "resources/gr96.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/gr96" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr96  # GetParam() = "resources/gr96.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/gr96
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/gr96
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/gr96 (0 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr96  # GetParam() = "resources/gr96.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr96  # GetParam() = "resources/gr96.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+84/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/gr666  # GetParam() = "resources/gr666.tsp"
+84/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/gr666  # GetParam() = "resources/gr666.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/gr666" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr666  # GetParam() = "resources/gr666.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/gr666
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/gr666
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/gr666 (6 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr666  # GetParam() = "resources/gr666.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr666  # GetParam() = "resources/gr666.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+85/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16  # GetParam() = "resources/ulysses16.tsp"
+85/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16  # GetParam() = "resources/ulysses16.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16  # GetParam() = "resources/ulysses16.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16 (0 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16  # GetParam() = "resources/ulysses16.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16  # GetParam() = "resources/ulysses16.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+86/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/gr202  # GetParam() = "resources/gr202.tsp"
+86/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/gr202  # GetParam() = "resources/gr202.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/gr202" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr202  # GetParam() = "resources/gr202.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/gr202
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/gr202
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/gr202 (0 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr202  # GetParam() = "resources/gr202.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr202  # GetParam() = "resources/gr202.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+87/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/gr229  # GetParam() = "resources/gr229.tsp"
+87/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/gr229  # GetParam() = "resources/gr229.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/gr229" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr229  # GetParam() = "resources/gr229.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/gr229
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/gr229
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/gr229 (0 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr229  # GetParam() = "resources/gr229.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr229  # GetParam() = "resources/gr229.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+88/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/ali535  # GetParam() = "resources/ali535.tsp"
+88/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/ali535  # GetParam() = "resources/ali535.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/ali535" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/ali535  # GetParam() = "resources/ali535.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/ali535
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/ali535
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/ali535 (5 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/ali535  # GetParam() = "resources/ali535.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/ali535  # GetParam() = "resources/ali535.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+89/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22  # GetParam() = "resources/ulysses22.tsp"
+89/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22  # GetParam() = "resources/ulysses22.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22  # GetParam() = "resources/ulysses22.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22 (0 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22  # GetParam() = "resources/ulysses22.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22  # GetParam() = "resources/ulysses22.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+90/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/gr431  # GetParam() = "resources/gr431.tsp"
+90/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/gr431  # GetParam() = "resources/gr431.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/gr431" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr431  # GetParam() = "resources/gr431.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/gr431
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/gr431
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/gr431 (2 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr431  # GetParam() = "resources/gr431.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr431  # GetParam() = "resources/gr431.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+91/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/burma14  # GetParam() = "resources/burma14.tsp"
+91/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/burma14  # GetParam() = "resources/burma14.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/burma14" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/burma14  # GetParam() = "resources/burma14.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/burma14
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/burma14
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/burma14 (0 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/burma14  # GetParam() = "resources/burma14.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/burma14  # GetParam() = "resources/burma14.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+92/92 Testing: GeoInstances/GeoParamTest.ReadGeoInstance/gr137  # GetParam() = "resources/gr137.tsp"
+92/92 Test: GeoInstances/GeoParamTest.ReadGeoInstance/gr137  # GetParam() = "resources/gr137.tsp"
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=GeoInstances/GeoParamTest.ReadGeoInstance/gr137" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr137  # GetParam() = "resources/gr137.tsp"" start time: Jun 25 14:28 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = GeoInstances/GeoParamTest.ReadGeoInstance/gr137
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GeoInstances/GeoParamTest
+[ RUN      ] GeoInstances/GeoParamTest.ReadGeoInstance/gr137
+[       OK ] GeoInstances/GeoParamTest.ReadGeoInstance/gr137 (0 ms)
+[----------] 1 test from GeoInstances/GeoParamTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr137  # GetParam() = "resources/gr137.tsp"" end time: Jun 25 14:28 CEST
+"GeoInstances/GeoParamTest.ReadGeoInstance/gr137  # GetParam() = "resources/gr137.tsp"" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 25 14:28 CEST

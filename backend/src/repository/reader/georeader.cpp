@@ -19,10 +19,17 @@ void GeoReader::parseHeader() {
         if (std::regex_match(line, match, rx)) {
             std::string key = trim(match[1]);
             std::string value = trim(match[2]);
+
             if (key == "NAME") name = value;
             else if (key == "COMMENT") comment = value;
             else if (key == "TYPE") type = value;
             else if (key == "DIMENSION") dimension = std::stoi(value);
+            else if (key == "EDGE_WEIGHT_TYPE") ew_type = value;
+            else if (key == "EDGE_WEIGHT_FORMAT") ew_format = value;
+            else if (key == "EDGE_DATA_FORMAT") ed_format = value;
+            else if (key == "NODE_COORD_TYPE") node_coord = value;
+            else if (key == "DISPLAY_DATA_TYPE") disp_type = value;
+            else if (key == "CAPACITY") capacity = std::stoi(value);
         }
     }
 }
@@ -76,11 +83,11 @@ void GeoReader::buildProblem() {
     m_problem->setComment(comment);
     m_problem->setType(type);
     m_problem->setDimension(dimension);
-    m_problem->setCapacity(0);
-    m_problem->setEdgeWeightType(EdgeWeightType::GEO);
-    m_problem->setEdgeWeightFormat(EdgeWeightFormat::UNKNOWN);
-    m_problem->setEdgeDataFormat(EdgeDataFormat::UNKNOWN);
-    m_problem->setNodeCoordType(NodeCoordType::TWOD_COORDS);
-    m_problem->setDisplayDataType(DisplayDataType::COORD_DISPLAY);
+    m_problem->setCapacity(capacity);
+    m_problem->setEdgeWeightType(m_problem->parseEdgeWeightType(ew_type));
+    m_problem->setEdgeWeightFormat(m_problem->parseEdgeWeightFormat(ew_format));
+    m_problem->setEdgeDataFormat(m_problem->parseEdgeDataFormat(ed_format));
+    m_problem->setNodeCoordType(m_problem->parseNodeCoordType(node_coord));
+    m_problem->setDisplayDataType(m_problem->parseDisplayDataType(disp_type));    
     m_problem->setGraph(graph);
 }

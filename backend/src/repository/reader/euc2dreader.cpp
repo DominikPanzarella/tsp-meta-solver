@@ -81,11 +81,11 @@ void Euc2DReader::buildProblem() {
     m_problem->setComment(comment);
     m_problem->setType(type);
     m_problem->setDimension(dimension);
-    m_problem->setCapacity(0);
-    m_problem->setEdgeWeightType(EdgeWeightType::EUC_2D);
-    m_problem->setEdgeWeightFormat(EdgeWeightFormat::UNKNOWN);
-    m_problem->setEdgeDataFormat(EdgeDataFormat::UNKNOWN);
-    m_problem->setNodeCoordType(NodeCoordType::TWOD_COORDS);
-    m_problem->setDisplayDataType(DisplayDataType::COORD_DISPLAY);
+    m_problem->setCapacity(capacity);
+    m_problem->setEdgeWeightType(m_problem->parseEdgeWeightType(ew_type));
+    m_problem->setEdgeWeightFormat(m_problem->parseEdgeWeightFormat(ew_format));
+    m_problem->setEdgeDataFormat(m_problem->parseEdgeDataFormat(ed_format));
+    m_problem->setNodeCoordType(m_problem->parseNodeCoordType(node_coord));
+    m_problem->setDisplayDataType(m_problem->parseDisplayDataType(disp_type));    
     m_problem->setGraph(graph);
 }
