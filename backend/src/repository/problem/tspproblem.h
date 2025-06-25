@@ -54,6 +54,10 @@ public:
 
     const IGraph& getGraph() const override;
 
+    const int getDimension() const override;
+
+    const int getCapacity() const override;
+
     /*      SETTER      */
 
     void setName(const std::string& name) override;

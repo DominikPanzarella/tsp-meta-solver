@@ -1,5 +1,6 @@
-SymmetricGraphTest.InitGraph 4 0.00044526
-SymmetricGraphTest.EdgeInsertion 2 0.000643813
-SymmetricGraphTest.Completeness 2 0.000494854
-SymmetricGraphTest.Symmetry 4 0.000249261
+Euc2DReaderTest.ReadA280 1 0.0338561
+SymmetricGraphTest.InitGraph 1 0.00162596
+SymmetricGraphTest.EdgeInsertion 1 0.0015755
+SymmetricGraphTest.Completeness 1 0.00161071
+SymmetricGraphTest.Symmetry 1 0.00219554
 ---

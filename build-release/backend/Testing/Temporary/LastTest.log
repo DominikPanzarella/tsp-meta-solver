@@ -1,10 +1,38 @@
-Start testing: Jun 24 15:40 CEST
+Start testing: Jun 25 11:53 CEST
 ----------------------------------------------------------
-1/4 Testing: SymmetricGraphTest.InitGraph
-1/4 Test: SymmetricGraphTest.InitGraph
+1/5 Testing: Euc2DReaderTest.ReadA280
+1/5 Test: Euc2DReaderTest.ReadA280
+Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=Euc2DReaderTest.ReadA280" "--gtest_also_run_disabled_tests"
+Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
+"Euc2DReaderTest.ReadA280" start time: Jun 25 11:53 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Euc2DReaderTest.ReadA280
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Euc2DReaderTest
+[ RUN      ] Euc2DReaderTest.ReadA280
+Opening file: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/resources/a280.tsp" | Is open: 1
+[       OK ] Euc2DReaderTest.ReadA280 (0 ms)
+[----------] 1 test from Euc2DReaderTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"Euc2DReaderTest.ReadA280" end time: Jun 25 11:53 CEST
+"Euc2DReaderTest.ReadA280" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: SymmetricGraphTest.InitGraph
+2/5 Test: SymmetricGraphTest.InitGraph
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.InitGraph" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"SymmetricGraphTest.InitGraph" start time: Jun 24 15:40 CEST
+"SymmetricGraphTest.InitGraph" start time: Jun 25 11:53 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -23,15 +51,15 @@ Note: Google Test filter = SymmetricGraphTest.InitGraph
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SymmetricGraphTest.InitGraph" end time: Jun 24 15:40 CEST
+"SymmetricGraphTest.InitGraph" end time: Jun 25 11:53 CEST
 "SymmetricGraphTest.InitGraph" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/4 Testing: SymmetricGraphTest.EdgeInsertion
-2/4 Test: SymmetricGraphTest.EdgeInsertion
+3/5 Testing: SymmetricGraphTest.EdgeInsertion
+3/5 Test: SymmetricGraphTest.EdgeInsertion
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.EdgeInsertion" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"SymmetricGraphTest.EdgeInsertion" start time: Jun 24 15:40 CEST
+"SymmetricGraphTest.EdgeInsertion" start time: Jun 25 11:53 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -50,15 +78,15 @@ Note: Google Test filter = SymmetricGraphTest.EdgeInsertion
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SymmetricGraphTest.EdgeInsertion" end time: Jun 24 15:40 CEST
+"SymmetricGraphTest.EdgeInsertion" end time: Jun 25 11:53 CEST
 "SymmetricGraphTest.EdgeInsertion" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/4 Testing: SymmetricGraphTest.Completeness
-3/4 Test: SymmetricGraphTest.Completeness
+4/5 Testing: SymmetricGraphTest.Completeness
+4/5 Test: SymmetricGraphTest.Completeness
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.Completeness" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"SymmetricGraphTest.Completeness" start time: Jun 24 15:40 CEST
+"SymmetricGraphTest.Completeness" start time: Jun 25 11:53 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -77,15 +105,15 @@ Note: Google Test filter = SymmetricGraphTest.Completeness
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SymmetricGraphTest.Completeness" end time: Jun 24 15:40 CEST
+"SymmetricGraphTest.Completeness" end time: Jun 25 11:53 CEST
 "SymmetricGraphTest.Completeness" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/4 Testing: SymmetricGraphTest.Symmetry
-4/4 Test: SymmetricGraphTest.Symmetry
+5/5 Testing: SymmetricGraphTest.Symmetry
+5/5 Test: SymmetricGraphTest.Symmetry
 Command: "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests" "--gtest_filter=SymmetricGraphTest.Symmetry" "--gtest_also_run_disabled_tests"
 Directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend
-"SymmetricGraphTest.Symmetry" start time: Jun 24 15:40 CEST
+"SymmetricGraphTest.Symmetry" start time: Jun 25 11:53 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -104,8 +132,8 @@ Note: Google Test filter = SymmetricGraphTest.Symmetry
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SymmetricGraphTest.Symmetry" end time: Jun 24 15:40 CEST
+"SymmetricGraphTest.Symmetry" end time: Jun 25 11:53 CEST
 "SymmetricGraphTest.Symmetry" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 24 15:40 CEST
+End testing: Jun 25 11:53 CEST

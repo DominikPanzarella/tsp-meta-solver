@@ -9,6 +9,15 @@ const std::string& TspProblem::getType() const
     return m_type;
 }
 
+const int TspProblem::getDimension() const {
+    return m_dimension;
+}
+
+const int TspProblem::getCapacity() const {
+    return m_capacity;
+}
+
+
 const std::string& TspProblem::getComment() const{
     return m_comment;
 }

@@ -67,3 +67,9 @@ if(BACKEND_TESTS)  # se la lista non è vuota
 else()
   message(WARNING "No test source files found in ${CMAKE_CURRENT_SOURCE_DIR}/test")
 endif()
+
+add_custom_command(TARGET tsp_backend POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/resources
+    ${CMAKE_CURRENT_BINARY_DIR}/resources
+)

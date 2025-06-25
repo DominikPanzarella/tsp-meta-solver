@@ -7,7 +7,9 @@
 
 void SymmetricGraph::init(int n_nodes) {
     this->n_nodes = n_nodes;
-    adjacencyMatrix = std::vector<std::vector<int>>(n_nodes, std::vector<int>(n_nodes, 0));
+    //adjacencyMatrix = std::vector<std::vector<int>>(n_nodes, std::vector<int>(n_nodes, 0));
+    adjacencyMatrix.resize(n_nodes, std::vector<int>(n_nodes, -1)); // -1 = no arco
+
 }
 
 void SymmetricGraph::setEdge(int x, int y, int weight) {
@@ -38,7 +40,7 @@ bool SymmetricGraph::isSymmetric() const {
 bool SymmetricGraph::isComplete() const {
     for (int i = 0; i < n_nodes; ++i)
         for (int j = 0; j < n_nodes; ++j)
-            if (i != j && adjacencyMatrix[i][j] == 0)
+            if (i != j && adjacencyMatrix[i][j] == -1)
                 return false;
     return true;
 }

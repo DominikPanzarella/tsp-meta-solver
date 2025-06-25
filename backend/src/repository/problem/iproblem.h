@@ -11,7 +11,7 @@
 
 //Graph
 
-#include "../../service/graph/igraph.h";
+#include "../../service/graph/igraph.h"
 #include "displaydatatype.h"
 #include "edgeweighttype.h"
 #include "edgeweightformat.h"
