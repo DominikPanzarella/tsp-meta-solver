@@ -1,4 +1,4 @@
-# tsp-meta-solver
+# Tsp-Meta-Solver
 
 ## Abstract
 This project investigates the performance of various algorithms and heuristics on hard in-
