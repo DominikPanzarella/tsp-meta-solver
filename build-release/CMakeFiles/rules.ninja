@@ -156,7 +156,7 @@ rule CXX_EXECUTABLE_LINKER__TSP-META-SOLVER_Release
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/homebrew/bin/cmake --regenerate-during-build -S"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver" -B"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release"
+  command = /opt/homebrew/bin/cmake --regenerate-during-build -S/Users/dominikpanzarella/Desktop/tsp-meta-solver -B/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release
   description = Re-running CMake...
   generator = 1
 

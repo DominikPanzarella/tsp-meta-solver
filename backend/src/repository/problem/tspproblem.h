@@ -97,6 +97,8 @@ public:
 
     DisplayDataType parseDisplayDataType(const std::string& str) const;
 
+    virtual void PrintMatrix() const override;
+
 
 private:
     std::string m_name;

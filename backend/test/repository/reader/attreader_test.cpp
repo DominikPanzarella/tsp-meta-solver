@@ -30,8 +30,7 @@ TEST_P(AttParamTest, ReadAttInstance) {
     ASSERT_TRUE(f.is_open()) << "File non apribile: " << path;
 
     AttReader reader;
-    reader.read(path);
-    auto p = reader.getProblem();
+    auto p = reader.read(path);
 
     ASSERT_NE(p, nullptr) << "Problema non letto da: " << path;
     ASSERT_NE(p->getName(), "") << "Nome non valido";

@@ -41,6 +41,7 @@ public:
 
     const std::vector<std::vector<int>>& getMatrix() const override;
 
+
 private:
     std::vector<std::vector<int>> adjacencyMatrix;
 

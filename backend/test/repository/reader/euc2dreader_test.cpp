@@ -35,9 +35,7 @@ TEST_P(Euc2DParamTest, ReadInstance){
     ASSERT_TRUE(f.is_open());
 
     Euc2DReader reader;
-    reader.read(path);
-
-    auto p = reader.getProblem();
+    auto p = reader.read(path);
 
     ASSERT_NE(p, nullptr) << "Problema non caricato per: " << path;
     ASSERT_NE(p->getName(), "") << "Nome non valido";

@@ -7,6 +7,7 @@
 #include "../../service/graph/node.h"
 #include "../../service/graph/symmetricgraph.h"
 #include "tspreader.h"
+#include <tuple>
 
 class Euc2DReader : public TspReader
 {
@@ -14,23 +15,39 @@ public:
 
     Euc2DReader() = default;
 
+    ~Euc2DReader() = default;
+
+
+
 protected:
 
     virtual bool canHandle(const std::string& content) const override;
 
-    virtual void parseHeader() override;
+    std::shared_ptr<IProblem> readInternal(std::istream& input) override;
 
-    virtual void parseBody() override;
-
-    virtual void buildGraph() override;
-
-    virtual void buildProblem() override;
 
 private:
-    std::string ew_format, ed_format, node_coord, disp_type;
-    std::string name, comment, type, ew_type;
-    int dimension = 0;
-    int capacity = 0;
-    std::vector<Node> nodes;
-    std::shared_ptr<SymmetricGraph> graph;
+
+    virtual std::tuple<std::string, std::string, std::string, int,
+    std::string, std::string, std::string, std::string,std::string, int>
+        parseHeader(std::istream& input) override;
+
+    virtual std::vector<Node> parseBody(std::istream& input, int dimension) override;
+
+    virtual std::shared_ptr<IGraph> buildGraph(const std::vector<Node>& nodes, int dimension) override;
+
+    virtual std::shared_ptr<IProblem> buildProblem(
+        const std::string& name,
+        const std::string& comment,
+        const std::string& type,
+        int dimension,
+        const std::string& ew_type,
+        const std::string& ew_format,
+        const std::string& ed_format,
+        const std::string& node_coord,
+        const std::string& disp_type,
+        int capacity,
+        std::shared_ptr<IGraph> graph) override;
+
+    
 };

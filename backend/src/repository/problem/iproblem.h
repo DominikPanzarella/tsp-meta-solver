@@ -66,4 +66,6 @@ public:
         virtual void setDisplayDataType(DisplayDataType ddt) = 0;
         
         virtual void setGraph(std::shared_ptr<IGraph> graph) = 0;
+
+        virtual void PrintMatrix() const =0;
 };

@@ -10,29 +10,42 @@
 
 class MatrixReader : public TspReader
 {
-public:
+    public:
 
     MatrixReader() = default;
+
+    ~MatrixReader() = default;
 
 protected:
 
     virtual bool canHandle(const std::string& content) const override;
 
-    virtual void parseHeader() override;
-
-    virtual void parseBody() override;
-
-    virtual void buildGraph() override;
-
-    virtual void buildProblem() override;
-
+    std::shared_ptr<IProblem> readInternal(std::istream& input) override;
 
 private:
-    std::string ew_format, ed_format, node_coord, disp_type;
-    std::string name, comment, type, ew_type;
-    int dimension = 0;
-    int capacity = 0;
-    std::vector<Node> nodes;
-    std::shared_ptr<SymmetricGraph> graph;
 
+    virtual std::tuple<std::string, std::string, std::string, int,
+    std::string, std::string, std::string, std::string,std::string, int>
+        parseHeader(std::istream& input) override;
+
+    virtual std::vector<Node> parseBody(std::istream& input, int dimension) override;
+
+    virtual std::shared_ptr<IGraph> buildGraph(const std::vector<Node>& nodes, int dimension) override;
+
+    virtual std::shared_ptr<IProblem> buildProblem(
+        const std::string& name,
+        const std::string& comment,
+        const std::string& type,
+        int dimension,
+        const std::string& ew_type,
+        const std::string& ew_format,
+        const std::string& ed_format,
+        const std::string& node_coord,
+        const std::string& disp_type,
+        int capacity,
+        std::shared_ptr<IGraph> graph) override;
+
+
+    std::vector<int> weights;  // Buffer condiviso tra parseBody e buildGraph
+    std::string format;
 };

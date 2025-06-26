@@ -18,9 +18,21 @@ bool AttReader::canHandle(const std::string& content) const {
            content.find("ATT") != std::string::npos;
 }
 
-void AttReader::parseHeader() {
+std::shared_ptr<IProblem> AttReader::readInternal(std::istream& input) {
+    auto [name, comment, type, dimension, ew_type, ew_format, ed_format, node_coord, disp_type, capacity] = parseHeader(input);
+    auto nodes = parseBody(input, dimension);
+    auto graph = buildGraph(nodes, dimension);
+    return buildProblem(name, comment, type, dimension, ew_type, ew_format, ed_format, node_coord, disp_type, capacity, graph);
+}
+
+std::tuple<std::string, std::string, std::string, int,
+           std::string, std::string, std::string, std::string, std::string, int>
+           AttReader::parseHeader(std::istream& input) {
+    std::string name, comment, type, ew_type, ew_format, ed_format, node_coord, disp_type;
+    int dimension = 0, capacity = 0;
     std::string line;
-    while (std::getline(*input, line)) {
+
+    while (std::getline(input, line)) {
         if (line.find("NODE_COORD_SECTION") != std::string::npos) break;
 
         std::regex rx(R"(^\s*([^:]+)\s*:\s*(.*))");
@@ -41,28 +53,32 @@ void AttReader::parseHeader() {
             else if (key == "CAPACITY") capacity = std::stoi(value);
         }
     }
+    return {name, comment, type, dimension, ew_type, ew_format, ed_format, node_coord, disp_type, capacity};
 }
 
-void AttReader::parseBody() {
+std::vector<Node> AttReader::parseBody(std::istream& input, int dimension) {
+    std::vector<Node> nodes;
     std::string line;
     int id;
     double x, y;
 
-    while (std::getline(*input, line)) {
-        if (line.find("EOF") != std::string::npos) break;
-
+    while (std::getline(input, line)) {
+        if (line.find("EOF") != std::string::npos || line.find("SECTION") != std::string::npos)
+            break;
         std::istringstream iss(line);
         if (!(iss >> id >> x >> y)) continue;
-        nodes.emplace_back(id, x, y);
+        nodes.emplace_back(Node{id, x, y});
     }
 
     if (nodes.size() != static_cast<size_t>(dimension)) {
         std::cerr << "[AttReader] Mismatch tra nodi letti e DIMENSION." << std::endl;
     }
+
+    return nodes;
 }
 
-void AttReader::buildGraph() {
-    graph = std::make_shared<SymmetricGraph>();
+std::shared_ptr<IGraph> AttReader::buildGraph(const std::vector<Node>& nodes, int dimension) {
+    auto graph = std::make_shared<SymmetricGraph>();
     graph->init(dimension);
 
     for (int i = 0; i < dimension; ++i) {
@@ -75,19 +91,33 @@ void AttReader::buildGraph() {
             else        graph->setEdge(i, j, tij);
         }
     }
+    return graph;
 }
 
-void AttReader::buildProblem() {
-    m_problem = std::make_shared<TspProblem>();
-    m_problem->setName(name);
-    m_problem->setComment(comment);
-    m_problem->setType(type);
-    m_problem->setDimension(dimension);
-    m_problem->setCapacity(capacity);
-    m_problem->setEdgeWeightType(m_problem->parseEdgeWeightType(ew_type));
-    m_problem->setEdgeWeightFormat(m_problem->parseEdgeWeightFormat(ew_format));
-    m_problem->setEdgeDataFormat(m_problem->parseEdgeDataFormat(ed_format));
-    m_problem->setNodeCoordType(m_problem->parseNodeCoordType(node_coord));
-    m_problem->setDisplayDataType(m_problem->parseDisplayDataType(disp_type));    
-    m_problem->setGraph(graph);
+std::shared_ptr<IProblem> AttReader::buildProblem(
+    const std::string& name,
+    const std::string& comment,
+    const std::string& type,
+    int dimension,
+    const std::string& ew_type,
+    const std::string& ew_format,
+    const std::string& ed_format,
+    const std::string& node_coord,
+    const std::string& disp_type,
+    int capacity,
+    std::shared_ptr<IGraph> graph)
+{
+    auto tsp = std::make_shared<TspProblem>();
+    tsp->setName(name);
+    tsp->setComment(comment);
+    tsp->setType(type);
+    tsp->setDimension(dimension);
+    tsp->setCapacity(capacity);
+    tsp->setEdgeWeightType(tsp->parseEdgeWeightType(ew_type));
+    tsp->setEdgeWeightFormat(tsp->parseEdgeWeightFormat(ew_format));
+    tsp->setEdgeDataFormat(tsp->parseEdgeDataFormat(ed_format));
+    tsp->setNodeCoordType(tsp->parseNodeCoordType(node_coord));
+    tsp->setDisplayDataType(tsp->parseDisplayDataType(disp_type));
+    tsp->setGraph(graph);
+    return tsp;
 }

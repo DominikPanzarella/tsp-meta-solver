@@ -1,4 +1,5 @@
 #include "tspproblem.h"
+#include <iostream>
 
 const std::string& TspProblem::getName() const{
     return m_name;
@@ -141,5 +142,16 @@ DisplayDataType TspProblem::parseDisplayDataType(const std::string& str) const{
     else if(str == "TWOD_DISPLAY") return DisplayDataType::TWOD_DISPLAY;
     else if(str == "NO_DISPLAY") return DisplayDataType::NO_DISPLAY;
     else return DisplayDataType::UNKNOWN;
+
+}
+
+void TspProblem::PrintMatrix() const{
+    auto adjacencyMatrix = m_graph->getMatrix();
+    for(int i=0; i<m_dimension; i++){
+        for(int j=0; j<m_dimension; j++)
+            std::cout << adjacencyMatrix[i][j] << " ";
+        std::cout << std::endl;
+    }
+
 
 }

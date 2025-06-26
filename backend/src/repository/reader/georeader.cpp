@@ -1,4 +1,5 @@
 #include "georeader.h"
+#include "../problem/tspproblem.h"
 #include <regex>
 #include <cmath>
 #include <sstream>
@@ -9,16 +10,28 @@ bool GeoReader::canHandle(const std::string& content) const {
            content.find("GEO") != std::string::npos;
 }
 
-void GeoReader::parseHeader() {
+std::shared_ptr<IProblem> GeoReader::readInternal(std::istream& input) {
+    auto [name, comment, type, dimension, ew_type, ew_format, ed_format, node_coord, disp_type, capacity] = parseHeader(input);
+    auto nodes = parseBody(input, dimension);
+    auto graph = buildGraph(nodes, dimension);
+    return buildProblem(name, comment, type, dimension, ew_type, ew_format, ed_format, node_coord, disp_type, capacity, graph);
+}
+
+std::tuple<std::string, std::string, std::string, int,
+           std::string, std::string, std::string, std::string, std::string, int>
+           GeoReader::parseHeader(std::istream& input) {
+    std::string name, comment, type, ew_type, ew_format, ed_format, node_coord, disp_type;
+    int dimension = 0, capacity = 0;
     std::string line;
-    while (std::getline(*input, line)) {
+
+    while (std::getline(input, line)) {
         if (line.find("NODE_COORD_SECTION") != std::string::npos) break;
 
         std::regex rx(R"(^\s*([^:]+)\s*:\s*(.*))");
         std::smatch match;
         if (std::regex_match(line, match, rx)) {
-            std::string key = trim(match[1]);
-            std::string value = trim(match[2]);
+            std::string key = TspReader::trim(match[1]);
+            std::string value = TspReader::trim(match[2]);
 
             if (key == "NAME") name = value;
             else if (key == "COMMENT") comment = value;
@@ -32,20 +45,31 @@ void GeoReader::parseHeader() {
             else if (key == "CAPACITY") capacity = std::stoi(value);
         }
     }
+
+    return {name, comment, type, dimension, ew_type, ew_format, ed_format, node_coord, disp_type, capacity};
 }
 
-void GeoReader::parseBody() {
+std::vector<Node> GeoReader::parseBody(std::istream& input, int dimension) {
+    std::vector<Node> nodes;
     std::string line;
     int id;
     double x, y;
 
-    while (std::getline(*input, line)) {
-        if (line.find("EOF") != std::string::npos) break;
+    while (std::getline(input, line)) {
+        if (line.find("EOF") != std::string::npos || line.find("SECTION") != std::string::npos)
+            break;
         std::istringstream iss(line);
         if (!(iss >> id >> x >> y)) continue;
-        nodes.emplace_back(id, x, y);
+        nodes.emplace_back(Node{id, x, y});
     }
+
+    if (nodes.size() != static_cast<size_t>(dimension)) {
+        std::cerr << "[GeoReader] Mismatch tra nodi letti e DIMENSION." << std::endl;
+    }
+
+    return nodes;
 }
+
 
 double GeoReader::geoToRadians(double coord) {
     int deg = nint(coord);
@@ -67,8 +91,8 @@ double GeoReader::geoDistance(const Node& a, const Node& b) {
     return static_cast<int>(RRR * std::acos(0.5 * ((1.0 + q1) * q2 - (1.0 - q1) * q3)) + 1.0);
 }
 
-void GeoReader::buildGraph() {
-    graph = std::make_shared<SymmetricGraph>();
+std::shared_ptr<IGraph> GeoReader::buildGraph(const std::vector<Node>& nodes, int dimension) {
+    auto graph = std::make_shared<SymmetricGraph>();
     graph->init(dimension);
 
     for (int i = 0; i < dimension; ++i) {
@@ -77,19 +101,34 @@ void GeoReader::buildGraph() {
             graph->setEdge(i, j, dist);
         }
     }
+
+    return graph;
 }
 
-void GeoReader::buildProblem() {
-    m_problem = std::make_shared<TspProblem>();
-    m_problem->setName(name);
-    m_problem->setComment(comment);
-    m_problem->setType(type);
-    m_problem->setDimension(dimension);
-    m_problem->setCapacity(capacity);
-    m_problem->setEdgeWeightType(m_problem->parseEdgeWeightType(ew_type));
-    m_problem->setEdgeWeightFormat(m_problem->parseEdgeWeightFormat(ew_format));
-    m_problem->setEdgeDataFormat(m_problem->parseEdgeDataFormat(ed_format));
-    m_problem->setNodeCoordType(m_problem->parseNodeCoordType(node_coord));
-    m_problem->setDisplayDataType(m_problem->parseDisplayDataType(disp_type));    
-    m_problem->setGraph(graph);
+std::shared_ptr<IProblem> GeoReader::buildProblem(
+    const std::string& name,
+    const std::string& comment,
+    const std::string& type,
+    int dimension,
+    const std::string& ew_type,
+    const std::string& ew_format,
+    const std::string& ed_format,
+    const std::string& node_coord,
+    const std::string& disp_type,
+    int capacity,
+    std::shared_ptr<IGraph> graph)
+{
+    auto tsp = std::make_shared<TspProblem>();
+    tsp->setName(name);
+    tsp->setComment(comment);
+    tsp->setType(type);
+    tsp->setDimension(dimension);
+    tsp->setCapacity(capacity);
+    tsp->setEdgeWeightType(tsp->parseEdgeWeightType(ew_type));
+    tsp->setEdgeWeightFormat(tsp->parseEdgeWeightFormat(ew_format));
+    tsp->setEdgeDataFormat(tsp->parseEdgeDataFormat(ed_format));
+    tsp->setNodeCoordType(tsp->parseNodeCoordType(node_coord));
+    tsp->setDisplayDataType(tsp->parseDisplayDataType(disp_type));
+    tsp->setGraph(graph);
+    return tsp;
 }

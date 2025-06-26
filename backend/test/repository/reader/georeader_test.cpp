@@ -30,8 +30,7 @@ TEST_P(GeoParamTest, ReadGeoInstance) {
     ASSERT_TRUE(f.is_open()) << "File non apribile: " << path;
 
     GeoReader reader;
-    reader.read(path);
-    auto p = reader.getProblem();
+    auto p = reader.read(path);
 
     ASSERT_NE(p, nullptr) << "Problema non letto da: " << path;
     ASSERT_NE(p->getName(), "") << "Nome non valido";

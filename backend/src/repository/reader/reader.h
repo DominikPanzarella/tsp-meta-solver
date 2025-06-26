@@ -1,15 +1,22 @@
 #pragma once
 
 
-#include <string>
 
 //////////////
 // #INCLUDE //
 //////////////
 
+#include "../problem/iproblem.h"
+
+#include <string>
+
+
 //interface
 class Reader{
 public:
     
-    virtual void read(const std::string& file_path) =0 ;
+    virtual std::shared_ptr<IProblem> read(const std::string& file_path) =0 ;
+
+protected:
+    virtual std::shared_ptr<IProblem> readInternal(std::istream& input) =0;
 };
