@@ -7,7 +7,6 @@
 
 namespace fs = std::filesystem;
 
-// ✅ Controlla se è un'istanza EXPLICIT
 bool isMatrixInstance(const fs::path& path) {
     std::ifstream file(path);
     std::string line;
@@ -27,8 +26,6 @@ bool isMatrixInstance(const fs::path& path) {
     return isExplicit && hasFormat;
 }
 
-
-// ✅ Recupera i path validi
 std::vector<std::string> getMatrixPaths() {
     std::vector<std::string> paths;
     const std::string resource_dir = "resources";
@@ -53,55 +50,77 @@ std::vector<std::string> getMatrixPaths() {
     return paths;
 }
 
-// ✅ Lista statica per evitare doppio parsing
 static std::vector<std::string> matrix_paths = getMatrixPaths();
 
-// ✅ Classe di test parametrico
-class MatrixParamTest : public ::testing::TestWithParam<std::string> {};
+class MatrixParamTest : public ::testing::TestWithParam<std::string> {
+protected:
+    std::shared_ptr<IProblem> problem;
+    std::string path;
+
+    void SetUp() override {
+        path = GetParam();
+
+        if (path == "__none__") {
+            GTEST_SKIP() << "Test saltato: nessuna istanza matrix trovata.";
+        }
+
+        MatrixReader reader;
+        problem = reader.read(path);
+        ASSERT_NE(problem, nullptr) << "Problema non letto da: " << path;
+    }
+};
+
 GTEST_ALLOW_UNINSTANTIATED_PARAMETERIZED_TEST(MatrixParamTest);
 
-// ✅ Test vero e proprio
 TEST_P(MatrixParamTest, ReadMatrixInstance) {
-    const std::string& path = GetParam();
+    std::cout << "✓ Path: " << path << "\n";
+    std::cout << "Dimension: " << problem->getDimension() << std::endl;
 
-    if (path == "__none__") {
-        GTEST_SKIP() << "Test saltato: nessuna istanza matrix trovata.";
-    }
+    const auto& matrix = problem->getGraph().getMatrix();
+    int size = matrix.size();
 
-    std::ifstream f(path);
-    ASSERT_TRUE(f.is_open()) << "File non apribile: " << path;
-
-    MatrixReader reader;
-    auto p = reader.read(path);
-
-    std::cout << "Dimension: " << p->getDimension() << std::endl;
-    int size = p->getGraph().getMatrix().size();
-    auto matrix = p->getGraph().getMatrix();
-    std::cout << "Matrix rows:" <<  size << std::endl;
+    std::cout << "Matrix rows: " << size << std::endl;
 
     bool flag = true;
-    for(int i=0; i<size; i++){
-        if(matrix[i].size() != size)    flag = false;
+    for (int i = 0; i < size; i++) {
+        if (matrix[i].size() != size) flag = false;
     }
 
-    std::cout << "All rows have the same numbero of column: " <<  (flag?"True":"False") << std::endl;
+    std::cout << "All rows have the same number of columns: " << (flag ? "True" : "False") << std::endl;
 
-    p->PrintMatrix();
+    problem->PrintMatrix();
 
-    ASSERT_NE(p, nullptr) << "Problema non letto da: " << path;
-    EXPECT_FALSE(p->getName().empty()) << "Nome non valido";
-    EXPECT_FALSE(p->getType().empty()) << "Tipo non valido";
-    //EXPECT_FALSE(p->getComment().empty()) << "Commento non valido";
-    EXPECT_GT(p->getDimension(), 0) << "Dimensione nulla: " << path;
-    EXPECT_EQ(p->getEdgeWeightType(), EdgeWeightType::EXPLICIT);
-    EXPECT_TRUE(p->getGraph().isSymmetric()) << "Matrice non simmetrica: " << path;
-    EXPECT_TRUE(p->getGraph().isComplete()) << "Matrice non completa: " << path;
+    EXPECT_FALSE(problem->getName().empty()) << "Nome non valido";
+    EXPECT_FALSE(problem->getType().empty()) << "Tipo non valido";
+    EXPECT_GT(problem->getDimension(), 0) << "Dimensione nulla: " << path;
+    EXPECT_EQ(problem->getEdgeWeightType(), EdgeWeightType::EXPLICIT);
+    EXPECT_TRUE(problem->getGraph().isSymmetric()) << "Matrice non simmetrica: " << path;
+    EXPECT_TRUE(problem->getGraph().isComplete()) << "Matrice non completa: " << path;
 }
 
-// Istanziazione dei test
+TEST_P(MatrixParamTest, MatrixIsValidAdjacency) {
+    const auto& matrix = problem->getGraph().getMatrix();
+    int n = matrix.size();
+
+    ASSERT_EQ(n, problem->getDimension()) << "Dimensione della matrice non corrisponde.";
+
+    for (int i = 0; i < n; ++i) {
+        ASSERT_EQ(matrix[i].size(), n) << "Riga " << i << " ha dimensione diversa da " << n;
+
+        for (int j = 0; j < n; ++j) {
+            if (i == j) {
+                EXPECT_EQ(matrix[i][j], 0) << "Elemento diagonale (" << i << "," << j << ") non è zero.";
+            } else {
+                EXPECT_EQ(matrix[i][j], matrix[j][i])
+                    << "Matrice non simmetrica: matrix[" << i << "][" << j << "] != matrix[" << j << "][" << i << "]";
+            }
+        }
+    }
+}
+
 INSTANTIATE_TEST_SUITE_P(MatrixInstances,
                          MatrixParamTest,
                          ::testing::ValuesIn(matrix_paths),
                          [](const testing::TestParamInfo<std::string>& info) {
-                             return fs::path(info.param).stem().string(); // e.g. gr96
+                             return fs::path(info.param).stem().string(); // es: gr96
                          });
