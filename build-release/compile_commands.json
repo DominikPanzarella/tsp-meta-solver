@@ -43,9 +43,21 @@
 },
 {
   "directory": "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -I\"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src\" -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1 -o backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/nearestneighbour.cpp.o -c \"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src/service/algorithm/nearestneighbour.cpp\"",
+  "file": "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src/service/algorithm/nearestneighbour.cpp",
+  "output": "backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/nearestneighbour.cpp.o"
+},
+{
+  "directory": "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release",
   "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -I\"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src\" -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1 -o backend/CMakeFiles/tsp_backend.dir/src/service/executor/executiontask.cpp.o -c \"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src/service/executor/executiontask.cpp\"",
   "file": "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src/service/executor/executiontask.cpp",
   "output": "backend/CMakeFiles/tsp_backend.dir/src/service/executor/executiontask.cpp.o"
+},
+{
+  "directory": "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -I\"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src\" -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1 -o backend/CMakeFiles/tsp_backend.dir/src/service/executor/singlequeexecutor.cpp.o -c \"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src/service/executor/singlequeexecutor.cpp\"",
+  "file": "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src/service/executor/singlequeexecutor.cpp",
+  "output": "backend/CMakeFiles/tsp_backend.dir/src/service/executor/singlequeexecutor.cpp.o"
 },
 {
   "directory": "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release",
