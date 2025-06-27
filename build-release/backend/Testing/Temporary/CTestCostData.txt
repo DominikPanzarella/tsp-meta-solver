@@ -1,6 +1,0 @@
-ReaderChainTests/TspRepoParamTest.ReadInstances/dsj1000  # GetParam() = "resources/dsj1000.tsp" 1 0.259292
-ReaderChainTests/TspRepoParamTest.ReadInstances/a280  # GetParam() = "resources/a280.tsp" 1 0.228615
-ReaderChainTests/TspRepoParamTest.ReadInstances/brazil58  # GetParam() = "resources/brazil58.tsp" 1 0.224063
-ReaderChainTests/TspRepoParamTest.ReadInstances/gr96  # GetParam() = "resources/gr96.tsp" 1 0.226942
-ReaderChainTests/TspRepoParamTest.ReadInstances/att48  # GetParam() = "resources/att48.tsp" 1 0.22659
----
