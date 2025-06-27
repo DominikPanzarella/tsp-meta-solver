@@ -32,9 +32,10 @@ public:
         if (canHandle(content)) {
             return readInternal(input);
         } else if (successor) {
-            successor->read(file_path);
+            return successor->read(file_path);
         } else {
             std::cerr << "[TspReader] Nessun reader compatibile trovato per: " << file_path << std::endl;
+            return nullptr;
         }
 
     }

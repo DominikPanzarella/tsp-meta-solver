@@ -1,35 +1,38 @@
 # ninja log v7
-2	23	1751010996592014615	backend/CMakeFiles/tsp_backend.dir/src/repository/tsprepository.cpp.o	49c840f24b04be63
-2	574	1751010996591298198	backend/CMakeFiles/tsp_backend.dir/src/repository/problem/tspproblem.cpp.o	dfe9dfdfb19b8d8a
-2	578	1751010996592118407	backend/CMakeFiles/tsp_backend.dir/src/service/graph/symmetricgraph.cpp.o	84d3f64a4a24a826
-3	725	1751010996592442365	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	7378d070a7ad2d77
-725	1448	1751010997315154384	backend/CMakeFiles/tsp_tests.dir/test/service/graph/symmetricgraph_test.cpp.o	460eb9ec367bb2b7
-24	1759	1751010996613930077	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/euc2dreader_test.cpp.o	944193fd08bb7baa
-3	1852	1751010996592533157	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/attreader_test.cpp.o	233438aaf6efc311
-3	1856	1751010996592624532	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/ceil2dreader_test.cpp.o	325f907b4987c19
-3	1950	1751010996592343448	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	38903dad3ed53a5f
-575	2047	1751010997164902696	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/georeader_test.cpp.o	43675e4adceaa144
-578	2049	1751010997167558613	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/matrixreader_test.cpp.o	b89ab371dbee85ce
-1448	2071	1751010998038274444	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	a875f695b48750d7
-2	2131	1751010996591812532	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/georeader.cpp.o	c636f07865bbf3be
-2	2164	1751010996591716365	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/euc2dreader.cpp.o	338127736d13a82b
-2	2183	1751010996591488823	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/attreader.cpp.o	94787030fbc91843
-2	2183	1751010996591913448	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/matrixreader.cpp.o	e7e325c797193a0c
-2	2186	1751010996591619157	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/ceil2dreader.cpp.o	f601e06bb05c2d74
-2186	2240	1751010998775755299	backend/libtsp_backend.a	d4723ed84616e905
-2240	3546	1751011000127236574	frontend/TSP-META-SOLVER_autogen/timestamp	4ac271ebd0b5696c
-2240	3546	1751011000127236574	frontend/TSP-META-SOLVER_autogen/mocs_compilation.cpp	4ac271ebd0b5696c
-2240	3546	1751011000127236574	/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/timestamp	4ac271ebd0b5696c
-2240	3546	1751011000127236574	/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/mocs_compilation.cpp	4ac271ebd0b5696c
-3	3915	1751010996592236157	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	aa837ede94353e66
-3915	3934	1751011000504729586	lib/libgtest.a	e71e0e2d20617bc3
-3934	3948	1751011000523874797	lib/libgtest_main.a	4f74bc404c849c8e
-3934	3950	1751011000523686505	lib/libgmock.a	e63efbd3d974ce25
-3950	3964	1751011000539394341	lib/libgmock_main.a	c915f201554b8147
-3547	4180	1751011000136870075	frontend/CMakeFiles/TSP-META-SOLVER.dir/TSP-META-SOLVER_autogen/mocs_compilation.cpp.o	5d75823575c4c5a5
-3547	4184	1751011000137036200	frontend/CMakeFiles/TSP-META-SOLVER.dir/main.cpp.o	719f6a1349412791
-3547	4278	1751011000137136950	frontend/CMakeFiles/TSP-META-SOLVER.dir/mainwindow.cpp.o	c8a23ef003470da9
-4278	4361	1751011000867473678	frontend/TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER	81133bb78cf21b
-3948	4438	1751011001027694660	backend/tsp_tests	1f5d8e3acabe432b
-3948	4438	1751011001027694660	backend/tsp_tests[1]_tests.cmake	1f5d8e3acabe432b
-3948	4438	1751011001027694660	/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests[1]_tests.cmake	1f5d8e3acabe432b
+3	724	1751020174046504481	backend/CMakeFiles/tsp_backend.dir/src/service/graph/symmetricgraph.cpp.o	84d3f64a4a24a826
+2	791	1751020174045543046	backend/CMakeFiles/tsp_backend.dir/src/repository/problem/tspproblem.cpp.o	dfe9dfdfb19b8d8a
+3	899	1751020174046403608	backend/CMakeFiles/tsp_backend.dir/src/repository/tsprepository.cpp.o	49c840f24b04be63
+3	916	1751020174046842723	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	7378d070a7ad2d77
+3	2050	1751020174047061967	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/ceil2dreader_test.cpp.o	325f907b4987c19
+3	2137	1751020174046959345	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/attreader_test.cpp.o	233438aaf6efc311
+3	2343	1751020174046728600	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	38903dad3ed53a5f
+728	2484	1751020174772089513	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/cor_test.cpp.o	70cce73c265e54d1
+791	2554	1751020174834569688	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/euc2dreader_test.cpp.o	944193fd08bb7baa
+2	2669	1751020174045855539	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/attreader.cpp.o	94787030fbc91843
+2	2692	1751020174046087283	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/euc2dreader.cpp.o	338127736d13a82b
+2	2697	1751020174045978369	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/ceil2dreader.cpp.o	f601e06bb05c2d74
+899	2712	1751020174942891697	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/georeader_test.cpp.o	43675e4adceaa144
+2	2715	1751020174046195739	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/georeader.cpp.o	c636f07865bbf3be
+917	2722	1751020174960475849	backend/CMakeFiles/tsp_tests.dir/test/repository/reader/matrixreader_test.cpp.o	b89ab371dbee85ce
+3	2791	1751020174046299694	backend/CMakeFiles/tsp_backend.dir/src/repository/reader/matrixreader.cpp.o	e7e325c797193a0c
+2137	2831	1751020176180836575	backend/CMakeFiles/tsp_tests.dir/test/service/graph/symmetricgraph_test.cpp.o	460eb9ec367bb2b7
+2792	2884	1751020176835232478	backend/libtsp_backend.a	d4723ed84616e905
+2343	2914	1751020176386558319	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	a875f695b48750d7
+2051	3115	1751020176094283824	backend/CMakeFiles/tsp_tests.dir/test/repository/tsprepository_test.cpp.o	f3e5a22ed2bd81ac
+2884	4202	1751020178236680720	frontend/TSP-META-SOLVER_autogen/timestamp	4ac271ebd0b5696c
+2884	4202	1751020178236680720	frontend/TSP-META-SOLVER_autogen/mocs_compilation.cpp	4ac271ebd0b5696c
+2884	4202	1751020178236680720	/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/timestamp	4ac271ebd0b5696c
+2884	4202	1751020178236680720	/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/mocs_compilation.cpp	4ac271ebd0b5696c
+3	4689	1751020174046615812	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	aa837ede94353e66
+4689	4709	1751020178733106831	lib/libgtest.a	e71e0e2d20617bc3
+4709	4724	1751020178752536439	lib/libgtest_main.a	4f74bc404c849c8e
+4709	4726	1751020178752343777	lib/libgmock.a	e63efbd3d974ce25
+4726	4744	1751020178770047592	lib/libgmock_main.a	c915f201554b8147
+4204	4900	1751020178247179837	frontend/CMakeFiles/TSP-META-SOLVER.dir/TSP-META-SOLVER_autogen/mocs_compilation.cpp.o	5d75823575c4c5a5
+4204	4905	1751020178247374540	frontend/CMakeFiles/TSP-META-SOLVER.dir/main.cpp.o	719f6a1349412791
+4204	4980	1751020178247675742	frontend/CMakeFiles/TSP-META-SOLVER.dir/mainwindow.cpp.o	c8a23ef003470da9
+12	347	1751020225110939609	frontend/TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER	81133bb78cf21b
+12	1033	1751020225110685865	backend/CMakeFiles/tsp_tests.dir/test/repository/tsprepository_test.cpp.o	f3e5a22ed2bd81ac
+1033	1507	1751020226604568464	backend/tsp_tests	2a2d61931ae2d99
+1033	1507	1751020226604568464	backend/tsp_tests[1]_tests.cmake	2a2d61931ae2d99
+1033	1507	1751020226604568464	/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests[1]_tests.cmake	2a2d61931ae2d99
