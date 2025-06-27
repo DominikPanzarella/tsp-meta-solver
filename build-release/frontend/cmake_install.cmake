@@ -1,4 +1,4 @@
-# Install script for directory: /Users/dominikpanzarella/Desktop/tsp-meta-solver/frontend
+# Install script for directory: /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/frontend
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER.app" USE_SOURCE_PERMISSIONS)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER.app" USE_SOURCE_PERMISSIONS)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER")
     execute_process(COMMAND /usr/bin/install_name_tool
@@ -49,12 +49,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/.qt/deploy_TSP_META_SOLVER_631e2f660e.cmake")
+  include("/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/.qt/deploy_TSP_META_SOLVER_631e2f660e.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/install_local_manifest.txt"
+  file(WRITE "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

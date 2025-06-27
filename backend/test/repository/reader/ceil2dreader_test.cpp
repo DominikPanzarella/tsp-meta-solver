@@ -20,38 +20,95 @@ bool isCeil2dInstance(const fs::path& path) {
 
 // Fixture per test parametrico
 class Ceil2dParamTest : public ::testing::TestWithParam<std::string> {
+    protected:
+        std::shared_ptr<IProblem> problem;
+        std::string path;
+
+        void SetUp(){
+            path = GetParam();
+
+            if (path == "__none__") {
+                GTEST_SKIP() << "Test saltato: nessuna istanza matrix trovata.";
+            }
+    
+            Ceil2dReader reader;
+            problem = reader.read(path);
+            ASSERT_NE(problem, nullptr) << "Problema non letto da: " << path;
+        }
 };
 
 // Test vero e proprio
 TEST_P(Ceil2dParamTest, ReadCeil2dInstance) {
-    const std::string& path = GetParam();
+    std::cout << "Path: " << path << "\n";
+    std::cout << "Dimension: " << problem->getDimension() << std::endl;
 
-    std::ifstream f(path);
-    ASSERT_TRUE(f.is_open()) << "File non apribile: " << path;
+    const auto& matrix = problem->getGraph().getMatrix();
+    int size = matrix.size();
 
-    Ceil2dReader reader;
-    auto p = reader.read(path);
+    std::cout << "Matrix rows: " << size << std::endl;
 
-    ASSERT_NE(p, nullptr) << "Problema non letto da: " << path;
-    ASSERT_NE(p->getName(), "") << "Nome non valido";
-    ASSERT_NE(p->getType(), "") << "Nome non valido";
-    ASSERT_NE(p->getComment(), "") << "Commento non valido";
-    ASSERT_GT(p->getDimension(), 0) << "Dimensione nulla: " << path;
-    EXPECT_EQ(p->getEdgeWeightType(), EdgeWeightType::CEIL_2D);
-    EXPECT_EQ(p->getDisplayDataType(), DisplayDataType::UNKNOWN);
-    EXPECT_TRUE(p->getGraph().isSymmetric()) << "Matrice non simmetrica: " << path;
-    EXPECT_TRUE(p->getGraph().isComplete()) << "Matrice non completa: " << path;
+    bool flag = true;
+    for (int i = 0; i < size; i++) {
+        if (matrix[i].size() != size) flag = false;
+    }
+
+    std::cout << "All rows have the same number of columns: " << (flag ? "True" : "False") << std::endl;
+
+    problem->PrintMatrix();
+
+    ASSERT_NE(problem, nullptr) << "Problema non letto da: " << path;
+    ASSERT_NE(problem->getName(), "") << "Nome non valido";
+    ASSERT_NE(problem->getType(), "") << "Nome non valido";
+    ASSERT_NE(problem->getComment(), "") << "Commento non valido";
+    ASSERT_GT(problem->getDimension(), 0) << "Dimensione nulla: " << path;
+    EXPECT_EQ(problem->getEdgeWeightType(), EdgeWeightType::CEIL_2D);
+    EXPECT_EQ(problem->getDisplayDataType(), DisplayDataType::UNKNOWN);
+    EXPECT_TRUE(problem->getGraph().isSymmetric()) << "Matrice non simmetrica: " << path;
+    EXPECT_TRUE(problem->getGraph().isComplete()) << "Matrice non completa: " << path;
+}
+
+TEST_P(Ceil2dParamTest, MatrixIsValidAdjacency) {
+    const auto& matrix = problem->getGraph().getMatrix();
+    int n = matrix.size();
+
+    ASSERT_EQ(n, problem->getDimension()) << "Dimensione della matrice non corrisponde.";
+
+    for (int i = 0; i < n; ++i) {
+        ASSERT_EQ(matrix[i].size(), n) << "Riga " << i << " ha dimensione diversa da " << n;
+
+        for (int j = 0; j < n; ++j) {
+            if (i == j) {
+                EXPECT_EQ(matrix[i][j], 0) << "Elemento diagonale (" << i << "," << j << ") non è zero.";
+            } else {
+                EXPECT_EQ(matrix[i][j], matrix[j][i])
+                    << "Matrice non simmetrica: matrix[" << i << "][" << j << "] != matrix[" << j << "][" << i << "]";
+            }
+        }
+    }
 }
 
 // Recupera tutti i path Att
 std::vector<std::string> getCeil2dPaths() {
     std::vector<std::string> paths;
     const std::string resource_dir = "resources";
+
+    if (!fs::exists(resource_dir)) {
+        std::cerr << "Directory 'resources/' non trovata\n";
+        return {"__none__"};  // fallback
+    }
+
     for (const auto& entry : fs::directory_iterator(resource_dir)) {
         if (entry.path().extension() == ".tsp" && isCeil2dInstance(entry.path())) {
             paths.push_back(entry.path().string());
         }
     }
+
+    if (paths.empty()) {
+        std::cerr << "⚠️ Nessuna istanza EXPLICIT trovata in /resources\n";
+        return {"__none__"};
+    }
+
+    std::cout << "✓ Trovate " << paths.size() << " istanze EXPLICIT.\n";
     return paths;
 }
 

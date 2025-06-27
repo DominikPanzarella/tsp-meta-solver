@@ -84,6 +84,9 @@ std::shared_ptr<IGraph> Ceil2dReader::buildGraph(const std::vector<Node>& nodes,
         }
     }
 
+    for(int i=0; i<dimension; i++)
+        graph->setEdge(i,i, 0);
+
     return graph;
 }
 

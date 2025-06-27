@@ -91,6 +91,10 @@ std::shared_ptr<IGraph> AttReader::buildGraph(const std::vector<Node>& nodes, in
             else        graph->setEdge(i, j, tij);
         }
     }
+
+    for(int i=0; i<dimension; i++)
+        graph->setEdge(i,i, 0);
+
     return graph;
 }
 

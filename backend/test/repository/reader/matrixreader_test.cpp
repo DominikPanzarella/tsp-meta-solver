@@ -73,7 +73,7 @@ protected:
 GTEST_ALLOW_UNINSTANTIATED_PARAMETERIZED_TEST(MatrixParamTest);
 
 TEST_P(MatrixParamTest, ReadMatrixInstance) {
-    std::cout << "✓ Path: " << path << "\n";
+    std::cout << "Path: " << path << "\n";
     std::cout << "Dimension: " << problem->getDimension() << std::endl;
 
     const auto& matrix = problem->getGraph().getMatrix();

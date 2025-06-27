@@ -1,35 +1,215 @@
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/swiss42  # GetParam() = "resources/swiss42.tsp" 1 0.144636
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/brazil58  # GetParam() = "resources/brazil58.tsp" 1 0.138159
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/brg180  # GetParam() = "resources/brg180.tsp" 1 0.150278
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/si1032  # GetParam() = "resources/si1032.tsp" 1 0.285136
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/bays29  # GetParam() = "resources/bays29.tsp" 1 0.13772
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/si535  # GetParam() = "resources/si535.tsp" 1 0.194085
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr21  # GetParam() = "resources/gr21.tsp" 1 0.13595
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr24  # GetParam() = "resources/gr24.tsp" 1 0.13825
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/dantzig42  # GetParam() = "resources/dantzig42.tsp" 1 0.137334
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/hk48  # GetParam() = "resources/hk48.tsp" 1 0.138132
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr17  # GetParam() = "resources/gr17.tsp" 1 0.136117
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/fri26  # GetParam() = "resources/fri26.tsp" 1 0.136501
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr48  # GetParam() = "resources/gr48.tsp" 1 0.136476
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/pa561  # GetParam() = "resources/pa561.tsp" 1 0.180845
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr120  # GetParam() = "resources/gr120.tsp" 1 0.207379
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/si175  # GetParam() = "resources/si175.tsp" 1 0.191372
-MatrixInstances/MatrixParamTest.ReadMatrixInstance/bayg29  # GetParam() = "resources/bayg29.tsp" 1 0.14024
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/swiss42  # GetParam() = "resources/swiss42.tsp" 1 0.148596
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/brazil58  # GetParam() = "resources/brazil58.tsp" 1 0.143518
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/brg180  # GetParam() = "resources/brg180.tsp" 1 0.139232
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/si1032  # GetParam() = "resources/si1032.tsp" 1 0.169087
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/bays29  # GetParam() = "resources/bays29.tsp" 1 0.137143
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/si535  # GetParam() = "resources/si535.tsp" 1 0.143618
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr21  # GetParam() = "resources/gr21.tsp" 1 0.135054
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr24  # GetParam() = "resources/gr24.tsp" 1 0.138815
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/dantzig42  # GetParam() = "resources/dantzig42.tsp" 1 0.134806
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/hk48  # GetParam() = "resources/hk48.tsp" 1 0.136646
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr17  # GetParam() = "resources/gr17.tsp" 1 0.135591
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/fri26  # GetParam() = "resources/fri26.tsp" 1 0.136573
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr48  # GetParam() = "resources/gr48.tsp" 1 0.135005
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/pa561  # GetParam() = "resources/pa561.tsp" 1 0.150902
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr120  # GetParam() = "resources/gr120.tsp" 1 0.145114
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/si175  # GetParam() = "resources/si175.tsp" 1 0.137245
-MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/bayg29  # GetParam() = "resources/bayg29.tsp" 1 0.135977
+AttInstances/AttParamTest.ReadAttInstance/att532 0 0
+AttInstances/AttParamTest.ReadAttInstance/att48 0 0
+AttInstances/AttParamTest.MatrixIsValidAdjacency/att532 0 0
+AttInstances/AttParamTest.MatrixIsValidAdjacency/att48 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr439 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rd100 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rl5934 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pcb442 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/u2319 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/gil262 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pcb3038 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/lin105 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/fl417 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/tsp225 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/fl1400 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/nrw1379 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/d2103 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroA150 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pcb1173 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/d198 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/fl1577 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/ch130 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroB100 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/u1060 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/berlin52 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/eil51 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rl1304 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/u2152 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/u724 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroD100 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/linhp318 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr299 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rd400 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/vm1084 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rat575 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/d1655 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/ch150 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/d15112 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr107 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroB200 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/brd14051 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/a280 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/d1291 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr264 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr76 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/d493 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr136 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rat195 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rl11849 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroA100 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroB150 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/bier127 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroC100 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/usa13509 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/eil76 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr124 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rl1323 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/p654 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rl1889 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/d657 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/eil101 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/fnl4461 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr2392 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rat783 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/ts225 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/u1432 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/u1817 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/lin318 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/d18512 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rl5915 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/st70 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/rat99 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/fl3795 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/u159 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroA200 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/u574 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr1002 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr152 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr226 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/vm1748 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/pr144 0 0
+Euc2DInstances/Euc2DParamTest.ReadInstance/kroE100 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr439 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rd100 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rl5934 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pcb442 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/u2319 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/gil262 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pcb3038 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/lin105 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/fl417 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/tsp225 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/fl1400 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/nrw1379 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/d2103 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroA150 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pcb1173 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/d198 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/fl1577 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/ch130 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroB100 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/u1060 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/berlin52 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/eil51 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rl1304 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/u2152 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/u724 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroD100 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/linhp318 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr299 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rd400 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/vm1084 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rat575 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/d1655 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/ch150 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/d15112 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr107 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroB200 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/brd14051 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/a280 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/d1291 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr264 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr76 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/d493 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr136 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rat195 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rl11849 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroA100 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroB150 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/bier127 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroC100 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/usa13509 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/eil76 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr124 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rl1323 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/p654 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rl1889 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/d657 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/eil101 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/fnl4461 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr2392 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rat783 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/ts225 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/u1432 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/u1817 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/lin318 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/d18512 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rl5915 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/st70 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/rat99 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/fl3795 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/u159 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroA200 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/u574 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr1002 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr152 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr226 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/vm1748 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/pr144 0 0
+Euc2DInstances/Euc2DParamTest.MatrixIsValidAdjacency/kroE100 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/gr96 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/gr666 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/ulysses16 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/gr202 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/gr229 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/ali535 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/ulysses22 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/gr431 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/burma14 0 0
+GeoInstances/GeoParamTest.ReadGeoInstance/gr137 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/gr96 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/gr666 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/ulysses16 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/gr202 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/gr229 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/ali535 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/ulysses22 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/gr431 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/burma14 0 0
+GeoInstances/GeoParamTest.MatrixIsValidAdjacency/gr137 0 0
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/swiss42  # GetParam() = "resources/swiss42.tsp" 1 0.244127
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/brazil58  # GetParam() = "resources/brazil58.tsp" 1 0.227116
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/brg180  # GetParam() = "resources/brg180.tsp" 1 0.230596
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/si1032  # GetParam() = "resources/si1032.tsp" 1 0.36956
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/bays29  # GetParam() = "resources/bays29.tsp" 1 0.232388
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/si535  # GetParam() = "resources/si535.tsp" 1 0.270316
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr21  # GetParam() = "resources/gr21.tsp" 1 0.223421
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr24  # GetParam() = "resources/gr24.tsp" 1 0.223913
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/dantzig42  # GetParam() = "resources/dantzig42.tsp" 1 0.238553
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/hk48  # GetParam() = "resources/hk48.tsp" 1 0.2266
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr17  # GetParam() = "resources/gr17.tsp" 1 0.225711
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/fri26  # GetParam() = "resources/fri26.tsp" 1 0.224722
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr48  # GetParam() = "resources/gr48.tsp" 1 0.230485
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/pa561  # GetParam() = "resources/pa561.tsp" 1 0.265177
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/gr120  # GetParam() = "resources/gr120.tsp" 1 0.231969
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/si175  # GetParam() = "resources/si175.tsp" 1 0.238656
+MatrixInstances/MatrixParamTest.ReadMatrixInstance/bayg29  # GetParam() = "resources/bayg29.tsp" 1 0.233965
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/swiss42  # GetParam() = "resources/swiss42.tsp" 1 0.223642
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/brazil58  # GetParam() = "resources/brazil58.tsp" 1 0.222104
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/brg180  # GetParam() = "resources/brg180.tsp" 1 0.223111
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/si1032  # GetParam() = "resources/si1032.tsp" 1 0.250973
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/bays29  # GetParam() = "resources/bays29.tsp" 1 0.220705
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/si535  # GetParam() = "resources/si535.tsp" 1 0.228828
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr21  # GetParam() = "resources/gr21.tsp" 1 0.221105
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr24  # GetParam() = "resources/gr24.tsp" 1 0.221503
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/dantzig42  # GetParam() = "resources/dantzig42.tsp" 1 0.218686
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/hk48  # GetParam() = "resources/hk48.tsp" 1 0.227884
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr17  # GetParam() = "resources/gr17.tsp" 1 0.219252
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/fri26  # GetParam() = "resources/fri26.tsp" 1 0.221752
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr48  # GetParam() = "resources/gr48.tsp" 1 0.219785
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/pa561  # GetParam() = "resources/pa561.tsp" 1 0.233811
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/gr120  # GetParam() = "resources/gr120.tsp" 1 0.234552
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/si175  # GetParam() = "resources/si175.tsp" 1 0.235033
+MatrixInstances/MatrixParamTest.MatrixIsValidAdjacency/bayg29  # GetParam() = "resources/bayg29.tsp" 1 0.221321
 ---

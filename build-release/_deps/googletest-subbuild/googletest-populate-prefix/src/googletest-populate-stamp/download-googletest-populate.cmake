@@ -22,14 +22,14 @@ function(check_file_hash has_hash hash_is_good)
   set("${has_hash}" TRUE PARENT_SCOPE)
 
   message(VERBOSE "verifying file...
-       file='/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'")
+       file='/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'")
 
-  file("" "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip" actual_value)
+  file("" "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip" actual_value)
 
   if(NOT "${actual_value}" STREQUAL "")
     set("${hash_is_good}" FALSE PARENT_SCOPE)
     message(VERBOSE " hash of
-    /Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip
+    /Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip
   does not match expected value
     expected: ''
       actual: '${actual_value}'")
@@ -71,32 +71,32 @@ function(sleep_before_download attempt)
   execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
 endfunction()
 
-if(EXISTS "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
+if(EXISTS "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
   check_file_hash(has_hash hash_is_good)
   if(has_hash)
     if(hash_is_good)
       message(VERBOSE "File already exists and hash match (skip download):
-  file='/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
+  file='/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
   =''"
       )
       return()
     else()
       message(VERBOSE "File already exists but hash mismatch. Removing...")
-      file(REMOVE "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
+      file(REMOVE "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
     endif()
   else()
     message(VERBOSE "File already exists but no hash specified (use URL_HASH):
-  file='/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
+  file='/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
 Old file will be removed and new file downloaded from URL."
     )
-    file(REMOVE "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
+    file(REMOVE "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
   endif()
 endif()
 
 set(retry_number 5)
 
 message(VERBOSE "Downloading...
-   dst='/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
+   dst='/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip'
    timeout='none'
    inactivity timeout='none'"
 )
@@ -119,7 +119,7 @@ foreach(i RANGE ${retry_number})
 
       file(
         DOWNLOAD
-        "${url}" "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip"
+        "${url}" "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip"
         SHOW_PROGRESS
         # no TIMEOUT
         # no INACTIVITY_TIMEOUT
@@ -136,7 +136,7 @@ foreach(i RANGE ${retry_number})
         check_file_hash(has_hash hash_is_good)
         if(has_hash AND NOT hash_is_good)
           message(VERBOSE "Hash mismatch, removing...")
-          file(REMOVE "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
+          file(REMOVE "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip")
         else()
           message(VERBOSE "Downloading... done")
           return()

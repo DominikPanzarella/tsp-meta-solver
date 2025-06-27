@@ -102,6 +102,10 @@ std::shared_ptr<IGraph> GeoReader::buildGraph(const std::vector<Node>& nodes, in
         }
     }
 
+
+    for(int i=0; i<dimension; i++)
+        graph->setEdge(i,i, 0);
+
     return graph;
 }
 

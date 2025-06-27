@@ -1,32 +1,32 @@
 {
-	"BUILD_DIR" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen",
-	"CMAKE_BINARY_DIR" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release",
-	"CMAKE_CURRENT_BINARY_DIR" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/frontend",
+	"BUILD_DIR" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/frontend",
 	"CMAKE_EXECUTABLE" : "/opt/homebrew/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/Users/dominikpanzarella/Desktop/tsp-meta-solver/frontend/CMakeLists.txt",
+		"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/frontend/CMakeLists.txt",
 		"/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake",
 		"/opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/lib/cmake/Qt6/macos/Info.plist.app.in"
 	],
-	"CMAKE_SOURCE_DIR" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver",
+	"CMAKE_SOURCE_DIR" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/deps",
+	"DEP_FILE" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "TSP-META-SOLVER_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/Users/dominikpanzarella/Desktop/tsp-meta-solver/frontend/mainwindow.h",
+			"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/frontend/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/include",
-	"MOC_COMPILATION_FILE" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -37,7 +37,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/Users/dominikpanzarella/Desktop/tsp-meta-solver/backend/src",
+		"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/lib/QtCore.framework/Headers",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/lib/QtCore.framework",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/mkspecs/macx-clang",
@@ -70,26 +70,26 @@
 		"-c",
 		"/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/TSP-META-SOLVER_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 11,
-	"PARSE_CACHE_FILE" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/CMakeFiles/TSP-META-SOLVER_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/CMakeFiles/TSP-META-SOLVER_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/Users/dominikpanzarella/Qt/6.9.1/macos/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/Users/dominikpanzarella/Qt/6.9.1/macos/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "/Users/dominikpanzarella/Desktop/tsp-meta-solver/build-release/frontend/CMakeFiles/TSP-META-SOLVER_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/frontend/CMakeFiles/TSP-META-SOLVER_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/Users/dominikpanzarella/Desktop/tsp-meta-solver/frontend/main.cpp",
+			"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/frontend/main.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/dominikpanzarella/Desktop/tsp-meta-solver/frontend/mainwindow.cpp",
+			"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/frontend/mainwindow.cpp",
 			"MU",
 			null
 		]
