@@ -192,6 +192,33 @@ build backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/nearestneighbour.
   TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_backend.dir/tsp_backend.pdb
   TARGET_PDB = backend/libtsp_backend.pdb
 
+build backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/path.cpp.o: CXX_COMPILER__tsp_backend_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/src/service/algorithm/path.cpp || cmake_object_order_depends_target_tsp_backend
+  DEP_FILE = backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/path.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
+  INCLUDES = -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src"
+  OBJECT_DIR = backend/CMakeFiles/tsp_backend.dir
+  OBJECT_FILE_DIR = backend/CMakeFiles/tsp_backend.dir/src/service/algorithm
+  TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_backend.dir/tsp_backend.pdb
+  TARGET_PDB = backend/libtsp_backend.pdb
+
+build backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/solutioncollector.cpp.o: CXX_COMPILER__tsp_backend_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/src/service/algorithm/solutioncollector.cpp || cmake_object_order_depends_target_tsp_backend
+  DEP_FILE = backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/solutioncollector.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
+  INCLUDES = -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src"
+  OBJECT_DIR = backend/CMakeFiles/tsp_backend.dir
+  OBJECT_FILE_DIR = backend/CMakeFiles/tsp_backend.dir/src/service/algorithm
+  TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_backend.dir/tsp_backend.pdb
+  TARGET_PDB = backend/libtsp_backend.pdb
+
+build backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/tspsolution.cpp.o: CXX_COMPILER__tsp_backend_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/src/service/algorithm/tspsolution.cpp || cmake_object_order_depends_target_tsp_backend
+  DEP_FILE = backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/tspsolution.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
+  INCLUDES = -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src"
+  OBJECT_DIR = backend/CMakeFiles/tsp_backend.dir
+  OBJECT_FILE_DIR = backend/CMakeFiles/tsp_backend.dir/src/service/algorithm
+  TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_backend.dir/tsp_backend.pdb
+  TARGET_PDB = backend/libtsp_backend.pdb
+
 build backend/CMakeFiles/tsp_backend.dir/src/service/executor/executiontask.cpp.o: CXX_COMPILER__tsp_backend_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/src/service/executor/executiontask.cpp || cmake_object_order_depends_target_tsp_backend
   DEP_FILE = backend/CMakeFiles/tsp_backend.dir/src/service/executor/executiontask.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
@@ -201,8 +228,17 @@ build backend/CMakeFiles/tsp_backend.dir/src/service/executor/executiontask.cpp.
   TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_backend.dir/tsp_backend.pdb
   TARGET_PDB = backend/libtsp_backend.pdb
 
-build backend/CMakeFiles/tsp_backend.dir/src/service/executor/singlequeexecutor.cpp.o: CXX_COMPILER__tsp_backend_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/src/service/executor/singlequeexecutor.cpp || cmake_object_order_depends_target_tsp_backend
-  DEP_FILE = backend/CMakeFiles/tsp_backend.dir/src/service/executor/singlequeexecutor.cpp.o.d
+build backend/CMakeFiles/tsp_backend.dir/src/service/executor/singlequeueexecutor.cpp.o: CXX_COMPILER__tsp_backend_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/src/service/executor/singlequeueexecutor.cpp || cmake_object_order_depends_target_tsp_backend
+  DEP_FILE = backend/CMakeFiles/tsp_backend.dir/src/service/executor/singlequeueexecutor.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
+  INCLUDES = -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src"
+  OBJECT_DIR = backend/CMakeFiles/tsp_backend.dir
+  OBJECT_FILE_DIR = backend/CMakeFiles/tsp_backend.dir/src/service/executor
+  TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_backend.dir/tsp_backend.pdb
+  TARGET_PDB = backend/libtsp_backend.pdb
+
+build backend/CMakeFiles/tsp_backend.dir/src/service/executor/workstealingexecutor.cpp.o: CXX_COMPILER__tsp_backend_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/src/service/executor/workstealingexecutor.cpp || cmake_object_order_depends_target_tsp_backend
+  DEP_FILE = backend/CMakeFiles/tsp_backend.dir/src/service/executor/workstealingexecutor.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
   INCLUDES = -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src"
   OBJECT_DIR = backend/CMakeFiles/tsp_backend.dir
@@ -227,7 +263,7 @@ build backend/CMakeFiles/tsp_backend.dir/src/service/graph/symmetricgraph.cpp.o:
 #############################################
 # Link the static library backend/libtsp_backend.a
 
-build backend/libtsp_backend.a: CXX_STATIC_LIBRARY_LINKER__tsp_backend_Release backend/CMakeFiles/tsp_backend.dir/src/repository/problem/tspproblem.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/attreader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/ceil2dreader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/euc2dreader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/georeader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/matrixreader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/tsprepository.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/nearestneighbour.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/executor/executiontask.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/executor/singlequeexecutor.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/graph/symmetricgraph.cpp.o
+build backend/libtsp_backend.a: CXX_STATIC_LIBRARY_LINKER__tsp_backend_Release backend/CMakeFiles/tsp_backend.dir/src/repository/problem/tspproblem.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/attreader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/ceil2dreader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/euc2dreader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/georeader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/reader/matrixreader.cpp.o backend/CMakeFiles/tsp_backend.dir/src/repository/tsprepository.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/nearestneighbour.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/path.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/solutioncollector.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/algorithm/tspsolution.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/executor/executiontask.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/executor/singlequeueexecutor.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/executor/workstealingexecutor.cpp.o backend/CMakeFiles/tsp_backend.dir/src/service/graph/symmetricgraph.cpp.o
   ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
   LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   OBJECT_DIR = backend/CMakeFiles/tsp_backend.dir
@@ -309,6 +345,24 @@ build backend/CMakeFiles/tsp_tests.dir/test/repository/tsprepository_test.cpp.o:
   TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_tests.dir/
   TARGET_PDB = backend/tsp_tests.pdb
 
+build backend/CMakeFiles/tsp_tests.dir/test/service/algorithm/nearestneighbour_test.cpp.o: CXX_COMPILER__tsp_tests_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/test/service/algorithm/nearestneighbour_test.cpp || cmake_object_order_depends_target_tsp_tests
+  DEP_FILE = backend/CMakeFiles/tsp_tests.dir/test/service/algorithm/nearestneighbour_test.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
+  INCLUDES = -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src" -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/test" -isystem "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/include" -isystem "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest"
+  OBJECT_DIR = backend/CMakeFiles/tsp_tests.dir
+  OBJECT_FILE_DIR = backend/CMakeFiles/tsp_tests.dir/test/service/algorithm
+  TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_tests.dir/
+  TARGET_PDB = backend/tsp_tests.pdb
+
+build backend/CMakeFiles/tsp_tests.dir/test/service/algorithm/singlequeueexecutor_test.cpp.o: CXX_COMPILER__tsp_tests_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/test/service/algorithm/singlequeueexecutor_test.cpp || cmake_object_order_depends_target_tsp_tests
+  DEP_FILE = backend/CMakeFiles/tsp_tests.dir/test/service/algorithm/singlequeueexecutor_test.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
+  INCLUDES = -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/src" -I"/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/backend/test" -isystem "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest/include" -isystem "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/_deps/googletest-src/googletest"
+  OBJECT_DIR = backend/CMakeFiles/tsp_tests.dir
+  OBJECT_FILE_DIR = backend/CMakeFiles/tsp_tests.dir/test/service/algorithm
+  TARGET_COMPILE_PDB = backend/CMakeFiles/tsp_tests.dir/
+  TARGET_PDB = backend/tsp_tests.pdb
+
 build backend/CMakeFiles/tsp_tests.dir/test/service/graph/symmetricgraph_test.cpp.o: CXX_COMPILER__tsp_tests_unscanned_Release /Users/dominikpanzarella/Library/Mobile$ Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre$ 6/Tesi/tsp-meta-solver/backend/test/service/graph/symmetricgraph_test.cpp || cmake_object_order_depends_target_tsp_tests
   DEP_FILE = backend/CMakeFiles/tsp_tests.dir/test/service/graph/symmetricgraph_test.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
@@ -326,7 +380,7 @@ build backend/CMakeFiles/tsp_tests.dir/test/service/graph/symmetricgraph_test.cp
 #############################################
 # Link the executable backend/tsp_tests
 
-build backend/tsp_tests backend/tsp_tests[1]_tests.cmake | ${cmake_ninja_workdir}backend/tsp_tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__tsp_tests_Release backend/CMakeFiles/tsp_tests.dir/test/repository/reader/attreader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/ceil2dreader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/cor_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/euc2dreader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/georeader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/matrixreader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/tsprepository_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/service/graph/symmetricgraph_test.cpp.o | backend/libtsp_backend.a lib/libgtest_main.a lib/libgtest.a || backend/libtsp_backend.a lib/libgtest.a lib/libgtest_main.a
+build backend/tsp_tests backend/tsp_tests[1]_tests.cmake | ${cmake_ninja_workdir}backend/tsp_tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__tsp_tests_Release backend/CMakeFiles/tsp_tests.dir/test/repository/reader/attreader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/ceil2dreader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/cor_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/euc2dreader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/georeader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/reader/matrixreader_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/repository/tsprepository_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/service/algorithm/nearestneighbour_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/service/algorithm/singlequeueexecutor_test.cpp.o backend/CMakeFiles/tsp_tests.dir/test/service/graph/symmetricgraph_test.cpp.o | backend/libtsp_backend.a lib/libgtest_main.a lib/libgtest.a || backend/libtsp_backend.a lib/libgtest.a lib/libgtest_main.a
   FLAGS = -O3 -DNDEBUG -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -mmacosx-version-min=14.1
   LINK_LIBRARIES = backend/libtsp_backend.a  lib/libgtest_main.a  lib/libgtest.a
   OBJECT_DIR = backend/CMakeFiles/tsp_tests.dir

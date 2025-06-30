@@ -9,7 +9,6 @@ public:
 
     virtual std::string name() const override;
 
-
 private:
 
 };

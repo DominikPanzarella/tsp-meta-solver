@@ -1,4 +1,4 @@
-#include "service/executor/singlequeexecutor.h"
+#include "service/executor/singlequeueexecutor.h"
 
 
 void SingleQueueExecutor::add(const std::shared_ptr<IAlgorithm>& algo,
@@ -8,10 +8,15 @@ void SingleQueueExecutor::add(const std::shared_ptr<IAlgorithm>& algo,
 
 void SingleQueueExecutor::run(){
     for(auto& task : m_tasks){
-        auto result = task->execute();
+        std::shared_ptr<ISolution> result = task->execute();
+        m_solutionCollector->addSolution(result);
     }
 }
 
 void SingleQueueExecutor::clear(){
     m_tasks.clear();
+}
+
+const std::shared_ptr<ISolutionCollector>& SingleQueueExecutor::getSolutionCollector() const {
+    return m_solutionCollector;
 }
