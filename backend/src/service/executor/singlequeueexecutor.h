@@ -6,7 +6,7 @@
 class SingleQueueExecutor : public IExecutor {
 public:
 
-    SingleQueueExecutor() = default;
+    SingleQueueExecutor();
 
     virtual ~SingleQueueExecutor() =default;
 

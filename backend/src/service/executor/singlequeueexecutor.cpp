@@ -1,5 +1,10 @@
 #include "service/executor/singlequeueexecutor.h"
 
+#include "service/algorithm/solutioncollector.h"
+
+SingleQueueExecutor::SingleQueueExecutor()
+    : m_solutionCollector(std::make_shared<SolutionCollector>()) {}
+
 
 void SingleQueueExecutor::add(const std::shared_ptr<IAlgorithm>& algo,
     const std::shared_ptr<IProblem>& problem){

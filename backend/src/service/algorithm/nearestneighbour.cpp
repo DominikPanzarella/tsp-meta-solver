@@ -3,12 +3,14 @@
 #include "service/algorithm/ipath.h"
 #include "service/algorithm/path.h"
 #include "service/algorithm/tspsolution.h"
+#include <chrono>
 
 std::string NearestNeighbour::name() const {
     return "NearestNeighbour";
 }
 
 std::shared_ptr<ISolution> NearestNeighbour::execute(std::shared_ptr<IProblem> problem) {
+    auto start = std::chrono::high_resolution_clock::now();
     const auto& dist = problem->getGraph().getMatrix();
     int n = problem->getDimension();
 
@@ -44,6 +46,13 @@ std::shared_ptr<ISolution> NearestNeighbour::execute(std::shared_ptr<IProblem> p
     totalCost += dist[current][tour[0]];
     tour.push_back(tour[0]);
 
+
+    //Execution time 
+    auto end = std::chrono::high_resolution_clock::now();
+    int duration_us = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
     std::shared_ptr<IPath> path = std::make_shared<Path>(tour, totalCost);
-    return std::make_shared<TspSolution>(path);
+    auto solution = std::make_shared<TspSolution>(path);
+    solution->setExecutionTime(duration_us);
+
+    return solution;
 }

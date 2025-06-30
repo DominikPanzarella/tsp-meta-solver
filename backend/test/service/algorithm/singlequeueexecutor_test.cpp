@@ -16,10 +16,24 @@
 #include <fstream>
 #include <sstream>
 
+
 namespace fs = std::filesystem;
 
 class SingleQueueParamTest : public ::testing::TestWithParam<std::string> {
     protected:
+        static std::ofstream result_file;
+
+        static void SetUpTestSuite() {
+            bool file_exist = fs::exists("single_queue_solution_report.csv");
+            result_file.open("single_queue_solution_report.csv", std::ios::app);
+            if(!file_exist)
+                result_file << "File,N,Cost,Time(us),TourClosed\n";
+        }
+        
+        static void TearDownTestSuite() {
+            result_file.close();
+        }
+
         std::shared_ptr<IProblem> loadProblem(const std::string& path) {
     
             auto euc2DReader = std::make_shared<Euc2DReader>();
@@ -38,6 +52,8 @@ class SingleQueueParamTest : public ::testing::TestWithParam<std::string> {
             return euc2DReader->read(path);
         }
 };
+
+std::ofstream SingleQueueParamTest::result_file;
 
 TEST_P(SingleQueueParamTest, ExecutorRunsAndProducesValidTour){
     std::string path = GetParam();
@@ -76,6 +92,19 @@ TEST_P(SingleQueueParamTest, ExecutorRunsAndProducesValidTour){
     }
     ASSERT_EQ(tour.front(), tour.back()) << "Tour non chiuso!";
     ASSERT_GT(cost, 0.0);
+
+    result_file << path << ","
+            << n << ","
+            << solution->getCost() << ","
+            << solution->getExecutionTime() << "us,"
+            << (tour.front() == tour.back() ? "Closed" : "Not Closed") << "\n" << std::endl;
+
+             // Output a schermo
+    std::cout << "✓ " << fs::path(path).filename()
+    << " | Nodes: " << n
+    << " | Cost: " << cost
+    << " | Time: " << solution->getExecutionTime() << "ms"
+    << std::endl;
 
 }
 
