@@ -2,14 +2,15 @@
 #include "service/algorithm/ipath.h"
 #include "service/algorithm/path.h"
 #include "service/algorithm/tspsolution.h"
-#include <omp.h>  // Include OpenMP
 #include <chrono>
 #include <unordered_set>
+#include <limits>
+#include <vector>
+#include <memory>
 
 std::string NearestInsertion::name() const {
-    return "FarthestInsertion";
+    return "NearestInsertion";
 }
-
 
 std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> problem) {
     auto start = std::chrono::high_resolution_clock::now();
@@ -29,7 +30,7 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
         notInTour.insert(i);
     }
 
-    // Step 2: Insert the node nearest to 0
+    // Step 2: Insert the nearest node from node 0 (instead of farthest)
     int nearest = -1;
     double minDist = std::numeric_limits<double>::infinity();
     for (int j : notInTour) {
@@ -45,14 +46,20 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
 
     while (!notInTour.empty()) {
         int bestCandidate = -1;
-        double bestDist = std::numeric_limits<double>::infinity();
-        
+        double bestMinDist = std::numeric_limits<double>::infinity(); // note: smallest distance!
+
         for (int v : notInTour) {
+            double minDistToTour = std::numeric_limits<double>::infinity();
             for (int u : tour) {
-                if (dist[u][v] < bestDist) {
-                    bestDist = dist[u][v];
-                    bestCandidate = v;
+                if (dist[u][v] < minDistToTour) {
+                    minDistToTour = dist[u][v];
                 }
+            }
+
+            // In NearestInsertion pick the node with smallest minDistToTour
+            if (minDistToTour < bestMinDist) {
+                bestMinDist = minDistToTour;
+                bestCandidate = v;
             }
         }
 
@@ -61,7 +68,7 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
 
         for (auto it = tour.begin(); it != tour.end(); ++it) {
             auto nextIt = std::next(it);
-            if (nextIt == tour.end()) nextIt = tour.begin();  // chiusura tour
+            if (nextIt == tour.end()) nextIt = tour.begin();  // close the tour
 
             int u = *it;
             int w = *nextIt;
@@ -78,10 +85,10 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
         notInTour.erase(bestCandidate);
     }
 
-    // Chiusura tour
+    // Close the tour
     tour.push_back(tour[0]);
 
-    // Calcolo del costo totale
+    // Calculate total cost
     double totalCost = 0.0;
     for (size_t i = 0; i < tour.size() - 1; ++i) {
         totalCost += dist[tour[i]][tour[i + 1]];
@@ -92,7 +99,7 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
 
     std::shared_ptr<IPath> path = std::make_shared<Path>(tour, totalCost);
     auto solution = std::make_shared<TspSolution>(path);
-    solution->setExecutionTime(execTimeUs);  // Richiede che TspSolution supporti setExecutionTime()
+    solution->setExecutionTime(execTimeUs);
 
     return solution;
 }
