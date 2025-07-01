@@ -1,5 +1,0 @@
-if(EXISTS "/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests[1]_tests.cmake")
-  include("/Users/dominikpanzarella/Library/Mobile Documents/com~apple~CloudDocs/Desktop/SUPSI/Semestre 6/Tesi/tsp-meta-solver/build-release/backend/tsp_tests[1]_tests.cmake")
-else()
-  add_test(tsp_tests_NOT_BUILT tsp_tests_NOT_BUILT)
-endif()
