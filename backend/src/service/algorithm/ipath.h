@@ -15,4 +15,6 @@ public:
     virtual void setCost(double c) = 0;
 
     virtual double getCost() const =0;
+
+    virtual int getDimension() const =0;
 };

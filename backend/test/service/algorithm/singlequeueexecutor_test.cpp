@@ -27,7 +27,7 @@ class SingleQueueParamTest : public ::testing::TestWithParam<std::string> {
             bool file_exist = fs::exists("single_queue_solution_report.csv");
             result_file.open("single_queue_solution_report.csv", std::ios::app);
             if(!file_exist)
-                result_file << "File,N,Cost,Time(us),TourClosed\n";
+                result_file << "File,N_TOUR,Cost,Time(us),TourClosed\n";
         }
         
         static void TearDownTestSuite() {
@@ -94,7 +94,7 @@ TEST_P(SingleQueueParamTest, ExecutorRunsAndProducesValidTour){
     ASSERT_GT(cost, 0.0);
 
     result_file << path << ","
-            << n << ","
+            << solution->getDimension() << ","
             << solution->getCost() << ","
             << solution->getExecutionTime() << "us,"
             << (tour.front() == tour.back() ? "Closed" : "Not Closed") << "\n" << std::endl;

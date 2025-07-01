@@ -25,3 +25,7 @@ void Path::setCost(double c){
 double Path::getCost() const{
     return m_cost;
 }
+
+int Path::getDimension() const {
+    return m_nodes.size();
+}

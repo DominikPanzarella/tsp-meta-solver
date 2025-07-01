@@ -24,3 +24,7 @@ void TspSolution::setExecutionTime(int ms){
 int TspSolution::getExecutionTime() const {
     return m_executionTimeMs;
 }
+
+int TspSolution::getDimension() const{
+    return m_path->getDimension();
+}

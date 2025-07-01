@@ -46,10 +46,9 @@
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/lib/QtWidgets.framework",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/lib/QtGui.framework/Headers",
 		"/Users/dominikpanzarella/Qt/6.9.1/macos/lib/QtGui.framework",
-		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1",
-		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include",
-		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include",
-		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+		"/opt/homebrew/Cellar/llvm/20.1.7/include/c++/v1",
+		"/opt/homebrew/Cellar/llvm/20.1.7/lib/clang/20/include",
+		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -64,7 +63,7 @@
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++",
+		"/opt/homebrew/opt/llvm/bin/clang++",
 		"-dM",
 		"-E",
 		"-c",

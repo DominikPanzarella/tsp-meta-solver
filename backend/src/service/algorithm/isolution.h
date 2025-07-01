@@ -13,7 +13,9 @@ public:
     virtual double getCost() const = 0;
 
     virtual void setExecutionTime(int ms) = 0;
-    
+
     virtual int getExecutionTime() const = 0;
+
+    virtual int getDimension() const =0;
 
 };

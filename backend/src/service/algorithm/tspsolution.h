@@ -23,6 +23,8 @@ public:
     
     virtual int getExecutionTime() const override;
 
+    virtual int getDimension() const override;
+
 private:
 
     std::shared_ptr<IPath> m_path;

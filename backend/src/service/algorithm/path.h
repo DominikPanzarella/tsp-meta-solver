@@ -22,6 +22,8 @@ public:
 
     virtual double getCost() const override;
 
+    virtual int getDimension() const override;
+
 private:
 
     double m_cost;

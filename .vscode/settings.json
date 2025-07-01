@@ -82,7 +82,8 @@
       "stack": "cpp",
       "strstream": "cpp",
       "typeindex": "cpp",
-      "valarray": "cpp"
+      "valarray": "cpp",
+      "memory": "cpp"
     },
     "qttools.qtInstallation": "/Users/dominikpanzarella/Qt/6.9.1/macos",
     "qttools.designerPath": "/Users/dominikpanzarella/Qt/6.9.1/macos/bin/designer"
