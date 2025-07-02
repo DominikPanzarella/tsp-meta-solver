@@ -61,9 +61,6 @@ TEST_P(WorkStealingExecutorTest, TasksAreDistributedAndExecutedWithStealing) {
     // Avviamo l'esecuzione
     executor.run();
 
-    // Aspettiamo un po' per far eseguire i task
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
-
     // Dopo esecuzione le code dovrebbero essere vuote o quasi vuote
     auto queueSizesAfter = executor.getQueueSizes();
     int totalTasksAfter = 0;
@@ -78,13 +75,20 @@ TEST_P(WorkStealingExecutorTest, TasksAreDistributedAndExecutedWithStealing) {
     EXPECT_LE(collector->size(), nTasks);
 
     // Verifichiamo che tutte le soluzioni siano valide
-    for (auto& sol : collector->getSolutions()) {
-        ASSERT_NE(sol, nullptr);
-        auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
-        ASSERT_NE(tspSol, nullptr);
-        auto pathObj = tspSol->getPath();
-        ASSERT_NE(pathObj, nullptr);
-        EXPECT_GT(pathObj->nodes().size(), 1);
+    const auto& solutionsMap = collector->getSolutions();
+    ASSERT_FALSE(solutionsMap.empty()) << "La mappa delle soluzioni è vuota";
+
+    // Itera su ogni algoritmo e sulle sue soluzioni
+    for (const auto& [algoName, solutionsVec] : solutionsMap) {
+        ASSERT_FALSE(solutionsVec.empty()) << "Nessuna soluzione per algoritmo " << algoName;
+        for (const auto& sol : solutionsVec) {
+            ASSERT_NE(sol, nullptr);
+            auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
+            ASSERT_NE(tspSol, nullptr);
+            auto pathObj = tspSol->getPath();
+            ASSERT_NE(pathObj, nullptr);
+            EXPECT_GT(pathObj->nodes().size(), 1);
+        }
     }
 }
 

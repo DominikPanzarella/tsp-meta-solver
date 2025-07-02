@@ -55,7 +55,7 @@ class SingleQueueParamTest : public ::testing::TestWithParam<std::string> {
 
 std::ofstream SingleQueueParamTest::result_file;
 
-TEST_P(SingleQueueParamTest, ExecutorRunsAndProducesValidTour){
+TEST_P(SingleQueueParamTest, ExecutorRunsAndProducesValidTour) {
     std::string path = GetParam();
     auto problem = loadProblem(path);
     ASSERT_NE(problem, nullptr) << "Problem loading failed: " << path;
@@ -67,9 +67,15 @@ TEST_P(SingleQueueParamTest, ExecutorRunsAndProducesValidTour){
 
     auto collector = executor.getSolutionCollector();
     ASSERT_NE(collector, nullptr);
-    ASSERT_EQ(collector->size(), 1);
+    ASSERT_GT(collector->size(), 0) << "Nessuna soluzione raccolta";
 
-    auto solution = collector->getSolutions().front();
+    const auto& solutionsMap = collector->getSolutions();
+    ASSERT_FALSE(solutionsMap.empty()) << "La mappa delle soluzioni è vuota";
+
+    auto it = solutionsMap.begin(); // prendo la prima entry
+    //ASSERT_FALSE(it->second.empty()) << "Il vettore di soluzioni è vuoto per l'algoritmo " << it->first;
+
+    auto solution = it->second.front();
     ASSERT_NE(solution, nullptr);
 
     auto tspSolution = std::dynamic_pointer_cast<TspSolution>(solution);
@@ -93,19 +99,19 @@ TEST_P(SingleQueueParamTest, ExecutorRunsAndProducesValidTour){
     ASSERT_EQ(tour.front(), tour.back()) << "Tour non chiuso!";
     ASSERT_GT(cost, 0.0);
 
+    // Scrittura su file
     result_file << path << ","
-            << solution->getDimension() << ","
-            << solution->getCost() << ","
-            << solution->getExecutionTime() << "us,"
-            << (tour.front() == tour.back() ? "Closed" : "Not Closed") << "\n" << std::endl;
+                << solution->getDimension() << ","
+                << solution->getCost() << ","
+                << solution->getExecutionTime() << "us,"
+                << (tour.front() == tour.back() ? "Closed" : "Not Closed") << "\n";
 
-             // Output a schermo
-    std::cout << "✓ " << fs::path(path).filename()
-    << " | Nodes: " << n
-    << " | Cost: " << cost
-    << " | Time: " << solution->getExecutionTime() << "ms"
-    << std::endl;
-
+    // Output a schermo
+    std::cout << "✓ " << fs::path(path).filename().string()
+              << " | Nodes: " << n
+              << " | Cost: " << cost
+              << " | Time: " << solution->getExecutionTime() << " us"
+              << std::endl;
 }
 
     

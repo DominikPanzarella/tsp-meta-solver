@@ -77,45 +77,50 @@ TEST_P(SingleQueueFakeParamTest, ExecutorRunsAndProducesValidTour){
     ASSERT_NE(collector, nullptr);
     ASSERT_EQ(collector->size(), 3);
 
-    const std::vector<std::shared_ptr<ISolution>>& solutions = collector->getSolutions();
-    ASSERT_FALSE(solutions.empty());
+    const auto& solutionsMap = collector->getSolutions();
 
-    for(auto solution : solutions){
-        auto tspSolution = std::dynamic_pointer_cast<TspSolution>(solution);
-        ASSERT_NE(tspSolution, nullptr);
-    
-        auto pathObj = tspSolution->getPath();
-        ASSERT_NE(pathObj, nullptr);
-    
-        const auto& tour = pathObj->nodes();
-        double cost = pathObj->getCost();
-        int n = problem->getDimension();
-    
-        ASSERT_EQ(tour.size(), n + 1);
-        std::vector<bool> visited(n, false);
-        for (size_t i = 0; i < tour.size() - 1; ++i) {
-            ASSERT_GE(tour[i], 0);
-            ASSERT_LT(tour[i], n);
-            ASSERT_FALSE(visited[tour[i]]) << "Nodo ripetuto!";
-            visited[tour[i]] = true;
+    ASSERT_FALSE(solutionsMap.empty());
+
+    for(const auto& [ algoName, solutions ]: solutionsMap){
+        for(const auto& solution : solutions){
+
+
+            auto tspSolution = std::dynamic_pointer_cast<TspSolution>(solution);
+            ASSERT_NE(tspSolution, nullptr);
+        
+            auto pathObj = tspSolution->getPath();
+            ASSERT_NE(pathObj, nullptr);
+        
+            const auto& tour = pathObj->nodes();
+            double cost = pathObj->getCost();
+            int n = problem->getDimension();
+        
+            ASSERT_EQ(tour.size(), n + 1);
+            std::vector<bool> visited(n, false);
+            for (size_t i = 0; i < tour.size() - 1; ++i) {
+                ASSERT_GE(tour[i], 0);
+                ASSERT_LT(tour[i], n);
+                ASSERT_FALSE(visited[tour[i]]) << "Nodo ripetuto!";
+                visited[tour[i]] = true;
+            }
+            ASSERT_EQ(tour.front(), tour.back()) << "Tour non chiuso!";
+            ASSERT_GT(cost, 0.0);
+        
+            result_file << path << ","
+                    << solution->getDimension() << ","
+                    << solution->getCost() << ","
+                    << solution->getExecutionTime() << "us,";
+            for(auto node : pathObj->nodes())
+                result_file << node << " ";
+            result_file << std::endl;
+        
+                    // Output a schermo
+            std::cout << "✓ " << fs::path(path).filename()
+            << " | Nodes: " << n
+            << " | Cost: " << cost
+            << " | Time: " << solution->getExecutionTime() << "ms"
+            << std::endl;
         }
-        ASSERT_EQ(tour.front(), tour.back()) << "Tour non chiuso!";
-        ASSERT_GT(cost, 0.0);
-    
-        result_file << path << ","
-                << solution->getDimension() << ","
-                << solution->getCost() << ","
-                << solution->getExecutionTime() << "us,";
-        for(auto node : pathObj->nodes())
-            result_file << node << " ";
-        result_file << std::endl;
-    
-                 // Output a schermo
-        std::cout << "✓ " << fs::path(path).filename()
-        << " | Nodes: " << n
-        << " | Cost: " << cost
-        << " | Time: " << solution->getExecutionTime() << "ms"
-        << std::endl;
     }
 
 

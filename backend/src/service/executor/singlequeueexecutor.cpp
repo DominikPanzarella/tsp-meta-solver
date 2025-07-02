@@ -14,7 +14,7 @@ void SingleQueueExecutor::add(const std::shared_ptr<IAlgorithm>& algo,
 void SingleQueueExecutor::run(){
     for(auto& task : m_tasks){
         std::shared_ptr<ISolution> result = task->execute();
-        m_solutionCollector->addSolution(result);
+        m_solutionCollector->addSolution(task->getAlgorithm()->name(),result);
     }
 }
 

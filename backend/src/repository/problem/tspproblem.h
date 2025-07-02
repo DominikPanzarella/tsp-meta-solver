@@ -86,6 +86,8 @@ public:
     
     void setGraph(std::shared_ptr<IGraph> graph) override;
 
+    const int getCost(int i,int j) const override;
+
 
     EdgeWeightType parseEdgeWeightType(const std::string& str) const;
 

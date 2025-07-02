@@ -74,9 +74,4 @@ add_custom_command(TARGET tsp_backend POST_BUILD
     ${CMAKE_CURRENT_BINARY_DIR}/resources
 )
 
-find_package(OpenMP REQUIRED)
-
-if(OpenMP_CXX_FOUND)
-    target_link_libraries(tsp_backend PRIVATE OpenMP::OpenMP_CXX)
-    target_compile_options(tsp_backend PRIVATE ${OpenMP_CXX_FLAGS})
-endif()
+add_definitions(-DLKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")

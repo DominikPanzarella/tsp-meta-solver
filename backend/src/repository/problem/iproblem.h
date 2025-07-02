@@ -44,6 +44,8 @@ public:
 
         virtual const IGraph& getGraph() const = 0;
 
+        virtual const int getCost(int i,int j) const = 0;
+
         // SET
         virtual void setName(const std::string& name) = 0;
 

@@ -183,7 +183,7 @@ void WorkStealingExecutor::worker(int id) {
                     // Thread-safe solution collection
                     std::lock_guard<std::mutex> lock(m_solutionMutex);
                     if (m_solutionCollector) {  // Check if still valid
-                        m_solutionCollector->addSolution(solution);
+                        m_solutionCollector->addSolution(task->getAlgorithm()->name(),solution);
                     }
                 }
             } catch (const std::exception& e) {

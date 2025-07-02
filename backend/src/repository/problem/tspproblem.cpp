@@ -155,3 +155,11 @@ void TspProblem::PrintMatrix() const{
 
 
 }
+
+const int TspProblem::getCost(int i,int j) const {
+    if(m_graph == nullptr)          return -1;
+    if(i<0 || i>=m_dimension)       return -1;
+    if(j<0 || j>=m_dimension)       return -1;
+    auto adjMatrix = m_graph->getMatrix();
+    return adjMatrix[i][j];
+}

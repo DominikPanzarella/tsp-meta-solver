@@ -1,6 +1,6 @@
 #include "tspsolution.h"
 
-TspSolution::TspSolution(std::shared_ptr<IPath> path) : m_path(std::move(path))
+TspSolution::TspSolution(std::shared_ptr<IPath> path,std::shared_ptr<IProblem> problem) : m_path(std::move(path)), m_problem(std::move(problem))
 {
     //Empty body constructor
 }
@@ -27,4 +27,8 @@ int TspSolution::getExecutionTime() const {
 
 int TspSolution::getDimension() const{
     return m_path->getDimension();
+}
+
+const std::shared_ptr<IProblem> TspSolution::getProblem() const{
+    return m_problem;
 }

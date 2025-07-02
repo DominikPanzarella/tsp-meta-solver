@@ -97,7 +97,7 @@ std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> 
     int execTimeUs = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 
     std::shared_ptr<IPath> path = std::make_shared<Path>(tour, totalCost);
-    auto solution = std::make_shared<TspSolution>(path);
+    auto solution = std::make_shared<TspSolution>(path, problem);
     solution->setExecutionTime(execTimeUs);
 
     return solution;

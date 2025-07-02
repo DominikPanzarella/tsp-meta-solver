@@ -7,7 +7,7 @@ public:
 
     TspSolution() =default;
 
-    TspSolution(std::shared_ptr<IPath> path);
+    TspSolution(std::shared_ptr<IPath> path, std::shared_ptr<IProblem> problem);
 
     virtual ~TspSolution()=default;
     
@@ -25,9 +25,13 @@ public:
 
     virtual int getDimension() const override;
 
+    virtual const std::shared_ptr<IProblem> getProblem() const override;
+
 private:
 
     std::shared_ptr<IPath> m_path;
+
+    std::shared_ptr<IProblem> m_problem;
 
     int m_executionTimeMs = 0.0;          //ms
 };
