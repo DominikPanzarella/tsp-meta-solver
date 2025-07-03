@@ -1,4 +1,4 @@
-NAME : pa561.tsp
+NAME : pa561
 COMMENT : 561-city problem (Kleinschmidt)
 TYPE : TSP
 DIMENSION : 561

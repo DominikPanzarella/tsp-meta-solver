@@ -33,15 +33,43 @@ protected:
 
         return euc2DReader->read(path);
     }
+
+    static const std::unordered_map<std::string, int>& getOptima(){
+        static std::unordered_map<std::string, int> optima = LKH3Solver::loadOptima("resources/tsp_optima.csv");
+        return optima;
+    }
 };
 
-TEST_P(LKH3ParamTest, LKH3GivesValidTour) {
+TEST_P(LKH3ParamTest, LKH3FastSolveSymmetric) {
     std::string path = GetParam();
     auto problem = loadProblem(path);
     ASSERT_NE(problem, nullptr) << "Problem loading failed for file: " << path;
 
-    // Path all'eseguibile LKH3
-    LKH3Solver lkh3(LKH3_PATH);  // dove LKH3_PATH è il path assoluto definito da CMake
+    std::string name = problem->getName();
+    std::string tspFile = "resources/" + name + ".tsp";
+    std::string solFile = "tmp_lkh3/solution_" + name + ".txt";
+    std::string paramFile = "tmp_lkh3/params_" + name + ".par";
+
+    LKH3Config config;
+    config.PROBLEM_FILE = tspFile;
+    config.OUTPUT_TOUR_FILE = solFile;
+    config.OPTIMUM = std::nullopt;  // carica se disponibile
+    config.MAX_TRIALS = 500;        // molto basso per velocità
+    config.RUNS = 1;                // poche esecuzioni
+    config.SEED = 42;
+    config.TRACE_LEVEL = 0;
+    config.MAX_CANDIDATES = 5;
+    config.MOVE_TYPE = 2;           // 2-opt più veloce, meno potente
+    config.BACKTRACKING = false;    // disabilitato
+    config.SUBGRADIENT = false;     // disabilitato
+    config.RESTRICTED_SEARCH = true; // abilitato per velocità
+
+    const auto& optima = getOptima();
+    auto it = optima.find(name);
+    if(it != optima.end())
+        config.OPTIMUM = it->second;
+
+    LKH3Solver lkh3(LKH3_PATH, config);
     auto solution = lkh3.execute(problem);
     auto tspSolution = std::dynamic_pointer_cast<TspSolution>(solution);
     ASSERT_NE(tspSolution, nullptr);
@@ -52,9 +80,9 @@ TEST_P(LKH3ParamTest, LKH3GivesValidTour) {
     const auto& tour = tspPath->nodes();
     double cost = tspPath->getCost();
 
-    // Verifica: tour valido (tutti i nodi visitati una sola volta tranne il ritorno)
     int n = problem->getDimension();
     ASSERT_EQ(tour.size(), n + 1);
+
     std::vector<bool> visited(n, false);
     for (size_t i = 0; i < tour.size() - 1; ++i) {
         ASSERT_GE(tour[i], 0);
@@ -66,6 +94,7 @@ TEST_P(LKH3ParamTest, LKH3GivesValidTour) {
     ASSERT_EQ(tour.front(), tour.back()) << "Tour non chiuso correttamente!";
     ASSERT_GT(cost, 0.0);
 }
+
 
 INSTANTIATE_TEST_SUITE_P(AllTspInstances,
                          LKH3ParamTest,

@@ -6,6 +6,7 @@
 #include "service/algorithm/nearestneighbour.h"
 #include "service/algorithm/nearestinsertion.h"
 #include "service/algorithm/farthestinsertion.h"
+#include "service/algorithm/lkh3solver.h"
 #include "repository/problem/iproblem.h"
 #include "repository/reader/tspreader.h"
 #include "repository/reader/euc2dreader.h"
@@ -19,78 +20,85 @@
 
 namespace fs = std::filesystem;
 
-class CsvWriterTest : public ::testing::Test {
-protected:
-    std::shared_ptr<IProblem> loadProblem(const std::string& path) {
-        auto euc2DReader = std::make_shared<Euc2DReader>();
-        auto ceil2dReader = std::make_shared<Ceil2dReader>();
-        auto matrixReader = std::make_shared<MatrixReader>();
-        auto geoReader = std::make_shared<GeoReader>();
-        auto attReader = std::make_shared<AttReader>();
-
-        euc2DReader->set_successor(ceil2dReader);
-        ceil2dReader->set_successor(matrixReader);
-        matrixReader->set_successor(geoReader);
-        geoReader->set_successor(attReader);
-
-        return euc2DReader->read(path);
-    }
-
-    std::vector<std::shared_ptr<IAlgorithm>> getAlgorithms() {
-        return {
-            std::make_shared<NearestNeighbour>()
-        };
-    }
-
-    void removeFileIfExists(const std::string& filename) {
-        if (fs::exists(filename)) fs::remove(filename);
-    }
-};
-
-TEST_F(CsvWriterTest, RunAllAlgorithmsOnAllInstancesAndWriteCsv) {
-    const std::string resourcesPath = "resources";
-    auto instances = collectTspInstances(resourcesPath);
+class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgorithm>> {
+    protected:
+        static std::vector<std::shared_ptr<IProblem>> problems;
     
-    SingleQueueExecutor executor;
-    CsvWriter writer;
-
-
-    auto algorithms = getAlgorithms();
-
-    // 1) Per ogni istanza e per ogni algoritmo: eseguo separatamente e raccolgo
-    for (const auto& filepath : instances) {
-        auto problem = loadProblem(filepath);
-        ASSERT_NE(problem, nullptr) << "Failed to load problem: " << filepath;
-
-        for (const auto& algo : algorithms) {
-            executor.add(algo, problem);
+        static void SetUpTestSuite() {
+            const std::string resourcesPath = "resources";
+            auto paths = collectTspInstances(resourcesPath);
+    
+            auto euc2DReader = std::make_shared<Euc2DReader>();
+            auto ceil2dReader = std::make_shared<Ceil2dReader>();
+            auto matrixReader = std::make_shared<MatrixReader>();
+            auto geoReader = std::make_shared<GeoReader>();
+            auto attReader = std::make_shared<AttReader>();
+    
+            euc2DReader->set_successor(ceil2dReader);
+            ceil2dReader->set_successor(matrixReader);
+            matrixReader->set_successor(geoReader);
+            geoReader->set_successor(attReader);
+    
+            for (const auto& path : paths) {
+                auto problem = euc2DReader->read(path);
+                ASSERT_NE(problem, nullptr) << "Failed to read: " << path;
+                problems.push_back(problem);
+            }
         }
-    }
-
-    executor.run();
-
-    // 2) Rimuovo eventuali file CSV preesistenti
-    for (const auto& algo : algorithms) {
-        std::string fn = "results_" + algo->name() + ".csv";
-        removeFileIfExists(fn);
-    }
-
-    const auto& collector = executor.getSolutionCollector();
-    const auto& solutionsByAlgo = collector->getSolutions();
-
-    for(const auto& [algoName, solutions] : solutionsByAlgo) {
-        for(const auto& solution : solutions){
-            ASSERT_NE(solution, nullptr) << "Solution is nullptr for algo: " << algoName;
-            ASSERT_NE(solution->getProblem(), nullptr) << "Problem is nullptr for algo: " << algoName;
-            std::cout << algoName << " -- " << solution->getProblem()->getName() << std::endl;
+    
+        static void TearDownTestSuite() {
+            problems.clear();  // cleanup
         }
+    
+        void removeFileIfExists(const std::string& filename) {
+            if (fs::exists(filename)) fs::remove(filename);
+        }
+    };
+    
+    // Inizializzazione del campo statico
+    std::vector<std::shared_ptr<IProblem>> CsvWriterAlgoTest::problems;
+    
+    TEST_P(CsvWriterAlgoTest, RunAlgorithmOnLoadedInstancesAndWriteCsv) {
+        auto algorithm = GetParam();
+        ASSERT_NE(algorithm, nullptr);
+    
+        SingleQueueExecutor executor;
+        CsvWriter writer;
+    
+        for (const auto& problem : problems) {
+            executor.add(algorithm, problem);
+        }
+    
+        executor.run();
+    
+        std::string filename = "results_" + algorithm->name() + ".csv";
+        removeFileIfExists(filename);
+    
+        const auto& collector = executor.getSolutionCollector();
+        const auto& solutionsByAlgo = collector->getSolutions();
+    
+        //ASSERT_TRUE(solutionsByAlgo.contains(algorithm->name()));
+    
+        for (const auto& solution : solutionsByAlgo.at(algorithm->name())) {
+            ASSERT_NE(solution, nullptr);
+            ASSERT_NE(solution->getProblem(), nullptr);
+        }
+    
+        bool success = writer.write("", "csv", collector);
+        EXPECT_TRUE(success);
     }
 
-
-    ASSERT_GT(solutionsByAlgo.size(),0);
-
-    bool success = writer.write("", "csv",collector);
-
-    EXPECT_TRUE(success);
-
-}
+    INSTANTIATE_TEST_SUITE_P(
+        AlgorithmTests,
+        CsvWriterAlgoTest,
+        ::testing::Values(
+            std::make_shared<NearestNeighbour>(),
+            std::make_shared<NearestInsertion>(),
+            std::make_shared<FarthestInsertion>(),
+            std::make_shared<LKH3Solver>()
+        ),
+        [](const ::testing::TestParamInfo<std::shared_ptr<IAlgorithm>>& info) {
+            return info.param->name();
+        }
+    );
+    

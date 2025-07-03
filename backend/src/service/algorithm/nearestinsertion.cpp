@@ -13,8 +13,6 @@ std::string NearestInsertion::name() const {
 }
 
 std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> problem) {
-    auto start = std::chrono::high_resolution_clock::now();
-
     const auto& dist = problem->getGraph().getMatrix();
     int n = problem->getDimension();
     if (n == 0) return nullptr;
@@ -94,12 +92,8 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
         totalCost += dist[tour[i]][tour[i + 1]];
     }
 
-    auto end = std::chrono::high_resolution_clock::now();
-    int execTimeUs = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
-
     std::shared_ptr<IPath> path = std::make_shared<Path>(tour, totalCost);
     auto solution = std::make_shared<TspSolution>(path, problem);
-    solution->setExecutionTime(execTimeUs);
 
     return solution;
 }

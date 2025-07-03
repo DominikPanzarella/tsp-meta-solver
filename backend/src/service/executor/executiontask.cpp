@@ -9,7 +9,20 @@ ExecutionTask::ExecutionTask(std::shared_ptr<IAlgorithm> algo,
     }
 
 std::shared_ptr<ISolution> ExecutionTask::execute() {
-    return m_algo->execute(m_problem);
+    //Start measuring exec time
+    auto start = std::chrono::high_resolution_clock::now(); 
+
+    //Execution
+    const auto& solution =  m_algo->execute(m_problem);
+
+    //Stop measuring execution time
+    auto end = std::chrono::high_resolution_clock::now();
+    int execTimeUs = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+    
+    //Set execution time
+    solution->setExecutionTime(execTimeUs);
+
+    return solution;
 }
 
 
