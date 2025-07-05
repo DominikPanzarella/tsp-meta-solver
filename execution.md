@@ -1,17 +1,16 @@
-Compilare ed eseguire con Qt (GUI) + Test (Ctest)
+Compilare ed eseguire 
 
 🔹 Debug
 
-cmake --preset debug
-cmake --build --preset debug
-./build-debug/frontend/TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER
+cmake --preset cli-debug
+cmake --build --preset cli-debug
+./build-debug/frontend/tsp-meta-solver
 
 🔹 Release
 
-cmake --preset release
-cmake --build --preset release
-./build-release/frontend/TSP-META-SOLVER.app/Contents/MacOS/TSP-META-SOLVER
-
+cmake --preset cli-release
+cmake --build --preset cli-release
+./build-release/frontend/tsp-meta-solver
 
 🔹 Test
 #from root

@@ -3,8 +3,7 @@
 
 // ----- Implementation
 
-TspService::TspService() {
-    repositoryLayer = std::make_unique<TspRepository>();
+TspService::TspService() : repositoryLayer(std::make_unique<TspRepository>()){
 }
 
 const std::shared_ptr<TspService>& TspService::getInstance(){
