@@ -33,10 +33,9 @@ class ConcordeParamTest : public ::testing::TestWithParam<std::string> {
     
             return euc2DReader->read(path);
         }
-    
 };
 
-TEST_P(ConcordeParamTest, LKH3FastSolveSymmetric) {
+TEST_P(ConcordeParamTest, ConcordeInstancesTest) {
     std::string path = GetParam();
     auto problem = loadProblem(path);
     ASSERT_NE(problem, nullptr) << "Problem loading failed for file: " << path;
@@ -44,7 +43,10 @@ TEST_P(ConcordeParamTest, LKH3FastSolveSymmetric) {
     std::string name = problem->getName();
     std::string tspFile = "resources/" + name + ".tsp";
 
-    ConcordeSolver concorde(CONCORDE_PATH);
+
+    ConcordeConfig config;
+    config.MAX_CHUNK_SIZE = 24;
+    ConcordeSolver concorde(CONCORDE_PATH, config);
     auto solution = concorde.execute(problem);
 
     ASSERT_NE(solution, nullptr);

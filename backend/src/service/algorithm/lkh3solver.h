@@ -16,6 +16,8 @@ public:
     virtual std::string name() const override;
 
     void setConfig(LKH3Config config);
+
+    void resetConfig();
 private:
 
     std::string m_lkhPath;
@@ -31,6 +33,7 @@ private:
     std::shared_ptr<ISolution> readSolution(std::shared_ptr<IProblem> problem);
 
     void prepareForProblem(const std::shared_ptr<IProblem>& problem, std::string tspFile, std::string solFile);
+
 
 };
 

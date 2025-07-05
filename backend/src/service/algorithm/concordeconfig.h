@@ -5,7 +5,7 @@
 struct ConcordeConfig {
     // File e input/output
     std::string PROBLEM_FILE;                    // file TSP (obbligatorio)
-    std::optional<std::string> OUTPUT_TOUR_FILE; // -o output file tour
+    std::string OUTPUT_TOUR_FILE; // -o output file tour
     std::optional<std::string> INITIAL_TOUR_FILE; // -t tour iniziale
     std::optional<std::string> RESTART_FILE;     // -R file di restart
 

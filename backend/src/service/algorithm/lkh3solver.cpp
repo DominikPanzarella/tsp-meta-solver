@@ -195,9 +195,12 @@ void LKH3Solver::setConfig(LKH3Config config) {
     m_config = config;
 }
 
+void LKH3Solver::resetConfig(){
+    m_config = LKH3Config{};
+}
+
 
 void LKH3Solver::prepareForProblem(const std::shared_ptr<IProblem>& problem, std::string tspFile, std::string solFile) {
-    std::string name = problem->getName();
     m_config.PROBLEM_FILE = tspFile;
     m_config.OUTPUT_TOUR_FILE = solFile;
 }
