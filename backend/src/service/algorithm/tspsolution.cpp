@@ -32,3 +32,8 @@ int TspSolution::getDimension() const{
 const std::shared_ptr<IProblem> TspSolution::getProblem() const{
     return m_problem;
 }
+
+void TspSolution::reset(){
+    m_path->reset();
+    m_executionTimeMs = 0;
+}

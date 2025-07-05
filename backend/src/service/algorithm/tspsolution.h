@@ -27,6 +27,8 @@ public:
 
     virtual const std::shared_ptr<IProblem> getProblem() const override;
 
+    virtual void reset() override;
+
 private:
 
     std::shared_ptr<IPath> m_path;

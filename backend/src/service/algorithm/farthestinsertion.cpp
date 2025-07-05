@@ -91,10 +91,8 @@ std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> 
         totalCost += dist[tour[i]][tour[i + 1]];
     }
 
-
     std::shared_ptr<IPath> path = std::make_shared<Path>(tour, totalCost);
-    auto solution = std::make_shared<TspSolution>(path, problem);
-
+    std::shared_ptr<TspSolution> solution = std::make_shared<TspSolution>(path, problem);
 
     return solution;
 }

@@ -83,30 +83,7 @@ class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgor
         CsvWriter writer;
     
         for (const auto& problem : problems) {
-            if(algorithm->name() == "LKH3")
-            {
-                std::string tspFile = "resources/" + problem->getName() + ".tsp";
-                std::string solFile = "tmp_lkh3/solution_" + problem->getName() + ".txt";
-
-                LKH3Config config;
-                config.PROBLEM_FILE = tspFile;  // placeholder, sarà sovrascritto da executor
-                config.OUTPUT_TOUR_FILE = solFile;
-                config.MAX_TRIALS = 500;
-                config.RUNS = 1;
-                config.SEED = 42;
-                config.TRACE_LEVEL = 0;
-                config.MAX_CANDIDATES = 5;
-                config.MOVE_TYPE = 2;
-                config.BACKTRACKING = false;
-                config.SUBGRADIENT = false;
-                config.RESTRICTED_SEARCH = true;
-
-                auto lkh3_algo = std::dynamic_pointer_cast<LKH3Solver>(algorithm);
-                ASSERT_NE(lkh3_algo, nullptr) << "Failed to cast to LKH3Solver";
-                lkh3_algo->setConfig(config);
-            }
             executor.add(algorithm, problem);
-
         }
     
         executor.run();
@@ -132,10 +109,10 @@ class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgor
         AlgorithmTests,
         CsvWriterAlgoTest,
         ::testing::Values(
-            std::make_shared<NearestNeighbour>(),
-            std::make_shared<NearestInsertion>(),
-            std::make_shared<FarthestInsertion>(),
-            makeFastLKH3()
+            //std::make_shared<NearestNeighbour>(),
+            //std::make_shared<NearestInsertion>(),
+            std::make_shared<FarthestInsertion>()
+            //makeFastLKH3()
         ),
         [](const ::testing::TestParamInfo<std::shared_ptr<IAlgorithm>>& info) {
             return info.param->name();

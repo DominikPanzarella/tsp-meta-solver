@@ -82,3 +82,8 @@ add_definitions(-DCONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP
 
 # oppure, se preferisci solo per i test/binario
 target_compile_definitions(tsp_tests PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
+
+add_definitions(-DOPTIMA_PATH="${CMAKE_BINARY_DIR}/resources/tsp_optima.csv")
+
+target_compile_definitions(tsp_backend PRIVATE OPTIMA_PATH="${CMAKE_BINARY_DIR}/resources/tsp_optima.csv")
+target_compile_definitions(tsp_tests PRIVATE OPTIMA_PATH="${CMAKE_BINARY_DIR}/resources/tsp_optima.csv")

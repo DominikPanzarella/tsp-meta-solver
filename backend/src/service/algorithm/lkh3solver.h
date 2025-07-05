@@ -2,7 +2,7 @@
 
 #include "service/algorithm/ialgorithm.h"
 #include "lkh3config.h" 
-#include <unordered_map>
+
 /*
     C++ wrapper for LKH3 algorithm (version 3.0.13) downloaded at http://akira.ruc.dk/~keld/research/LKH-3/
 */
@@ -14,9 +14,6 @@ public:
     virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem) override;
 
     virtual std::string name() const override;
-
-    static std::unordered_map<std::string, int> loadOptima(const std::string& filePath);
-
 
     void setConfig(LKH3Config config);
 private:
@@ -32,6 +29,8 @@ private:
     bool runLKH(const std::string& paramFile);
 
     std::shared_ptr<ISolution> readSolution(std::shared_ptr<IProblem> problem);
+
+    void prepareForProblem(const std::shared_ptr<IProblem>& problem, std::string tspFile, std::string solFile);
 
 };
 

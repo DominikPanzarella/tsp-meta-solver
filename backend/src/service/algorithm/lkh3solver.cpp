@@ -2,10 +2,10 @@
 #include "service/algorithm/path.h"
 #include "service/algorithm/tspsolution.h"
 
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
 #include <filesystem>
+
+#include <cstdlib>
+
 
 LKH3Solver::LKH3Solver(const std::string& lkhPath,LKH3Config config) 
 : m_lkhPath(std::filesystem::absolute(lkhPath)), m_workingDir("tmp_lkh3"), m_config{config}
@@ -125,8 +125,6 @@ std::string LKH3Solver::writeParamFile(const std::string& paramFile) {
 }
 
 
-
-
 bool LKH3Solver::runLKH(const std::string& paramFile){
     std::stringstream cmd;
     cmd << "\"" << m_lkhPath << "\" \"" << paramFile << "\"";
@@ -178,6 +176,9 @@ std::shared_ptr<ISolution> LKH3Solver::execute(std::shared_ptr<IProblem> problem
     //per il momento hardcodiamo il percorso del problema
     std::string tspFile = "resources/" + problem->getName() + ".tsp";
     std::string solFile = m_workingDir + "/solution_"+problem->getName()+".txt";
+    prepareForProblem(problem, tspFile, solFile);
+
+    
     std::string paramFile = m_workingDir + "/params_"+problem->getName()+".par";
 
     writeParamFile(paramFile);
@@ -190,45 +191,13 @@ std::shared_ptr<ISolution> LKH3Solver::execute(std::shared_ptr<IProblem> problem
     return readSolution(problem);
 }
 
-std::unordered_map<std::string, int> LKH3Solver::loadOptima(const std::string& filePath){
-
-    if(filePath.empty())        throw std::invalid_argument("filePath cannot be null");
-
-    std::unordered_map<std::string, int> optima;
-    std::ifstream file(filePath);
-
-    if (!file.is_open()) {
-        std::cerr << "[loadOptima] Error while opening the file: " << filePath << std::endl;
-        return optima;
-    }
-
-    std::string line;
-    bool firstLine = true;
-    while(std::getline(file, line)){
-
-        if (firstLine) { // salta intestazione
-            firstLine = false;
-            continue;
-        }
-
-        std::istringstream ss(line);
-        std::string name;
-        std::string costStr;
-
-        if(!std::getline(ss, name, ','))        continue;;
-        if(!std::getline(ss, costStr,',') )     continue;
-
-        try{
-            int cost = std::stoi(costStr);
-            optima[name] = cost;
-        }catch (const std::exception& e) {
-            std::cerr << "[loadOptima] Errore nella conversione: " << e.what() << " per linea: " << line << std::endl;
-        }
-    }
-
-    return optima;
-}
-
 void LKH3Solver::setConfig(LKH3Config config) {
     m_config = config;
+}
+
+
+void LKH3Solver::prepareForProblem(const std::shared_ptr<IProblem>& problem, std::string tspFile, std::string solFile) {
+    std::string name = problem->getName();
+    m_config.PROBLEM_FILE = tspFile;
+    m_config.OUTPUT_TOUR_FILE = solFile;
 }
