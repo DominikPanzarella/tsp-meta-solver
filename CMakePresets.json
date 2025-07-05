@@ -1,57 +1,38 @@
 {
-    "version": 3,
-    "cmakeMinimumRequired": {
-      "major": 3,
-      "minor": 21,
-      "patch": 0
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "cli-debug",
+      "displayName": "Debug CLI",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
     },
-    "configurePresets": [
-      {
-        "name": "debug",
-        "displayName": "Debug with Qt GUI",
-        "generator": "Ninja",
-        "binaryDir": "${sourceDir}/build-debug",
-        "cacheVariables": {
-          "CMAKE_BUILD_TYPE": "Debug",
-          "CMAKE_PREFIX_PATH": "/Users/dominikpanzarella/Qt/6.9.1/macos/lib/cmake",
-          "ENABLE_QT": "ON"
-        }
-      },
-      {
-        "name": "release",
-        "displayName": "Release with Qt GUI",
-        "generator": "Ninja",
-        "binaryDir": "${sourceDir}/build-release",
-        "cacheVariables": {
-          "CMAKE_BUILD_TYPE": "Release",
-          "CMAKE_PREFIX_PATH": "/Users/dominikpanzarella/Qt/6.9.1/macos/lib/cmake",
-          "ENABLE_QT": "ON"
-        }
-      },
-      {
-        "name": "cli-backend-only",
-        "displayName": "Release CLI Backend Only",
-        "generator": "Ninja",
-        "binaryDir": "${sourceDir}/build-cli",
-        "cacheVariables": {
-          "CMAKE_BUILD_TYPE": "Release",
-          "ENABLE_QT": "OFF"
-        }
+    {
+      "name": "cli-release",
+      "displayName": "Release CLI",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
       }
-    ],
-    "buildPresets": [
-      {
-        "name": "debug",
-        "configurePreset": "debug"
-      },
-      {
-        "name": "release",
-        "configurePreset": "release"
-      },
-      {
-        "name": "cli",
-        "configurePreset": "cli-backend-only"
-      }
-    ]
-  }
-  
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "cli-debug",
+      "configurePreset": "cli-debug"
+    },
+    {
+      "name": "cli-release",
+      "configurePreset": "cli-release"
+    }
+  ]
+}

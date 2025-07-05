@@ -1,31 +1,21 @@
-qt_standard_project_setup()
+cmake_minimum_required(VERSION 3.14)
+project(tsp_cli)
 
-qt_add_executable(TSP-META-SOLVER
-    WIN32 MACOSX_BUNDLE
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(tsp-meta-solver
     main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
 )
 
-target_link_libraries(TSP-META-SOLVER
-    PRIVATE
-        Qt::Core
-        Qt::Widgets
-        tsp_backend
+target_link_libraries(tsp-meta-solver
+    PRIVATE tsp_backend
 )
 
+# Installazione opzionale
 include(GNUInstallDirs)
 
-install(TARGETS TSP-META-SOLVER
-    BUNDLE  DESTINATION .
+install(TARGETS tsp-meta-solver
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
-
-qt_generate_deploy_app_script(
-    TARGET TSP-META-SOLVER
-    OUTPUT_SCRIPT deploy_script
-    NO_UNSUPPORTED_PLATFORM_ERROR
-)
-install(SCRIPT ${deploy_script})
