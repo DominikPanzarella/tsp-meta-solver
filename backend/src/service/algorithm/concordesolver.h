@@ -13,4 +13,13 @@ public:
     
 private:
 
+    std::string m_concordePath;
+
+    std::string m_workingDir;
+
+    bool runConcorde(const std::string& tspFile, const std::string& problemName);
+
+    std::shared_ptr<ISolution> readSolution(std::shared_ptr<IProblem> problem);
+
+
 };

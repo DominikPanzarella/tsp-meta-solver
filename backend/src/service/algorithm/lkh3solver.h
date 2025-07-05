@@ -16,7 +16,9 @@ public:
     virtual std::string name() const override;
 
     static std::unordered_map<std::string, int> loadOptima(const std::string& filePath);
-    
+
+
+    void setConfig(LKH3Config config);
 private:
 
     std::string m_lkhPath;

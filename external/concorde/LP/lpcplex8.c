@@ -42,6 +42,9 @@
 #include <cplex.h>
 
 #undef  CC_CPLEX_DISPLAY
+#ifndef CPX_PARAM_FASTMIP
+#define CPX_PARAM_FASTMIP 1017
+#endif
 
 #define CC_ONE_ENV
 
@@ -434,7 +437,7 @@ static int primalopt (CClp *lp)
     sprintf (probname, "prim%d.sav", probcnt);
     probcnt++;
     printf ("Writing %s\n", probname);
-    CPXsavwrite (lp->cplex_env, lp->cplex_lp, probname);
+    CPXwriteprob (lp->cplex_env, lp->cplex_lp, probname, NULL);
 #endif
 
     rval = CPXprimopt (lp->cplex_env, lp->cplex_lp);
@@ -499,7 +502,7 @@ static int dualopt (CClp *lp)
     sprintf (probname, "dual%d.sav", probcnt);
     probcnt++;
     printf ("Writing %s\n", probname);
-    CPXsavwrite (lp->cplex_env, lp->cplex_lp, probname);
+    CPXwriteprob (lp->cplex_env, lp->cplex_lp, probname, NULL);
 #endif
 
     rval = CPXdualopt (lp->cplex_env, lp->cplex_lp);
@@ -572,7 +575,7 @@ static int baropt (CClp *lp)
     sprintf (probname, "barrier%d.sav", probcnt);
     probcnt++;
     printf ("Writing %s\n", probname);
-    CPXsavwrite (lp->cplex_env, lp->cplex_lp, probname);
+    CPXwriteprob (lp->cplex_env, lp->cplex_lp, probname, NULL);
 #endif
 
     rval = CPXbaropt (lp->cplex_env, lp->cplex_lp);
@@ -1586,7 +1589,7 @@ int CClp_dump_lp (CClp *lp, const char *fname)
     strncpy (nambuf, fname, sizeof (nambuf));
     nambuf[sizeof(nambuf)-1] = '\0';
 
-    rval = CPXsavwrite (lp->cplex_env, lp->cplex_lp, nambuf);
+    rval = CPXwriteprob (lp->cplex_env, lp->cplex_lp, nambuf, NULL);
     if (rval) {
         fprintf (stderr, "CPXsavwrite failed\n");
     }

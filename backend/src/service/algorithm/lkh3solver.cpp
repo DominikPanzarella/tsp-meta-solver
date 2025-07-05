@@ -228,3 +228,7 @@ std::unordered_map<std::string, int> LKH3Solver::loadOptima(const std::string& f
 
     return optima;
 }
+
+void LKH3Solver::setConfig(LKH3Config config) {
+    m_config = config;
+}

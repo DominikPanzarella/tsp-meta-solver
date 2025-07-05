@@ -20,6 +20,23 @@
 
 namespace fs = std::filesystem;
 
+std::shared_ptr<IAlgorithm> makeFastLKH3() {
+    LKH3Config config;
+    config.PROBLEM_FILE = "";  // placeholder, sarà sovrascritto da executor
+    config.OUTPUT_TOUR_FILE = "tmp_lkh3/temp_solution.txt";
+    config.MAX_TRIALS = 500;
+    config.RUNS = 1;
+    config.SEED = 42;
+    config.TRACE_LEVEL = 0;
+    config.MAX_CANDIDATES = 5;
+    config.MOVE_TYPE = 2;
+    config.BACKTRACKING = false;
+    config.SUBGRADIENT = false;
+    config.RESTRICTED_SEARCH = true;
+
+    return std::make_shared<LKH3Solver>(LKH3_PATH, config);
+};
+
 class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgorithm>> {
     protected:
         static std::vector<std::shared_ptr<IProblem>> problems;
@@ -59,14 +76,37 @@ class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgor
     std::vector<std::shared_ptr<IProblem>> CsvWriterAlgoTest::problems;
     
     TEST_P(CsvWriterAlgoTest, RunAlgorithmOnLoadedInstancesAndWriteCsv) {
-        auto algorithm = GetParam();
+        const auto& algorithm = GetParam();
         ASSERT_NE(algorithm, nullptr);
     
         SingleQueueExecutor executor;
         CsvWriter writer;
     
         for (const auto& problem : problems) {
+            if(algorithm->name() == "LKH3")
+            {
+                std::string tspFile = "resources/" + problem->getName() + ".tsp";
+                std::string solFile = "tmp_lkh3/solution_" + problem->getName() + ".txt";
+
+                LKH3Config config;
+                config.PROBLEM_FILE = tspFile;  // placeholder, sarà sovrascritto da executor
+                config.OUTPUT_TOUR_FILE = solFile;
+                config.MAX_TRIALS = 500;
+                config.RUNS = 1;
+                config.SEED = 42;
+                config.TRACE_LEVEL = 0;
+                config.MAX_CANDIDATES = 5;
+                config.MOVE_TYPE = 2;
+                config.BACKTRACKING = false;
+                config.SUBGRADIENT = false;
+                config.RESTRICTED_SEARCH = true;
+
+                auto lkh3_algo = std::dynamic_pointer_cast<LKH3Solver>(algorithm);
+                ASSERT_NE(lkh3_algo, nullptr) << "Failed to cast to LKH3Solver";
+                lkh3_algo->setConfig(config);
+            }
             executor.add(algorithm, problem);
+
         }
     
         executor.run();
@@ -95,7 +135,7 @@ class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgor
             std::make_shared<NearestNeighbour>(),
             std::make_shared<NearestInsertion>(),
             std::make_shared<FarthestInsertion>(),
-            std::make_shared<LKH3Solver>()
+            makeFastLKH3()
         ),
         [](const ::testing::TestParamInfo<std::shared_ptr<IAlgorithm>>& info) {
             return info.param->name();

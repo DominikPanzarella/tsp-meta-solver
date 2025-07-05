@@ -75,3 +75,10 @@ add_custom_command(TARGET tsp_backend POST_BUILD
 )
 
 add_definitions(-DLKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
+
+target_compile_definitions(tsp_tests PRIVATE LKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
+
+add_definitions(-DCONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
+
+# oppure, se preferisci solo per i test/binario
+target_compile_definitions(tsp_tests PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
