@@ -1,7 +1,7 @@
 #include "matrixreader.h"
-#include "../problem/tspproblem.h"
-#include "../../service/graph/symmetricgraph.h"
-#include "../../service/graph/node.h"
+#include "service/problem/tspproblem.h"
+#include "service/graph/symmetricgraph.h"
+#include "service/graph/node.h"
 
 #include <sstream>
 #include <regex>

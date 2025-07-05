@@ -4,8 +4,7 @@
 // #INCLUDE //
 //////////////
 
-#include "../../service/graph/node.h"
-#include "../../service/graph/symmetricgraph.h"
+#include "service/graph/node.h"
 #include "tspreader.h"
 #include <tuple>
 

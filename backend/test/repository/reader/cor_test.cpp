@@ -6,7 +6,7 @@
 #include "repository/reader/ceil2dreader.h"
 #include "repository/reader/georeader.h"
 #include "repository/reader/matrixreader.h"
-#include "repository/problem/tspproblem.h"
+#include "service/problem/tspproblem.h"
 #include <filesystem>
 #include <fstream>
 #include <sstream>

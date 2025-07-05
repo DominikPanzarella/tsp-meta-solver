@@ -1,12 +1,12 @@
+#pragma once
 
-
-#include "repository/problem/iproblem.h"
+#include "service/problem/iproblem.h"
+#include "service/algorithm/isolutioncollector.h"
 
 class ITspRepository{
 public:
 
     virtual std::shared_ptr<IProblem> read(const std::string& file_path) =0;
 
-    //TODO: to implement export (need a solution object)
-    virtual bool write(const std::string& file_path) = 0;
+    virtual bool write(std::string file_path, std::string extension, const std::shared_ptr<ISolutionCollector>& solutionCollector) =0;
 };

@@ -1,8 +1,8 @@
 // Euc2DReader.cpp
 
 #include "euc2dreader.h"
-#include "../problem/tspproblem.h"
-#include "../../service/graph/symmetricgraph.h"
+#include "service/problem/tspproblem.h"
+#include "service/graph/symmetricgraph.h"
 #include <regex>
 #include <cmath>
 #include <sstream>

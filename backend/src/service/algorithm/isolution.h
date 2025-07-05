@@ -1,6 +1,6 @@
 #pragma once
 
-#include "repository/problem/iproblem.h"
+#include "service/problem/iproblem.h"
 #include "service/algorithm/ipath.h"
 
 class ISolution{

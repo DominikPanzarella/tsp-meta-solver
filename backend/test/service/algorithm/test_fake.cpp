@@ -2,7 +2,7 @@
 #include "service/algorithm/nearestneighbour.h"
 #include "service/algorithm/farthestinsertion.h"
 #include "service/algorithm/nearestinsertion.h"
-#include "repository/problem/iproblem.h"
+#include "service/problem/iproblem.h"
 #include "repository/reader/tspreader.h"
 #include "repository/reader/euc2dreader.h"
 #include "repository/reader/attreader.h"

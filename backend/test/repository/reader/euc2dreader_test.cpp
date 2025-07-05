@@ -2,7 +2,7 @@
 
 #include "repository/reader/tspreader.h"
 #include "repository/reader/euc2dreader.h"
-#include "repository/problem/tspproblem.h"
+#include "service/problem/tspproblem.h"
 #include <filesystem>
 #include <fstream>
 #include <sstream>

@@ -1,6 +1,6 @@
 #pragma once
-#include "service/executor/executiontask.h"
 
+#include "service/executor/executiontask.h"
 #include "service/algorithm/isolutioncollector.h"
 
 class IExecutor {
