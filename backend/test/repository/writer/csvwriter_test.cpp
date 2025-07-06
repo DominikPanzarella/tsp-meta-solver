@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include "utils/testutils.h"
 #include <filesystem>
 #include <fstream>
 
+#include "utils/testutils.cpp"
 #include "service/algorithm/nearestneighbour.h"
 #include "service/algorithm/nearestinsertion.h"
 #include "service/algorithm/farthestinsertion.h"
@@ -16,6 +16,7 @@
 #include "repository/reader/matrixreader.h"
 #include "service/algorithm/solutioncollector.h"
 #include "service/executor/singlequeueexecutor.h"
+#include "service/algorithm/concordesolver.h"
 #include "repository/writer/csvwriter.h"
 
 namespace fs = std::filesystem;
@@ -36,6 +37,10 @@ std::shared_ptr<IAlgorithm> makeFastLKH3() {
 
     return std::make_shared<LKH3Solver>(LKH3_PATH, config);
 };
+
+std::shared_ptr<IAlgorithm> makeConcorde() {
+    return std::make_shared<ConcordeSolver>(CONCORDE_PATH);
+}
 
 class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgorithm>> {
     protected:
@@ -109,10 +114,11 @@ class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgor
         AlgorithmTests,
         CsvWriterAlgoTest,
         ::testing::Values(
-            //std::make_shared<NearestNeighbour>(),
-            //std::make_shared<NearestInsertion>(),
-            std::make_shared<FarthestInsertion>()
-            //makeFastLKH3()
+            std::make_shared<NearestNeighbour>(),
+            std::make_shared<NearestInsertion>(),
+            std::make_shared<FarthestInsertion>(),
+            makeFastLKH3(),
+            makeConcorde()
         ),
         [](const ::testing::TestParamInfo<std::shared_ptr<IAlgorithm>>& info) {
             return info.param->name();

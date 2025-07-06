@@ -3,7 +3,7 @@
 
 // ----- Implementation
 
-ExecutorService::ExecutorService() : executor(std::unique_ptr<SingleQueueExecutor>())
+ExecutorService::ExecutorService() : executor(std::make_unique<SingleQueueExecutor>())
 {
 }
 

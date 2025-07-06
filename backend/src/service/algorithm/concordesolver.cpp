@@ -12,8 +12,9 @@ ConcordeSolver::ConcordeSolver(const std::string& concordePath, ConcordeConfig c
     : m_concordePath(std::filesystem::absolute(concordePath)),
       m_config(std::move(config)),
       m_workingDir("tmp_concorde")
-      {
-
+{
+    if(std::filesystem::exists(m_workingDir))
+        std::filesystem::remove_all(m_workingDir);
     std::filesystem::create_directories(m_workingDir);
 }
 

@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 
-#include "repository/tsprepository.h"
+#include "controller/executorcontroller.h"
+#include "controller/tspcontroller.h"
 #include "utils/testutils.cpp"
 
 
@@ -9,29 +10,29 @@
 
 namespace fs = std::filesystem;
 
-class TspRepositoryTest : public ::testing::TestWithParam<std::shared_ptr<IAlgorithm>>  {
+class ExecutorControllerTest : public ::testing::TestWithParam<std::shared_ptr<IAlgorithm>>  {
 protected:
     static std::vector<std::string> paths;
-    static std::unique_ptr<TspRepository> tspRepository;
-    static std::shared_ptr<IExecutor> executor;
+    static std::shared_ptr<ExecutorController> executorController;
+    static std::shared_ptr<TspController> tspController;
     static std::vector<std::shared_ptr<IProblem>> problems;
 
     static void SetUpTestSuite() {
         const std::string resourcesPath = "resources";
         paths = collectTspInstances(resourcesPath);
-        executor = createSingleQueueExecutor();
-        tspRepository = std::make_unique<TspRepository>();
+        tspController = TspController::getInstance();
+        executorController = ExecutorController::getInstance();
 
         for(const auto& path : paths){
-            auto problem = tspRepository->read(path);
+            auto problem = tspController->read(path);
             ASSERT_NE(problem, nullptr) << "Failed to read: " << path;
             problems.push_back(problem);
         }
     }
 
     static void TearDownTestSuite() {
-        tspRepository.reset();
-        executor.reset();
+        tspController.reset();
+        executorController.reset();
     }
 
     void removeFileIfExists(const std::string& filename){
@@ -41,26 +42,26 @@ protected:
 
 };
 
-std::vector<std::string> TspRepositoryTest::paths;
-std::unique_ptr<TspRepository> TspRepositoryTest::tspRepository;
-std::shared_ptr<IExecutor> TspRepositoryTest::executor;
-std::vector<std::shared_ptr<IProblem>> TspRepositoryTest::problems;
+std::vector<std::string> ExecutorControllerTest::paths;
+std::shared_ptr<TspController> ExecutorControllerTest::tspController;
+std::shared_ptr<ExecutorController> ExecutorControllerTest::executorController;
+std::vector<std::shared_ptr<IProblem>> ExecutorControllerTest::problems;
 
-TEST_P(TspRepositoryTest, ReadAllTspInstances) {
+TEST_P(ExecutorControllerTest, ReadAllTspInstances) {
 
     const auto& algorithm = GetParam();
     ASSERT_NE(algorithm, nullptr);
 
     for (const auto& problem : problems) {
-        executor->add(algorithm, problem);
+        executorController->add(algorithm, problem);
     }
 
-    executor->run();
+    executorController->run();
 
     std::string filename = "results_" + algorithm->name() + ".csv";
     removeFileIfExists(filename);
 
-    const auto& collector = executor->getSolutionCollector();
+    const auto& collector = executorController->getSolutionCollector();
     const auto& solutionsByAlgo = collector->getSolutions();
     ASSERT_NE(collector, nullptr) << "SolutionCollector is null";
 
@@ -69,13 +70,13 @@ TEST_P(TspRepositoryTest, ReadAllTspInstances) {
         ASSERT_NE(solution->getProblem(), nullptr);
     }
 
-    bool success = tspRepository->write("", "csv", collector);
+    bool success = tspController->write("", "csv", collector);
     EXPECT_TRUE(success);
 }
 
 INSTANTIATE_TEST_SUITE_P(
     AlgorithmsTest,
-    TspRepositoryTest,
+    ExecutorControllerTest,
     ::testing::ValuesIn(
         algoToTest()
     ),

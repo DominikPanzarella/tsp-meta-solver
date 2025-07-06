@@ -10,7 +10,9 @@
 LKH3Solver::LKH3Solver(const std::string& lkhPath,LKH3Config config) 
 : m_lkhPath(std::filesystem::absolute(lkhPath)), m_workingDir("tmp_lkh3"), m_config{config}
 {
-    std::filesystem::create_directory(m_workingDir);
+    if(std::filesystem::exists(m_workingDir))
+        std::filesystem::remove_all(m_workingDir);
+    std::filesystem::create_directories(m_workingDir);
 }
 
 std::string LKH3Solver::name() const {

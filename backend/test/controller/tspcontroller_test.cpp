@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "repository/tsprepository.h"
+#include "controller/tspcontroller.h"
 #include "utils/testutils.cpp"
 
 
@@ -9,10 +9,10 @@
 
 namespace fs = std::filesystem;
 
-class TspRepositoryTest : public ::testing::TestWithParam<std::shared_ptr<IAlgorithm>>  {
+class TspControllerTest : public ::testing::TestWithParam<std::shared_ptr<IAlgorithm>>  {
 protected:
     static std::vector<std::string> paths;
-    static std::unique_ptr<TspRepository> tspRepository;
+    static std::shared_ptr<TspController> tspController;
     static std::shared_ptr<IExecutor> executor;
     static std::vector<std::shared_ptr<IProblem>> problems;
 
@@ -20,17 +20,17 @@ protected:
         const std::string resourcesPath = "resources";
         paths = collectTspInstances(resourcesPath);
         executor = createSingleQueueExecutor();
-        tspRepository = std::make_unique<TspRepository>();
+        tspController = TspController::getInstance();
 
         for(const auto& path : paths){
-            auto problem = tspRepository->read(path);
+            auto problem = tspController->read(path);
             ASSERT_NE(problem, nullptr) << "Failed to read: " << path;
             problems.push_back(problem);
         }
     }
 
     static void TearDownTestSuite() {
-        tspRepository.reset();
+        tspController.reset();
         executor.reset();
     }
 
@@ -41,12 +41,12 @@ protected:
 
 };
 
-std::vector<std::string> TspRepositoryTest::paths;
-std::unique_ptr<TspRepository> TspRepositoryTest::tspRepository;
-std::shared_ptr<IExecutor> TspRepositoryTest::executor;
-std::vector<std::shared_ptr<IProblem>> TspRepositoryTest::problems;
+std::vector<std::string> TspControllerTest::paths;
+std::shared_ptr<TspController> TspControllerTest::tspController;
+std::shared_ptr<IExecutor> TspControllerTest::executor;
+std::vector<std::shared_ptr<IProblem>> TspControllerTest::problems;
 
-TEST_P(TspRepositoryTest, ReadAllTspInstances) {
+TEST_P(TspControllerTest, ReadAllTspInstances) {
 
     const auto& algorithm = GetParam();
     ASSERT_NE(algorithm, nullptr);
@@ -69,13 +69,13 @@ TEST_P(TspRepositoryTest, ReadAllTspInstances) {
         ASSERT_NE(solution->getProblem(), nullptr);
     }
 
-    bool success = tspRepository->write("", "csv", collector);
+    bool success = tspController->write("", "csv", collector);
     EXPECT_TRUE(success);
 }
 
 INSTANTIATE_TEST_SUITE_P(
     AlgorithmsTest,
-    TspRepositoryTest,
+    TspControllerTest,
     ::testing::ValuesIn(
         algoToTest()
     ),

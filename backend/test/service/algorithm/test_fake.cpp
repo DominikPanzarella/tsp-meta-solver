@@ -13,7 +13,7 @@
 #include "service/algorithm/path.h"
 #include "service/executor/singlequeueexecutor.h"
 #include "service/algorithm/solutioncollector.h"
-#include "utils/testutils.h"
+#include "utils/testutils.cpp"
 #include <filesystem>
 #include <fstream>
 #include <sstream>

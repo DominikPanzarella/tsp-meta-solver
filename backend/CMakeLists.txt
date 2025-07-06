@@ -37,9 +37,6 @@ target_include_directories(tsp_backend PUBLIC
 
 target_compile_features(tsp_backend PUBLIC cxx_std_17)
 
-# === CLI ===
-#add_executable(tsp_cli ${CMAKE_CURRENT_SOURCE_DIR}/src/main_cli.cpp)
-#target_link_libraries(tsp_cli PRIVATE tsp_backend)
 
 # === TEST ===
 enable_testing()
@@ -75,15 +72,13 @@ add_custom_command(TARGET tsp_backend POST_BUILD
 )
 
 add_definitions(-DLKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
-
-target_compile_definitions(tsp_tests PRIVATE LKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
-
 add_definitions(-DCONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
-
-# oppure, se preferisci solo per i test/binario
-target_compile_definitions(tsp_tests PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
-
 add_definitions(-DOPTIMA_PATH="${CMAKE_BINARY_DIR}/resources/tsp_optima.csv")
 
-target_compile_definitions(tsp_backend PRIVATE OPTIMA_PATH="${CMAKE_BINARY_DIR}/resources/tsp_optima.csv")
+target_compile_definitions(tsp_tests PRIVATE LKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
+target_compile_definitions(tsp_tests PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
 target_compile_definitions(tsp_tests PRIVATE OPTIMA_PATH="${CMAKE_BINARY_DIR}/resources/tsp_optima.csv")
+
+target_compile_definitions(tsp_backend PRIVATE LKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
+target_compile_definitions(tsp_backend PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
+target_compile_definitions(tsp_backend PRIVATE OPTIMA_PATH="${CMAKE_BINARY_DIR}/resources/tsp_optima.csv")

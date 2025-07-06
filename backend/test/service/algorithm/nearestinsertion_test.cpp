@@ -9,7 +9,7 @@
 #include "repository/reader/matrixreader.h"
 #include "service/algorithm/tspsolution.h"
 #include "service/algorithm/path.h"
-#include "utils/testutils.h"
+#include "utils/testutils.cpp"
 #include <filesystem>
 #include <fstream>
 #include <sstream>
