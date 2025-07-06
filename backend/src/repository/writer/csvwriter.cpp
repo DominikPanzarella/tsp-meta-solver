@@ -28,7 +28,7 @@ bool CsvWriter::writeFile(const std::shared_ptr<ISolutionCollector>& solutionCol
             continue;
         }
 
-        out << "Problem,Dimension,Cost,Time(us),TourLength,Ratio" << std::endl;       //the algo name is missing
+        out << "Problem,Dimension,Algorithm,Cost,Time(us),TourLength" << std::endl;       //the algo name is missing
 
         for (const auto& sol : solutions) {
             auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
@@ -36,6 +36,7 @@ bool CsvWriter::writeFile(const std::shared_ptr<ISolutionCollector>& solutionCol
 
             out << tspSol->getProblem()->getName() << ",";
             out << tspSol->getProblem()->getDimension() << ",";
+            out << algoName << ",";
             out << tspSol->getPath()->getCost() << ",";
             out << tspSol->getExecutionTime() << ",";
             out << tspSol->getPath()->getDimension();
