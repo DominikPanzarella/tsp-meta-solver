@@ -46,7 +46,7 @@ TEST_P(ConcordeParamTest, ConcordeInstancesTest) {
 
     ConcordeConfig config;
     config.MAX_CHUNK_SIZE = 24;
-    ConcordeSolver concorde(CONCORDE_PATH, config);
+    ConcordeSolver concorde(CONCORDE_PATH, "resources" ,config);
     auto solution = concorde.execute(problem);
 
     ASSERT_NE(solution, nullptr);

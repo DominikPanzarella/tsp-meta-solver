@@ -6,7 +6,7 @@
 class ConcordeSolver : public IAlgorithm{
 public:
 
-    explicit ConcordeSolver(const std::string& concordePath, ConcordeConfig config = {});
+    explicit ConcordeSolver(const std::string& concordePath, const std::string& resourcesPath ,ConcordeConfig config = {});
 
     virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem) override;
 
@@ -21,6 +21,8 @@ private:
     std::string m_concordePath;
 
     std::string m_workingDir;
+
+    std::string m_resourcesPath;
 
     ConcordeConfig m_config;
 

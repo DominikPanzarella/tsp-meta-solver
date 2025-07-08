@@ -9,7 +9,7 @@
 class LKH3Solver : public IAlgorithm{
 public:
 
-    explicit LKH3Solver(const std::string& lkhPath, LKH3Config config = {});
+    explicit LKH3Solver(const std::string& lkhPath,  const std::string& resourcesPath, LKH3Config config = {});
 
     virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem) override;
 
@@ -25,6 +25,8 @@ private:
     std::string m_workingDir;
 
     LKH3Config m_config;
+
+    std::string m_resourcesPath;
 
     std::string writeParamFile(const std::string& paramFile);
 

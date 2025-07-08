@@ -78,8 +78,8 @@ inline std::vector<std::shared_ptr<IAlgorithm>> algoToTest(){
         std::make_shared<NearestNeighbour>(),
         std::make_shared<NearestInsertion>(),
         std::make_shared<FarthestInsertion>(),
-        std::make_shared<LKH3Solver>(LKH3_PATH, config),
-        std::make_shared<ConcordeSolver>(CONCORDE_PATH)
+        std::make_shared<LKH3Solver>(LKH3_PATH,"resources", config),
+        std::make_shared<ConcordeSolver>(CONCORDE_PATH, "resources")
 
     };
 }

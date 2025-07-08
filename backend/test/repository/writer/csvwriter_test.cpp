@@ -35,11 +35,11 @@ std::shared_ptr<IAlgorithm> makeFastLKH3() {
     config.SUBGRADIENT = false;
     config.RESTRICTED_SEARCH = true;
 
-    return std::make_shared<LKH3Solver>(LKH3_PATH, config);
+    return std::make_shared<LKH3Solver>(LKH3_PATH, "resources", config);
 };
 
 std::shared_ptr<IAlgorithm> makeConcorde() {
-    return std::make_shared<ConcordeSolver>(CONCORDE_PATH);
+    return std::make_shared<ConcordeSolver>(CONCORDE_PATH, "resources");
 }
 
 class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgorithm>> {

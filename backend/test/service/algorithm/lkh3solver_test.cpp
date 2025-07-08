@@ -69,7 +69,7 @@ TEST_P(LKH3ParamTest, LKH3FastSolveSymmetric) {
     if(it != optima.end())
         config.OPTIMUM = it->second;
 
-    LKH3Solver lkh3(LKH3_PATH, config);
+    LKH3Solver lkh3(LKH3_PATH, "resources" ,config);
     auto solution = lkh3.execute(problem);
     auto tspSolution = std::dynamic_pointer_cast<TspSolution>(solution);
     ASSERT_NE(tspSolution, nullptr);

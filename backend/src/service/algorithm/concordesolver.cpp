@@ -8,8 +8,9 @@
 #include <cstdlib>
 #include <iostream>
 
-ConcordeSolver::ConcordeSolver(const std::string& concordePath, ConcordeConfig config)
+ConcordeSolver::ConcordeSolver(const std::string& concordePath, const std::string& resourcesPath ,ConcordeConfig config)
     : m_concordePath(std::filesystem::absolute(concordePath)),
+      m_resourcesPath(resourcesPath),
       m_config(std::move(config)),
       m_workingDir("tmp_concorde")
 {
@@ -24,7 +25,7 @@ std::string ConcordeSolver::name() const {
 
 std::shared_ptr<ISolution> ConcordeSolver::execute(std::shared_ptr<IProblem> problem) {
     std::string name = problem->getName();
-    std::string tspFile = "resources/" + problem->getName() + ".tsp";
+    std::string tspFile = m_resourcesPath + "/" + problem->getName() + ".tsp";
 
     m_config.PROBLEM_FILE = name + ".tsp";
     m_config.OUTPUT_TOUR_FILE = name + ".sol";

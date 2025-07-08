@@ -7,8 +7,8 @@
 #include <cstdlib>
 
 
-LKH3Solver::LKH3Solver(const std::string& lkhPath,LKH3Config config) 
-: m_lkhPath(std::filesystem::absolute(lkhPath)), m_workingDir("tmp_lkh3"), m_config{config}
+LKH3Solver::LKH3Solver(const std::string& lkhPath,  const std::string& resourcesPath, LKH3Config config) 
+: m_lkhPath(std::filesystem::absolute(lkhPath)), m_workingDir("tmp_lkh3"), m_config{config}, m_resourcesPath(resourcesPath)
 {
     if(std::filesystem::exists(m_workingDir))
         std::filesystem::remove_all(m_workingDir);
@@ -176,7 +176,7 @@ std::shared_ptr<ISolution> LKH3Solver::readSolution( std::shared_ptr<IProblem> p
 
 std::shared_ptr<ISolution> LKH3Solver::execute(std::shared_ptr<IProblem> problem) {
     //per il momento hardcodiamo il percorso del problema
-    std::string tspFile = "resources/" + problem->getName() + ".tsp";
+    std::string tspFile = m_resourcesPath + "/" + problem->getName() + ".tsp";
     std::string solFile = m_workingDir + "/solution_"+problem->getName()+".txt";
     prepareForProblem(problem, tspFile, solFile);
 
