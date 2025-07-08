@@ -69,7 +69,7 @@ TEST_P(TspRepositoryTest, ReadAllTspInstances) {
         ASSERT_NE(solution->getProblem(), nullptr);
     }
 
-    bool success = tspRepository->write("", "csv", collector);
+    bool success = tspRepository->write("results", "csv", collector);
     EXPECT_TRUE(success);
 }
 

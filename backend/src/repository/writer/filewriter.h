@@ -23,5 +23,5 @@ protected:
 
     virtual bool canHandle(const std::string& content) const =0;
 
-    virtual bool writeFile(const std::shared_ptr<ISolutionCollector>& solutionCollector) const = 0;
+    virtual bool writeFile(std::string file_path, const std::shared_ptr<ISolutionCollector>& solutionCollector) const = 0;
 };

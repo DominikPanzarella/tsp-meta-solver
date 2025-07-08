@@ -8,7 +8,7 @@
 class Initializer {
 public:
 
-    Initializer(const std::string resourcesPath);
+    Initializer(const std::string resourcesPath, const std::string resultsPath);
 
     static void init(int argc, char *argv[]);
 
@@ -21,4 +21,6 @@ private:
     static std::vector<std::shared_ptr<IProblem>> problems;
 
     static std::string m_resourcesPath;
+
+    static std::string m_resultsPath;
 };

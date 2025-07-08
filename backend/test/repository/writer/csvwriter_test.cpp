@@ -106,7 +106,7 @@ class CsvWriterAlgoTest : public ::testing::TestWithParam<std::shared_ptr<IAlgor
             ASSERT_NE(solution->getProblem(), nullptr);
         }
     
-        bool success = writer.write("", "csv", collector);
+        bool success = writer.write("results", "csv", collector);
         EXPECT_TRUE(success);
     }
 

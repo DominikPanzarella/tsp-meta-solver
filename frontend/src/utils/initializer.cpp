@@ -15,6 +15,7 @@
 #include <unordered_set>
 
 std::string Initializer::m_resourcesPath = "";
+std::string Initializer::m_resultsPath = "";
 std::vector<std::shared_ptr<IProblem>> Initializer::problems ={};
 
 void Initializer::init(int argc, char *argv[]){
@@ -28,6 +29,7 @@ void Initializer::init(int argc, char *argv[]){
 
     std::vector<std::string> paths;
     paths = collectTspInstances(m_resourcesPath);
+
 
     if(paths.size() == 0)
     {
@@ -54,7 +56,7 @@ void Initializer::init(int argc, char *argv[]){
     std::cout << "Creating results files ......" << std::endl;
 
     const auto& collector = executorController->getSolutionCollector();
-    bool success = tspController->write("", "csv", collector);
+    bool success = tspController->write(m_resultsPath, "csv", collector);
 
 
     std::cout << "Execution done." << std::endl;
@@ -109,6 +111,8 @@ std::vector<std::string> Initializer::collectTspInstances(const std::string& dir
     return paths;
 }
 
+
+//TODO: read from configiration files LKH3 and Concorde configurations + which algo to execute
 std::vector<std::shared_ptr<IAlgorithm>> Initializer::algoToTest(){
 
     LKH3Config config;
@@ -134,7 +138,8 @@ std::vector<std::shared_ptr<IAlgorithm>> Initializer::algoToTest(){
 }
 
 
-Initializer::Initializer(const std::string resourcesPath)
+Initializer::Initializer(const std::string resourcesPath, const std::string resultsPath)
 {
     m_resourcesPath = resourcesPath;
+    m_resultsPath = resultsPath;
 }

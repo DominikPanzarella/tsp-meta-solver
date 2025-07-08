@@ -34,3 +34,5 @@
 # Build directories
 build-release
 build-debug
+
+results

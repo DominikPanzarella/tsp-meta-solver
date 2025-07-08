@@ -69,7 +69,7 @@ TEST_P(TspControllerTest, ReadAllTspInstances) {
         ASSERT_NE(solution->getProblem(), nullptr);
     }
 
-    bool success = tspController->write("", "csv", collector);
+    bool success = tspController->write("results", "csv", collector);
     EXPECT_TRUE(success);
 }
 

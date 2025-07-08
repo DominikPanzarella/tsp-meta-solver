@@ -13,7 +13,7 @@ bool FileWriter::write(std::string file_path, std::string extension, const std::
     std::string contentType = extension;
 
     if(canHandle(contentType)){
-        return writeFile(solutionCollector);
+        return writeFile(file_path, solutionCollector);
     }else if(successor){
         return successor->write(file_path, extension, solutionCollector);
     }

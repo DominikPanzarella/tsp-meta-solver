@@ -3,10 +3,14 @@
 
 void Start::start(int argc, char *argv[]){
     std::string path;
-    if(argc > 1)        path = argv[1];
-    else                throw std::runtime_error("Resources directory must be provided");
+    std::string results_path;
+    if(argc > 2){
+        path = argv[1];
+        results_path = argv[2];
+    }        
+    else                throw std::runtime_error("Resources/Results directory must be provided");
 
-    Initializer init(path);
+    Initializer init(path, results_path);
 
     Initializer::init(argc, argv);
 }
