@@ -83,3 +83,8 @@ inline std::vector<std::shared_ptr<IAlgorithm>> algoToTest(){
 
     };
 }
+
+
+inline std::string getConfigurationFile(){
+    return "resources/tspmetasolver.set";
+}

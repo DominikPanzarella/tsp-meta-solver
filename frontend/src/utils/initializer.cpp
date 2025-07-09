@@ -3,6 +3,7 @@
 // --- Including controller 
 #include "controller/executorcontroller.h"
 #include "controller/tspcontroller.h"
+#include "controller/configcontroller.h"
 
 // --- Including algorithms 
 #include "service/algorithm/concordesolver.h"
@@ -11,12 +12,18 @@
 #include "service/algorithm/farthestinsertion.h"
 #include "service/algorithm/lkh3solver.h"
 
+
+
 #include <iostream>
 #include <unordered_set>
 
 std::string Initializer::m_resourcesPath = "";
 std::string Initializer::m_resultsPath = "";
+std::string Initializer::m_format = "";
 std::vector<std::shared_ptr<IProblem>> Initializer::problems ={};
+LKH3Config Initializer::m_lkh3Config = {};
+ConcordeConfig Initializer::m_concordeConfig = {};
+GeneralConfig Initializer::m_generalConfig = {};
 
 void Initializer::init(int argc, char *argv[]){
 
@@ -26,6 +33,9 @@ void Initializer::init(int argc, char *argv[]){
     const std::shared_ptr<ExecutorController>& executorController = ExecutorController::getInstance();
 
     const std::shared_ptr<TspController>& tspController = TspController::getInstance();
+
+
+
 
     std::vector<std::string> paths;
     paths = collectTspInstances(m_resourcesPath);
@@ -40,6 +50,8 @@ void Initializer::init(int argc, char *argv[]){
         auto problem = tspController->read(path);
         problems.push_back(problem);
     }
+
+
 
     std::vector<std::shared_ptr<IAlgorithm>> algorithms = algoToTest();
 
@@ -56,7 +68,7 @@ void Initializer::init(int argc, char *argv[]){
     std::cout << "Creating results files ......" << std::endl;
 
     const auto& collector = executorController->getSolutionCollector();
-    bool success = tspController->write(m_resultsPath, "csv", collector);
+    bool success = tspController->write(m_resultsPath, m_format, collector);
 
 
     std::cout << "Execution done." << std::endl;
@@ -115,31 +127,30 @@ std::vector<std::string> Initializer::collectTspInstances(const std::string& dir
 //TODO: read from configiration files LKH3 and Concorde configurations + which algo to execute
 std::vector<std::shared_ptr<IAlgorithm>> Initializer::algoToTest(){
 
-    LKH3Config config;
-    config.PROBLEM_FILE = "";  // placeholder, sarà sovrascritto da executor
-    config.OUTPUT_TOUR_FILE = "tmp_lkh3/temp_solution.txt";
-    config.MAX_TRIALS = 500;
-    config.RUNS = 1;
-    config.SEED = 42;
-    config.TRACE_LEVEL = 0;
-    config.MAX_CANDIDATES = 5;
-    config.MOVE_TYPE = 2;
-    config.BACKTRACKING = false;
-    config.SUBGRADIENT = false;
-    config.RESTRICTED_SEARCH = true;
-    
-    return {
-        std::make_shared<NearestNeighbour>(),
-        std::make_shared<NearestInsertion>(),
-        std::make_shared<FarthestInsertion>(),
-        std::make_shared<LKH3Solver>(LKH3_PATH, m_resourcesPath, config),
-        std::make_shared<ConcordeSolver>(CONCORDE_PATH, m_resourcesPath)
+    std::vector<std::shared_ptr<IAlgorithm>> algorithms {
+        //std::make_shared<NearestNeighbour>(),
+        //std::make_shared<NearestInsertion>(),
+        //std::make_shared<FarthestInsertion>(),
+        //std::make_shared<LKH3Solver>(LKH3_PATH, m_resourcesPath, m_lkh3Config),
+        std::make_shared<ConcordeSolver>(CONCORDE_PATH, m_resourcesPath, m_concordeConfig)
     };
+
+    return algorithms;
+
 }
 
 
-Initializer::Initializer(const std::string resourcesPath, const std::string resultsPath)
+Initializer::Initializer(const std::string resourcesPath, const std::string resultsPath, const std::string format)
 {
     m_resourcesPath = resourcesPath;
     m_resultsPath = resultsPath;
+    m_format = format;
+
+    const std::shared_ptr<ConfigController>& configController = ConfigController::getInstance();
+
+    configController->readConfiguration(CONFIG_PATH);
+
+    m_lkh3Config = configController->getLKH3Config();
+    m_concordeConfig = configController->getConcordeConfig();
+    m_generalConfig = configController->getGeneralConfig();
 }

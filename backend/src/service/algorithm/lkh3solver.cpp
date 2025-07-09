@@ -8,7 +8,7 @@
 
 
 LKH3Solver::LKH3Solver(const std::string& lkhPath,  const std::string& resourcesPath, LKH3Config config) 
-: m_lkhPath(std::filesystem::absolute(lkhPath)), m_workingDir("tmp_lkh3"), m_config{config}, m_resourcesPath(resourcesPath)
+: m_lkhPath(std::filesystem::absolute(lkhPath)), m_workingDir(std::filesystem::absolute("tmp_cd lkh3")), m_config{config}, m_resourcesPath(resourcesPath)
 {
     if(std::filesystem::exists(m_workingDir))
         std::filesystem::remove_all(m_workingDir);
@@ -120,8 +120,9 @@ std::string LKH3Solver::writeParamFile(const std::string& paramFile) {
     if (m_config.VEHICLES) out << "VEHICLES = " << *m_config.VEHICLES << "\n";
 
     // Flag special (optional)
-    if (m_config.SPECIAL) out << "SPECIAL = " << (*m_config.SPECIAL ? "YES" : "NO") << "\n";
-
+    if (m_config.SPECIAL && *m_config.SPECIAL)
+        out << "SPECIAL\n";
+        
     out.close();
     return paramFile;
 }

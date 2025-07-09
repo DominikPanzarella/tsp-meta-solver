@@ -12,7 +12,7 @@ ConcordeSolver::ConcordeSolver(const std::string& concordePath, const std::strin
     : m_concordePath(std::filesystem::absolute(concordePath)),
       m_resourcesPath(resourcesPath),
       m_config(std::move(config)),
-      m_workingDir("tmp_concorde")
+      m_workingDir(std::filesystem::absolute("tmp_concorde"))
 {
     if(std::filesystem::exists(m_workingDir))
         std::filesystem::remove_all(m_workingDir);
@@ -43,6 +43,15 @@ bool ConcordeSolver::runConcorde(const std::string& tspFile, const std::string& 
 
     std::filesystem::copy_file(tspFile, tspDest, std::filesystem::copy_options::overwrite_existing);
 
+    if (!std::filesystem::exists(tspDest)) {
+        throw std::runtime_error("File TSP non copiato: " + tspDest);
+    }
+    
+    std::ifstream test(tspDest);
+    if (!test || test.peek() == std::ifstream::traits_type::eof()) {
+        throw std::runtime_error("File TSP vuoto: " + tspDest);
+    }
+
     auto oldCwd = std::filesystem::current_path();
     std::filesystem::current_path(m_workingDir);
 
@@ -59,7 +68,7 @@ bool ConcordeSolver::runConcorde(const std::string& tspFile, const std::string& 
         cmd << " -R \"" << *m_config.RESTART_FILE << "\"";
     }
     if (m_config.BRANCHING && !(*m_config.BRANCHING)) {
-        cmd << " -b0"; // disabilita branching (esempio)
+        cmd << " -b";
     }
     if (m_config.DFS_BRANCHING && *m_config.DFS_BRANCHING) {
         cmd << " -d";

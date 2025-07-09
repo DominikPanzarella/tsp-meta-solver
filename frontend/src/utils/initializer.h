@@ -3,12 +3,17 @@
 #include "service/problem/iproblem.h"
 #include "service/algorithm/ialgorithm.h"
 
+// --- Including config pattern
+#include "service/algorithm/lkh3config.h"
+#include "service/algorithm/concordeconfig.h"
+#include "service/algorithm/generalconfig.h"
+
 #include <string>
 
 class Initializer {
 public:
 
-    Initializer(const std::string resourcesPath, const std::string resultsPath);
+    Initializer(const std::string resourcesPath, const std::string resultsPath, const std::string format);
 
     static void init(int argc, char *argv[]);
 
@@ -23,4 +28,12 @@ private:
     static std::string m_resourcesPath;
 
     static std::string m_resultsPath;
+
+    static std::string m_format;
+
+    static LKH3Config m_lkh3Config;
+
+    static ConcordeConfig m_concordeConfig;
+
+    static GeneralConfig m_generalConfig;
 };

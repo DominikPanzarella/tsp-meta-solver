@@ -5,7 +5,7 @@ project(tsp_backend)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Assicurati di usare C++17 o superiore
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Includi FetchContent per scaricare GTest
@@ -22,10 +22,12 @@ FetchContent_MakeAvailable(googletest)
 # === GLOBALE ===
 # Includi tutte le cartelle header
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/resources)
 
 # === SORGENTE LIBRERIA ===
 file(GLOB_RECURSE BACKEND_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/resources"
 )
 
 # Libreria statica (può essere shared se vuoi)
@@ -33,6 +35,7 @@ add_library(tsp_backend STATIC ${BACKEND_SOURCES})
 
 target_include_directories(tsp_backend PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/resources
 )
 
 target_compile_features(tsp_backend PUBLIC cxx_std_17)
@@ -51,6 +54,7 @@ if(BACKEND_TESTS)  # se la lista non è vuota
   target_include_directories(tsp_tests PRIVATE
       ${CMAKE_CURRENT_SOURCE_DIR}/src
       ${CMAKE_CURRENT_SOURCE_DIR}/test
+      ${CMAKE_CURRENT_SOURCE_DIR}/resources
   )
 
   target_link_libraries(tsp_tests

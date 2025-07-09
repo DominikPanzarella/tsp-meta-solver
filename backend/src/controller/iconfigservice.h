@@ -1,15 +1,12 @@
 #pragma once
 
-#include <string>
-
+#include "service/algorithm/generalconfig.h"
 #include "service/algorithm/lkh3config.h"
 #include "service/algorithm/concordeconfig.h"
-#include "service/algorithm/generalconfig.h"
 
-class IConfigurationProvider {
-public:
-
-    virtual ~IConfigurationProvider() =default;
+class IConfigService{
+public: 
+    virtual ~IConfigService() = default;
 
     virtual void readConfiguration(const std::string& path) = 0; 
     
@@ -18,5 +15,4 @@ public:
     virtual const ConcordeConfig& getConcordeConfig() const = 0;
 
     virtual const GeneralConfig& getGeneralConfig() const = 0;
-
 };

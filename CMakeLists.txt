@@ -20,3 +20,9 @@ add_custom_target(copy_resources ALL
           ${CMAKE_SOURCE_DIR}/resources
           ${CMAKE_BINARY_DIR}/resources
 )
+
+add_custom_target(copy_config ALL
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different
+          ${CMAKE_SOURCE_DIR}/tspmetasolver.set
+          ${CMAKE_BINARY_DIR}/tspmetasolver.set
+)

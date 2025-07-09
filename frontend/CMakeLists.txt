@@ -28,9 +28,12 @@ install(TARGETS tsp-meta-solver
 
 add_definitions(-DLKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
 add_definitions(-DCONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
+add_definitions(-DCONFIG_PATH="${CMAKE_BINARY_DIR}/tspmetasolver.set")
 
 target_compile_definitions(tsp_tests PRIVATE LKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
 target_compile_definitions(tsp_tests PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
+target_compile_definitions(tsp_tests PRIVATE CONFIG_PATH="${CMAKE_BINARY_DIR}/tspmetasolver.set")
 
 target_compile_definitions(tsp_backend PRIVATE LKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
 target_compile_definitions(tsp_backend PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
+target_compile_definitions(tsp-meta-solver PRIVATE CONFIG_PATH="${CMAKE_BINARY_DIR}/tspmetasolver.set")
