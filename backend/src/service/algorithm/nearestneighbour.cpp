@@ -53,3 +53,16 @@ std::shared_ptr<ISolution> NearestNeighbour::execute(std::shared_ptr<IProblem> p
 
     return solution;
 }
+
+NearestNeighbour::NearestNeighbour(int startingNode) : m_startingNode{startingNode}
+{
+
+}
+
+int NearestNeighbour::getStartingNode() const {
+    return m_startingNode;
+}
+
+void NearestNeighbour::setStartingNode(int startingNode) {
+    m_startingNode = startingNode;
+}

@@ -96,3 +96,17 @@ std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> 
 
     return solution;
 }
+
+
+FarthestInsertion::FarthestInsertion(int startingNode) : m_startingNode{startingNode}
+{
+
+}
+
+int FarthestInsertion::getStartingNode() const {
+    return m_startingNode;
+}
+
+void FarthestInsertion::setStartingNode(int startingNode) {
+    m_startingNode = startingNode;
+}

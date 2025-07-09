@@ -9,6 +9,14 @@ public:
 
     virtual std::string name() const override;
 
+    FarthestInsertion(int startingNode = 0);
+
+    int getStartingNode() const;
+
+    void setStartingNode(int startingNode);
+
 private:
+
+    int m_startingNode;
 
 };

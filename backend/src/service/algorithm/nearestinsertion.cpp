@@ -97,3 +97,16 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
 
     return solution;
 }
+
+NearestInsertion::NearestInsertion(int startingNode) : m_startingNode{startingNode}
+{
+
+}
+
+int NearestInsertion::getStartingNode() const {
+    return m_startingNode;
+}
+
+void NearestInsertion::setStartingNode(int startingNode) {
+    m_startingNode = startingNode;
+}

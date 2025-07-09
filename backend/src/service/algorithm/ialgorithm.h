@@ -10,6 +10,9 @@
 //Algorithm Interface
 class IAlgorithm{
 public:
+    
+    IAlgorithm() = default;
+
     virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem) = 0;
 
     virtual ~IAlgorithm() = default;
