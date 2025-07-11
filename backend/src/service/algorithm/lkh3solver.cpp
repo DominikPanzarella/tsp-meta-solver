@@ -21,117 +21,111 @@ LKH3Solver::LKH3Solver(const std::string& lkhPath,  const std::string& resources
 std::string LKH3Solver::name() const {
     return "LKH3";
 }
-
-std::string LKH3Solver::writeParamFile(const std::string& paramFile,std::shared_ptr<IInstanceSetting> instanceSettings) {
+std::string LKH3Solver::writeParamFile(const std::string& paramFile, std::shared_ptr<IInstanceSetting> instanceSettings) {
     std::ofstream out(paramFile);
+    if (!out.is_open()) {
+        throw std::runtime_error("Unable to open parameter file: " + paramFile);
+    }
 
     std::shared_ptr<LKH3InstanceSetting> settingInstance = std::dynamic_pointer_cast<LKH3InstanceSetting>(instanceSettings);
     std::shared_ptr<LKH3GeneralSetting> settingGeneral = std::dynamic_pointer_cast<LKH3GeneralSetting>(m_config);
 
-    if(!settingGeneral || !settingInstance)
-        throw std::runtime_error("LKH3 wrong settings ");
+    if (!settingGeneral || !settingInstance)
+        throw std::runtime_error("LKH3 settings are invalid or not properly casted");
 
-    if (settingInstance->getProblemFile()->empty())
+    if (!settingInstance->getProblemFile() || settingInstance->getProblemFile()->empty())
         throw std::invalid_argument("PROBLEM_FILE cannot be empty");
-    if (settingInstance->getOutputTourFile()->empty())
+    if (!settingInstance->getOutputTourFile() || settingInstance->getOutputTourFile()->empty())
         throw std::invalid_argument("OUTPUT_TOUR_FILE cannot be empty");
 
-    out << "PROBLEM_FILE = " << *settingInstance->getProblemFile()<< "\n";
+    // Macros to simplify code
+    #define WRITE_OPT(opt, key) if (opt) out << key << " = " << *opt << "\n"
+    #define WRITE_OPT_BOOL(opt, key) if (opt) out << key << " = " << (*opt ? "YES" : "NO") << "\n"
+
+    // Instance-specific settings
+    out << "PROBLEM_FILE = " << *settingInstance->getProblemFile() << "\n";
     out << "OUTPUT_TOUR_FILE = " << *settingInstance->getOutputTourFile() << "\n";
+    WRITE_OPT(settingInstance->getInitialTourFile(), "INITIAL_TOUR_FILE");
+    WRITE_OPT(settingInstance->getInputTourFile(), "INPUT_TOUR_FILE");
+    WRITE_OPT(settingInstance->getMergeTourFile(), "MERGE_TOUR_FILE");
+    WRITE_OPT(settingInstance->getTourFile(), "TOUR_FILE");
 
-    // Candidate edges & sets
-    /*
-    if (m_config.ASCENT_CANDIDATES) out << "ASCENT_CANDIDATES = " << *m_config.ASCENT_CANDIDATES << "\n";
-    if (m_config.BACKBONE_TRIALS) out << "BACKBONE_TRIALS = " << *m_config.BACKBONE_TRIALS << "\n";
-    if (m_config.BACKTRACKING) out << "BACKTRACKING = " << (*m_config.BACKTRACKING ? "YES" : "NO") << "\n";
+    // General settings
+    WRITE_OPT(settingGeneral->getAscentCandidates(), "ASCENT_CANDIDATES");
+    WRITE_OPT(settingGeneral->getBackboneTrials(), "BACKBONE_TRIALS");
+    WRITE_OPT_BOOL(settingGeneral->getBacktracking(), "BACKTRACKING");
 
-    for (const auto& f : m_config.CANDIDATE_FILE)
+    for (const auto& f : settingGeneral->getCandidateFiles())
         out << "CANDIDATE_FILE = " << f << "\n";
 
-    if (m_config.BWTSP) {
-        int B = std::get<0>(*m_config.BWTSP);
-        int Q = std::get<1>(*m_config.BWTSP);
-        if (std::get<2>(*m_config.BWTSP))
-            out << "BWTSP = " << B << " " << Q << " " << *std::get<2>(*m_config.BWTSP) << "\n";
-        else
-            out << "BWTSP = " << B << " " << Q << "\n";
+    if (auto bwtsp = settingGeneral->getBWTSP()) {
+        const auto& [B, Q, optR] = *bwtsp;
+        out << "BWTSP = " << B << " " << Q;
+        if (optR) out << " " << *optR;
+        out << "\n";
     }
 
-    if (m_config.CANDIDATE_SET_TYPE) out << "CANDIDATE_SET_TYPE = " << *m_config.CANDIDATE_SET_TYPE << "\n";
-    if (m_config.EXCESS) out << "EXCESS = " << *m_config.EXCESS << "\n";
-    if (m_config.EXTRA_CANDIDATES) out << "EXTRA_CANDIDATES = " << *m_config.EXTRA_CANDIDATES << "\n";
-    if (m_config.EXTRA_CANDIDATE_SET_TYPE) out << "EXTRA_CANDIDATE_SET_TYPE = " << *m_config.EXTRA_CANDIDATE_SET_TYPE << "\n";
+    WRITE_OPT(settingGeneral->getCandidateSetType(), "CANDIDATE_SET_TYPE");
+    WRITE_OPT(settingGeneral->getExcess(), "EXCESS");
+    WRITE_OPT(settingGeneral->getExtraCandidates(), "EXTRA_CANDIDATES");
+    WRITE_OPT(settingGeneral->getExtraCandidateSetType(), "EXTRA_CANDIDATE_SET_TYPE");
 
-    // Gain / heuristics
-    if (m_config.GAIN23) out << "GAIN23 = " << (*m_config.GAIN23 ? "YES" : "NO") << "\n";
-    if (m_config.GAIN_CRITERION) out << "GAIN_CRITERION = " << (*m_config.GAIN_CRITERION ? "YES" : "NO") << "\n";
-    if (m_config.SUBGRADIENT) out << "SUBGRADIENT = " << (*m_config.SUBGRADIENT ? "YES" : "NO") << "\n";
+    WRITE_OPT_BOOL(settingGeneral->getGain23(), "GAIN23");
+    WRITE_OPT_BOOL(settingGeneral->getGainCriterion(), "GAIN_CRITERION");
+    WRITE_OPT_BOOL(settingGeneral->getSubgradient(), "SUBGRADIENT");
 
-    // Initial tour and ascent
-    if (m_config.INITIAL_PERIOD) out << "INITIAL_PERIOD = " << *m_config.INITIAL_PERIOD << "\n";
-    if (m_config.INITIAL_STEP_SIZE) out << "INITIAL_STEP_SIZE = " << *m_config.INITIAL_STEP_SIZE << "\n";
-    if (m_config.INITIAL_TOUR_ALGORITHM) out << "INITIAL_TOUR_ALGORITHM = " << *m_config.INITIAL_TOUR_ALGORITHM << "\n";
-    if (m_config.INITIAL_TOUR_FILE) out << "INITIAL_TOUR_FILE = " << *m_config.INITIAL_TOUR_FILE << "\n";
-    if (m_config.INITIAL_TOUR_FRACTION) out << "INITIAL_TOUR_FRACTION = " << *m_config.INITIAL_TOUR_FRACTION << "\n";
+    WRITE_OPT(settingGeneral->getInitialPeriod(), "INITIAL_PERIOD");
+    WRITE_OPT(settingGeneral->getInitialStepSize(), "INITIAL_STEP_SIZE");
+    WRITE_OPT(settingGeneral->getInitialTourAlgorithm(), "INITIAL_TOUR_ALGORITHM");
+    WRITE_OPT(settingGeneral->getInitialTourFraction(), "INITIAL_TOUR_FRACTION");
 
-    // Tours controlling search
-    if (m_config.INPUT_TOUR_FILE) out << "INPUT_TOUR_FILE = " << *m_config.INPUT_TOUR_FILE << "\n";
-    if (m_config.MERGE_TOUR_FILE) out << "MERGE_TOUR_FILE = " << *m_config.MERGE_TOUR_FILE << "\n";
+    WRITE_OPT(settingGeneral->getKicks(), "KICKS");
+    WRITE_OPT(settingGeneral->getKickType(), "KICK_TYPE");
+    WRITE_OPT_BOOL(settingGeneral->getMakespan(), "MAKESPAN");
+    WRITE_OPT(settingGeneral->getMaxBreadth(), "MAX_BREADTH");
+    WRITE_OPT(settingGeneral->getMaxCandidates(), "MAX_CANDIDATES");
+    WRITE_OPT(settingGeneral->getMaxSwaps(), "MAX_SWAPS");
+    WRITE_OPT(settingGeneral->getMaxTrials(), "MAX_TRIALS");
+    WRITE_OPT(settingGeneral->getMoveType(), "MOVE_TYPE");
+    WRITE_OPT(settingGeneral->getNonSequentialMoveType(), "NONSEQUENTIAL_MOVE_TYPE");
+    WRITE_OPT(settingGeneral->getPatchingA(), "PATCHING_A");
+    WRITE_OPT(settingGeneral->getPatchingC(), "PATCHING_C");
+    WRITE_OPT(settingGeneral->getSubsequentMoveType(), "SUBSEQUENT_MOVE_TYPE");
+    WRITE_OPT_BOOL(settingGeneral->getSubsequentPatching(), "SUBSEQUENT_PATCHING");
 
-    // Kicks and moves
-    if (m_config.KICKS) out << "KICKS = " << *m_config.KICKS << "\n";
-    if (m_config.KICK_TYPE) out << "KICK_TYPE = " << *m_config.KICK_TYPE << "\n";
-    if (m_config.MAKESPAN) out << "MAKESPAN = " << (*m_config.MAKESPAN ? "YES" : "NO") << "\n";
-    if (m_config.MAX_BREADTH) out << "MAX_BREADTH = " << *m_config.MAX_BREADTH << "\n";
-    if (m_config.MAX_CANDIDATES) out << "MAX_CANDIDATES = " << *m_config.MAX_CANDIDATES << "\n";
-    if (m_config.MAX_SWAPS) out << "MAX_SWAPS = " << *m_config.MAX_SWAPS << "\n";
-    if (m_config.MAX_TRIALS) out << "MAX_TRIALS = " << *m_config.MAX_TRIALS << "\n";
-    if (m_config.MOVE_TYPE) out << "MOVE_TYPE = " << *m_config.MOVE_TYPE << "\n";
-    if (m_config.NONSEQUENTIAL_MOVE_TYPE) out << "NONSEQUENTIAL_MOVE_TYPE = " << *m_config.NONSEQUENTIAL_MOVE_TYPE << "\n";
-    if (m_config.PATCHING_A) out << "PATCHING_A = " << *m_config.PATCHING_A << "\n";
-    if (m_config.PATCHING_C) out << "PATCHING_C = " << *m_config.PATCHING_C << "\n";
-    if (m_config.SUBSEQUENT_MOVE_TYPE) out << "SUBSEQUENT_MOVE_TYPE = " << *m_config.SUBSEQUENT_MOVE_TYPE << "\n";
-    if (m_config.SUBSEQUENT_PATCHING) out << "SUBSEQUENT_PATCHING = " << (*m_config.SUBSEQUENT_PATCHING ? "YES" : "NO") << "\n";
+    WRITE_OPT(settingGeneral->getOptimum(), "OPTIMUM");
+    WRITE_OPT_BOOL(settingGeneral->getStopAtOptimum(), "STOP_AT_OPTIMUM");
+    WRITE_OPT(settingGeneral->getTimeLimit(), "TIME_LIMIT");
 
-    // Optimization / stopping
-    if (m_config.OPTIMUM) out << "OPTIMUM = " << *m_config.OPTIMUM << "\n";
-    if (m_config.STOP_AT_OPTIMUM) out << "STOP_AT_OPTIMUM = " << (*m_config.STOP_AT_OPTIMUM ? "YES" : "NO") << "\n";
-    if (m_config.TIME_LIMIT) out << "TIME_LIMIT = " << *m_config.TIME_LIMIT << "\n";
+    WRITE_OPT(settingGeneral->getDepot(), "DEPOT");
+    WRITE_OPT(settingGeneral->getComment(), "COMMENT");
 
-    // Problem characteristics
-    if (m_config.DEPOT) out << "DEPOT = " << *m_config.DEPOT << "\n";
-    if (m_config.COMMENT) out << "COMMENT " << *m_config.COMMENT << "\n";
+    WRITE_OPT(settingGeneral->getTraceLevel(), "TRACE_LEVEL");
+    WRITE_OPT(settingGeneral->getPopulationSize(), "POPULATION_SIZE");
+    WRITE_OPT(settingGeneral->getPrecision(), "PRECISION");
+    WRITE_OPT_BOOL(settingGeneral->getRestrictedSearch(), "RESTRICTED_SEARCH");
+    WRITE_OPT(settingGeneral->getRuns(), "RUNS");
+    WRITE_OPT(settingGeneral->getSeed(), "SEED");
+    WRITE_OPT(settingGeneral->getSalesmen(), "SALESMEN");
+    WRITE_OPT(settingGeneral->getScale(), "SCALE");
+    WRITE_OPT(settingGeneral->getSintefSolutionFile(), "SINTEF_SOLUTION_FILE");
+    WRITE_OPT(settingGeneral->getPiFile(), "PI_FILE");
 
-    // Output
-    if (m_config.TOUR_FILE) out << "TOUR_FILE = " << *m_config.TOUR_FILE << "\n";
-    if (m_config.TRACE_LEVEL) out << "TRACE_LEVEL = " << *m_config.TRACE_LEVEL << "\n";
+    WRITE_OPT(settingGeneral->getSubproblemSize(), "SUBPROBLEM_SIZE");
+    WRITE_OPT(settingGeneral->getSubproblemTourFile(), "SUBPROBLEM_TOUR_FILE");
 
-    // Misc
-    if (m_config.POPULATION_SIZE) out << "POPULATION_SIZE = " << *m_config.POPULATION_SIZE << "\n";
-    if (m_config.PRECISION) out << "PRECISION = " << *m_config.PRECISION << "\n";
-    if (m_config.RESTRICTED_SEARCH) out << "RESTRICTED_SEARCH = " << (*m_config.RESTRICTED_SEARCH ? "YES" : "NO") << "\n";
-    if (m_config.RUNS) out << "RUNS = " << *m_config.RUNS << "\n";
-    if (m_config.SEED) out << "SEED = " << *m_config.SEED << "\n";
-    if (m_config.SALESMEN) out << "SALESMEN = " << *m_config.SALESMEN << "\n";
-    if (m_config.SCALE) out << "SCALE = " << *m_config.SCALE << "\n";
-    if (m_config.SINTEF_SOLUTION_FILE) out << "SINTEF_SOLUTION_FILE = " << *m_config.SINTEF_SOLUTION_FILE << "\n";
-    if (m_config.PI_FILE) out << "PI_FILE = " << *m_config.PI_FILE << "\n";
+    WRITE_OPT(settingGeneral->getMTSPMinSize(), "MTSP_MIN_SIZE");
+    WRITE_OPT(settingGeneral->getMTSPMaxSize(), "MTSP_MAX_SIZE");
+    WRITE_OPT(settingGeneral->getMTSPObjective(), "MTSP_OBJECTIVE");
+    WRITE_OPT(settingGeneral->getMTSPSolutionFile(), "MTSP_SOLUTION_FILE");
+    WRITE_OPT(settingGeneral->getVehicles(), "VEHICLES");
 
-    // Subproblem
-    if (m_config.SUBPROBLEM_SIZE) out << "SUBPROBLEM_SIZE = " << *m_config.SUBPROBLEM_SIZE << "\n";
-    if (m_config.SUBPROBLEM_TOUR_FILE) out << "SUBPROBLEM_TOUR_FILE = " << *m_config.SUBPROBLEM_TOUR_FILE << "\n";
-
-    // MTSP / VRP
-    if (m_config.MTSP_MIN_SIZE) out << "MTSP_MIN_SIZE = " << *m_config.MTSP_MIN_SIZE << "\n";
-    if (m_config.MTSP_MAX_SIZE) out << "MTSP_MAX_SIZE = " << *m_config.MTSP_MAX_SIZE << "\n";
-    if (m_config.MTSP_OBJECTIVE) out << "MTSP_OBJECTIVE = " << *m_config.MTSP_OBJECTIVE << "\n";
-    if (m_config.MTSP_SOLUTION_FILE) out << "MTSP_SOLUTION_FILE = " << *m_config.MTSP_SOLUTION_FILE << "\n";
-    if (m_config.VEHICLES) out << "VEHICLES = " << *m_config.VEHICLES << "\n";
-
-    // Flag special (optional)
-    if (m_config.SPECIAL && *m_config.SPECIAL)
+    if (settingGeneral->getSpecial().value_or(false))
         out << "SPECIAL\n";
-    */
+
+    #undef WRITE_OPT
+    #undef WRITE_OPT_BOOL
+
     out.close();
     return paramFile;
 }

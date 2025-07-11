@@ -27,12 +27,7 @@ void ConfigProvider::configure(std::vector<std::shared_ptr<IProblem>> problems) 
     configureLKH3();
 
     std::vector<std::string> algorithms = getEnabledAlgorithms();
-
-    std::cout << algorithms.size() << std::endl;
-    for(const auto& algo: algorithms)
-        std::cout << algo << std::endl;
-
-
+    
     for(const auto& algo : algorithms){
         const std::string& algoName = algo;
         for(const auto& problem : problems){

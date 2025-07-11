@@ -1,6 +1,6 @@
 {
     "Execution": {
-        "EnabledAlgorithms": ["NearestInsertion", "NearestNeighbour", "FarthestInsertion", "Concorde"]
+        "EnabledAlgorithms": ["NearestInsertion", "NearestNeighbour", "FarthestInsertion", "Concorde", "LKH3"]
     },
     "NearestInsertion":{
         "GeneralSettings": {
