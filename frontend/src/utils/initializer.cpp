@@ -3,6 +3,7 @@
 // --- Including controller 
 #include "controller/executorcontroller.h"
 #include "controller/tspcontroller.h"
+#include "controller/configcontroller.h"
 
 // --- Including algorithms 
 #include "service/algorithm/concordesolver.h"
@@ -52,21 +53,22 @@ void Initializer::init(int argc, char *argv[]){
         problems.push_back(problem);
     }
 
-    ConfigProvider provider;
 
-    provider.read("../tspmetasolver.json");
+    const std::shared_ptr<ConfigController>& provider = ConfigController::getInstance();
 
-    provider.configure(problems);
+    provider->read("../tspmetasolver.json");
+
+    provider->configure(problems);
 
     std::vector<std::shared_ptr<IAlgorithm>> algorithms;
 
-    std::shared_ptr<NearestInsertionGeneralSetting> ni   = provider.getNearestInsertionSettings();
-    std::shared_ptr<NearestNeighbourGeneralSetting> nn   = provider.getNearestNeighbourSettings();
-    std::shared_ptr<FarthestInsertionGeneralSetting> fi  = provider.getFarthestInsertionSettings();
-    std::shared_ptr<ConcordeGeneralSetting> cc           = provider.getConcordeSettings();
-    std::shared_ptr<LKH3GeneralSetting> lkh3             = provider.getLKH3Settings();
+    std::shared_ptr<NearestInsertionGeneralSetting> ni   = provider->getNearestInsertionSettings();
+    std::shared_ptr<NearestNeighbourGeneralSetting> nn   = provider->getNearestNeighbourSettings();
+    std::shared_ptr<FarthestInsertionGeneralSetting> fi  = provider->getFarthestInsertionSettings();
+    std::shared_ptr<ConcordeGeneralSetting> cc           = provider->getConcordeSettings();
+    std::shared_ptr<LKH3GeneralSetting> lkh3             = provider->getLKH3Settings();
     
-    for(const std::string& algo : provider.getEnabledAlgorithms())
+    for(const std::string& algo : provider->getEnabledAlgorithms())
     {
         if (algo == "NearestInsertion") {
             algorithms.push_back(std::make_shared<NearestInsertion>());
@@ -96,15 +98,15 @@ void Initializer::init(int argc, char *argv[]){
             std::shared_ptr<IInstanceSetting> setting;
     
             if (algoName == "NearestInsertion") {
-                setting = provider.getNearestInsertionSettings()->getInstance(probName);
+                setting = provider->getNearestInsertionSettings()->getInstance(probName);
             } else if (algoName == "NearestNeighbour") {
-                setting = provider.getNearestNeighbourSettings()->getInstance(probName);
+                setting = provider->getNearestNeighbourSettings()->getInstance(probName);
             } else if (algoName == "FarthestInsertion") {
-                setting = provider.getFarthestInsertionSettings()->getInstance(probName);
+                setting = provider->getFarthestInsertionSettings()->getInstance(probName);
             } else if (algoName == "LKH3") {
-                setting = provider.getLKH3Settings()->getInstance(probName);
+                setting = provider->getLKH3Settings()->getInstance(probName);
             } else if (algoName == "Concorde") {
-                setting = provider.getConcordeSettings()->getInstance(probName);
+                setting = provider->getConcordeSettings()->getInstance(probName);
             }
     
             executorController->add(algorithm, problem, setting);
