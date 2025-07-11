@@ -26,3 +26,9 @@ add_custom_target(copy_config ALL
           ${CMAKE_SOURCE_DIR}/tspmetasolver.set
           ${CMAKE_BINARY_DIR}/tspmetasolver.set
 )
+
+add_custom_target(copy_config_json ALL
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different
+          ${CMAKE_SOURCE_DIR}/tspmetasolver.json
+          ${CMAKE_BINARY_DIR}/tspmetasolver.json
+)

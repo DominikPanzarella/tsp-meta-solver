@@ -5,17 +5,12 @@
 class NearestInsertion : public IAlgorithm {
 public:
 
-    virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem) override;
+    virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem, std::shared_ptr<IInstanceSetting> instanceSettings) override;
 
     virtual std::string name() const override;
 
-    NearestInsertion(int startingNode = 0);
-
-    int getStartingNode() const;
-
-    void setStartingNode(int startingNode);
+    NearestInsertion() =default;   
 
 private:
-    int m_startingNode;
 
 };

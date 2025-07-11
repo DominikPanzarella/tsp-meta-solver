@@ -9,7 +9,7 @@ public:
     static const std::shared_ptr<ExecutorController>& getInstance();
 
 
-    void add(const std::shared_ptr<IAlgorithm>& algo, const std::shared_ptr<IProblem>& problem);
+    void add(const std::shared_ptr<IAlgorithm>& algo, const std::shared_ptr<IProblem>& problem, const std::shared_ptr<IInstanceSetting>& setting);
 
     void run() const;
 

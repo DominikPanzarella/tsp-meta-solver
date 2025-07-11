@@ -2,13 +2,16 @@
 
 #include "service/executor/executiontask.h"
 #include "service/algorithm/isolutioncollector.h"
+#include "repository/configuration2/config/iinstancesetting.h"
 
 class IExecutor {
     public:
         virtual ~IExecutor() = default;
     
         virtual void add(const std::shared_ptr<IAlgorithm>& algo,
-                         const std::shared_ptr<IProblem>& problem) = 0;
+                         const std::shared_ptr<IProblem>& problem,
+                         const std::shared_ptr<IInstanceSetting>& setting
+                        ) = 0;
     
         virtual void run() = 0;
     

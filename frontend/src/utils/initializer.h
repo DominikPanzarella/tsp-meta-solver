@@ -3,10 +3,6 @@
 #include "service/problem/iproblem.h"
 #include "service/algorithm/ialgorithm.h"
 
-// --- Including config pattern
-#include "service/algorithm/lkh3config.h"
-#include "service/algorithm/concordeconfig.h"
-#include "service/algorithm/generalconfig.h"
 
 #include <string>
 
@@ -31,9 +27,4 @@ private:
 
     static std::string m_format;
 
-    static LKH3Config m_lkh3Config;
-
-    static ConcordeConfig m_concordeConfig;
-
-    static GeneralConfig m_generalConfig;
 };

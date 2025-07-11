@@ -7,8 +7,8 @@ SingleQueueExecutor::SingleQueueExecutor()
 
 
 void SingleQueueExecutor::add(const std::shared_ptr<IAlgorithm>& algo,
-    const std::shared_ptr<IProblem>& problem){
-        m_tasks.emplace_back(std::make_unique<ExecutionTask>(algo, problem));
+    const std::shared_ptr<IProblem>& problem, const std::shared_ptr<IInstanceSetting>& setting){
+        m_tasks.emplace_back(std::make_unique<ExecutionTask>(algo, problem, setting));
     }
 
 void SingleQueueExecutor::run(){

@@ -2,13 +2,14 @@
 #include "service/algorithm/ipath.h"
 #include "service/algorithm/path.h"
 #include "service/algorithm/tspsolution.h"
+#include "repository/configuration2/config/nearestneighbourinstancesetting.h"
 #include <chrono>
 
 std::string NearestNeighbour::name() const {
     return "NearestNeighbour";
 }
 
-std::shared_ptr<ISolution> NearestNeighbour::execute(std::shared_ptr<IProblem> problem) {
+std::shared_ptr<ISolution> NearestNeighbour::execute(std::shared_ptr<IProblem> problem,std::shared_ptr<IInstanceSetting> instanceSettings) {
    
     const auto& dist = problem->getGraph().getMatrix();
     int n = problem->getDimension();
@@ -16,7 +17,15 @@ std::shared_ptr<ISolution> NearestNeighbour::execute(std::shared_ptr<IProblem> p
     std::vector<bool> visited(n, false);
     std::vector<int> tour;
 
-    int current = 0; // nodo iniziale
+
+    std::shared_ptr<NearestNeighbourInstanceSetting> setting = std::dynamic_pointer_cast<NearestNeighbourInstanceSetting>(instanceSettings);
+
+    if(setting == nullptr)      throw std::runtime_error("Wrong Instance Settings given as parameter");
+
+    int current = setting->getStartingNode();
+
+    if (current < 0 || current >= n)      throw std::runtime_error("Starting node is out of bounds");
+
     visited[current] = true;
     tour.push_back(current);
 
@@ -46,23 +55,9 @@ std::shared_ptr<ISolution> NearestNeighbour::execute(std::shared_ptr<IProblem> p
     tour.push_back(tour[0]);
 
 
-   
     std::shared_ptr<IPath> path = std::make_shared<Path>(tour, totalCost);
     auto solution = std::make_shared<TspSolution>(path, problem);
 
 
     return solution;
-}
-
-NearestNeighbour::NearestNeighbour(int startingNode) : m_startingNode{startingNode}
-{
-
-}
-
-int NearestNeighbour::getStartingNode() const {
-    return m_startingNode;
-}
-
-void NearestNeighbour::setStartingNode(int startingNode) {
-    m_startingNode = startingNode;
 }

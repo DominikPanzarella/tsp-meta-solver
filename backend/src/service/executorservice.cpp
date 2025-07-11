@@ -13,9 +13,9 @@ const std::shared_ptr<ExecutorService>& ExecutorService::getInstance()
     return mySelf;
 }
 
- void ExecutorService::add(const std::shared_ptr<IAlgorithm>& algo, const std::shared_ptr<IProblem>& problem) 
+ void ExecutorService::add(const std::shared_ptr<IAlgorithm>& algo, const std::shared_ptr<IProblem>& problem,const std::shared_ptr<IInstanceSetting>& setting) 
 {
-    executor->add(algo,problem);
+    executor->add(algo,problem, setting);
 }
 
 void ExecutorService::run(){

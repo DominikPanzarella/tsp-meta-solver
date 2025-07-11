@@ -3,6 +3,8 @@
 #include <iostream>
 #include "service/problem/iproblem.h"
 #include "service/algorithm/isolution.h"
+#include "repository/configuration2/config/iinstancesetting.h"
+#include "repository/configuration2/config/igeneralsetting.h"
 #include <unordered_map>
 #include <sstream>
 #include <fstream>
@@ -13,7 +15,7 @@ public:
     
     IAlgorithm() = default;
 
-    virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem) = 0;
+    virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem, std::shared_ptr<IInstanceSetting> instanceSettings) = 0;
 
     virtual ~IAlgorithm() = default;
 

@@ -3,7 +3,6 @@
 // --- Including controller 
 #include "controller/executorcontroller.h"
 #include "controller/tspcontroller.h"
-#include "controller/configcontroller.h"
 
 // --- Including algorithms 
 #include "service/algorithm/concordesolver.h"
@@ -11,6 +10,13 @@
 #include "service/algorithm/nearestinsertion.h"
 #include "service/algorithm/farthestinsertion.h"
 #include "service/algorithm/lkh3solver.h"
+
+#include "repository/configuration2/configprovider.h"
+#include "repository/configuration2/config/nearestneighbourgeneralsetting.h"
+#include "repository/configuration2/config/nearestinsertiongeneralsetting.h"
+#include "repository/configuration2/config/concordegeneralsetting.h"
+#include "repository/configuration2/config/lkh3generalsetting.h"
+#include "repository/configuration2/config/farthestinsertiongeneralsetting.h"
 
 
 
@@ -21,9 +27,6 @@ std::string Initializer::m_resourcesPath = "";
 std::string Initializer::m_resultsPath = "";
 std::string Initializer::m_format = "";
 std::vector<std::shared_ptr<IProblem>> Initializer::problems ={};
-LKH3Config Initializer::m_lkh3Config = {};
-ConcordeConfig Initializer::m_concordeConfig = {};
-GeneralConfig Initializer::m_generalConfig = {};
 
 void Initializer::init(int argc, char *argv[]){
 
@@ -33,8 +36,6 @@ void Initializer::init(int argc, char *argv[]){
     const std::shared_ptr<ExecutorController>& executorController = ExecutorController::getInstance();
 
     const std::shared_ptr<TspController>& tspController = TspController::getInstance();
-
-
 
 
     std::vector<std::string> paths;
@@ -51,17 +52,64 @@ void Initializer::init(int argc, char *argv[]){
         problems.push_back(problem);
     }
 
+    ConfigProvider provider;
 
+    provider.read("../tspmetasolver.json");
 
-    std::vector<std::shared_ptr<IAlgorithm>> algorithms = algoToTest();
+    provider.configure(problems);
+
+    std::vector<std::shared_ptr<IAlgorithm>> algorithms;
+
+    std::shared_ptr<NearestInsertionGeneralSetting> ni   = provider.getNearestInsertionSettings();
+    std::shared_ptr<NearestNeighbourGeneralSetting> nn   = provider.getNearestNeighbourSettings();
+    std::shared_ptr<FarthestInsertionGeneralSetting> fi  = provider.getFarthestInsertionSettings();
+    std::shared_ptr<ConcordeGeneralSetting> cc           = provider.getConcordeSettings();
+    std::shared_ptr<LKH3GeneralSetting> lkh3             = provider.getLKH3Settings();
+    
+    for(const std::string& algo : provider.getEnabledAlgorithms())
+    {
+        if (algo == "NearestInsertion") {
+            algorithms.push_back(std::make_shared<NearestInsertion>());
+        }
+        else if (algo == "NearestNeighbour") {
+            algorithms.push_back(std::make_shared<NearestNeighbour>());
+        }
+        else if (algo == "FarthestInsertion") {
+            algorithms.push_back(std::make_shared<FarthestInsertion>());
+        }
+        else if (algo == "LKH3") {
+            algorithms.push_back(std::make_shared<LKH3Solver>(LKH3_PATH, m_resourcesPath, lkh3));
+        }
+        else if (algo == "Concorde") {
+            algorithms.push_back(std::make_shared<ConcordeSolver>(CONCORDE_PATH, m_resourcesPath, cc));
+        }
+    }
+
 
     std::cout << "Starting execution ......" << std::endl;
 
-    for(const auto& algorithm : algorithms)
-        for(const auto& problem : problems)
-            executorController->add(algorithm, problem);
-
-
+    for (const auto& algorithm : algorithms) {
+        for (const auto& problem : problems) {
+            std::string algoName = algorithm->name();
+            std::string probName = problem->getName();
+    
+            std::shared_ptr<IInstanceSetting> setting;
+    
+            if (algoName == "NearestInsertion") {
+                setting = provider.getNearestInsertionSettings()->getInstance(probName);
+            } else if (algoName == "NearestNeighbour") {
+                setting = provider.getNearestNeighbourSettings()->getInstance(probName);
+            } else if (algoName == "FarthestInsertion") {
+                setting = provider.getFarthestInsertionSettings()->getInstance(probName);
+            } else if (algoName == "LKH3") {
+                setting = provider.getLKH3Settings()->getInstance(probName);
+            } else if (algoName == "Concorde") {
+                setting = provider.getConcordeSettings()->getInstance(probName);
+            }
+    
+            executorController->add(algorithm, problem, setting);
+        }
+    }
     executorController->run();
 
 
@@ -123,34 +171,9 @@ std::vector<std::string> Initializer::collectTspInstances(const std::string& dir
     return paths;
 }
 
-
-//TODO: read from configiration files LKH3 and Concorde configurations + which algo to execute
-std::vector<std::shared_ptr<IAlgorithm>> Initializer::algoToTest(){
-
-    std::vector<std::shared_ptr<IAlgorithm>> algorithms {
-        //std::make_shared<NearestNeighbour>(),
-        //std::make_shared<NearestInsertion>(),
-        //std::make_shared<FarthestInsertion>(),
-        //std::make_shared<LKH3Solver>(LKH3_PATH, m_resourcesPath, m_lkh3Config),
-        std::make_shared<ConcordeSolver>(CONCORDE_PATH, m_resourcesPath, m_concordeConfig)
-    };
-
-    return algorithms;
-
-}
-
-
 Initializer::Initializer(const std::string resourcesPath, const std::string resultsPath, const std::string format)
 {
     m_resourcesPath = resourcesPath;
     m_resultsPath = resultsPath;
     m_format = format;
-
-    const std::shared_ptr<ConfigController>& configController = ConfigController::getInstance();
-
-    configController->readConfiguration(CONFIG_PATH);
-
-    m_lkh3Config = configController->getLKH3Config();
-    m_concordeConfig = configController->getConcordeConfig();
-    m_generalConfig = configController->getGeneralConfig();
 }

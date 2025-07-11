@@ -2,6 +2,7 @@
 #include "service/algorithm/ipath.h"
 #include "service/algorithm/path.h"
 #include "service/algorithm/tspsolution.h"
+#include "repository/configuration2/config/nearestinsertioninstancesetting.h"
 #include <chrono>
 #include <unordered_set>
 #include <limits>
@@ -12,7 +13,7 @@ std::string NearestInsertion::name() const {
     return "NearestInsertion";
 }
 
-std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> problem) {
+std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> problem, std::shared_ptr<IInstanceSetting> instanceSettings){
     const auto& dist = problem->getGraph().getMatrix();
     int n = problem->getDimension();
     if (n == 0) return nullptr;
@@ -21,19 +22,30 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
     std::unordered_set<int> notInTour;
     std::vector<bool> inTour(n, false);
 
-    // Step 1: Start with node 0
-    tour.push_back(0);
-    inTour[0] = true;
-    for (int i = 1; i < n; ++i) {
-        notInTour.insert(i);
+    std::shared_ptr<NearestInsertionInstanceSetting> setting = std::dynamic_pointer_cast<NearestInsertionInstanceSetting>(instanceSettings);
+
+    if(setting == nullptr)      throw std::runtime_error("Wrong Instance Settings given as parameter");
+
+    int startingNode = setting->getStartingNode();
+
+    if (startingNode < 0 || startingNode >= n)      throw std::runtime_error("Starting node is out of bounds");
+
+    tour.push_back(startingNode);
+
+    inTour[startingNode] = true;
+
+    for (int i = 0; i < n; ++i) {
+        if (i != startingNode) {
+            notInTour.insert(i);
+        }
     }
 
-    // Step 2: Insert the nearest node from node 0 (instead of farthest)
+    // Insert nearest node from startingNode
     int nearest = -1;
     double minDist = std::numeric_limits<double>::infinity();
     for (int j : notInTour) {
-        if (dist[0][j] < minDist) {
-            minDist = dist[0][j];
+        if (dist[startingNode][j] < minDist) {
+            minDist = dist[startingNode][j];
             nearest = j;
         }
     }
@@ -96,17 +108,4 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
     auto solution = std::make_shared<TspSolution>(path, problem);
 
     return solution;
-}
-
-NearestInsertion::NearestInsertion(int startingNode) : m_startingNode{startingNode}
-{
-
-}
-
-int NearestInsertion::getStartingNode() const {
-    return m_startingNode;
-}
-
-void NearestInsertion::setStartingNode(int startingNode) {
-    m_startingNode = startingNode;
 }

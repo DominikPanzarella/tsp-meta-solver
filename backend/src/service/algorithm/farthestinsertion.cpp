@@ -2,6 +2,7 @@
 #include "service/algorithm/ipath.h"
 #include "service/algorithm/path.h"
 #include "service/algorithm/tspsolution.h"
+#include "repository/configuration2/config/farthestinsertioninstancesetting.h"
 #include <chrono>
 #include <unordered_set>
 #include <limits>
@@ -12,7 +13,7 @@ std::string FarthestInsertion::name() const {
     return "FarthestInsertion";
 }
 
-std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> problem) {
+std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> problem, std::shared_ptr<IInstanceSetting> instanceSettings) {
     const auto& dist = problem->getGraph().getMatrix();
     int n = problem->getDimension();
     if (n == 0) return nullptr;
@@ -21,19 +22,30 @@ std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> 
     std::unordered_set<int> notInTour;
     std::vector<bool> inTour(n, false);
 
-    // Step 1: Start with node 0
-    tour.push_back(0);
-    inTour[0] = true;
-    for (int i = 1; i < n; ++i) {
-        notInTour.insert(i);
+    auto setting = std::dynamic_pointer_cast<FarthestInsertionInstanceSetting>(instanceSettings);
+    if (!setting)
+        throw std::runtime_error("Wrong Instance Settings given as parameter");
+
+    int startingNode = setting->getStartingNode();
+    if (startingNode < 0 || startingNode >= n)
+        throw std::runtime_error("Starting node is out of bounds");
+
+    // Step 1: Start with startingNode
+    tour.push_back(startingNode);
+    inTour[startingNode] = true;
+
+    for (int i = 0; i < n; ++i) {
+        if (i != startingNode) {
+            notInTour.insert(i);
+        }
     }
 
-    // Step 2: Insert the farthest node from node 0
+    // Step 2: Insert the farthest node from startingNode
     int farthest = -1;
     double maxDist = -1.0;
     for (int j : notInTour) {
-        if (dist[0][j] > maxDist) {
-            maxDist = dist[0][j];
+        if (dist[startingNode][j] > maxDist) {
+            maxDist = dist[startingNode][j];
             farthest = j;
         }
     }
@@ -65,7 +77,7 @@ std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> 
 
         for (auto it = tour.begin(); it != tour.end(); ++it) {
             auto nextIt = std::next(it);
-            if (nextIt == tour.end()) nextIt = tour.begin();  // chiusura del tour
+            if (nextIt == tour.end()) nextIt = tour.begin();  // close the tour
 
             int u = *it;
             int w = *nextIt;
@@ -82,31 +94,15 @@ std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> 
         notInTour.erase(bestCandidate);
     }
 
-    // Chiusura del tour
+    // Close the tour
     tour.push_back(tour[0]);
 
-    // Calcolo del costo totale
+    // Calculate total cost
     double totalCost = 0.0;
     for (size_t i = 0; i < tour.size() - 1; ++i) {
         totalCost += dist[tour[i]][tour[i + 1]];
     }
 
-    std::shared_ptr<IPath> path = std::make_shared<Path>(tour, totalCost);
-    std::shared_ptr<TspSolution> solution = std::make_shared<TspSolution>(path, problem);
-
-    return solution;
-}
-
-
-FarthestInsertion::FarthestInsertion(int startingNode) : m_startingNode{startingNode}
-{
-
-}
-
-int FarthestInsertion::getStartingNode() const {
-    return m_startingNode;
-}
-
-void FarthestInsertion::setStartingNode(int startingNode) {
-    m_startingNode = startingNode;
+    auto path = std::make_shared<Path>(tour, totalCost);
+    return std::make_shared<TspSolution>(path, problem);
 }

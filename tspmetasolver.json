@@ -1,0 +1,69 @@
+{
+    "Execution": {
+        "EnabledAlgorithms": ["NearestInsertion", "NearestNeighbour", "FarthestInsertion", "Concorde"]
+    },
+    "NearestInsertion":{
+        "GeneralSettings": {
+            "HardInstances":{
+                "Nodes": 5
+            }
+        },
+        "InstancesSettings":{
+            "a280":{
+                "StartingNode": 1
+            },
+            "att48":{
+                "StartingNode": 4
+            }
+        }
+    },
+    "NearesetNeighbour":{
+        "GeneralSettings": {
+            "HardInstances":{
+                "Nodes": 10
+            }
+        },
+        "InstancesSettings":{
+            "a280":{
+                "StartingNode": 1
+            },
+            "att48":{
+                "StartingNode": 10
+            }
+        }
+    },
+    "FarthestInsertion":{
+        "GeneralSettings": {
+            "HardInstances":{
+                "Nodes": 7
+            }
+        },
+        "InstancesSettings":{
+            "a280":{
+                "StartingNode": 2
+            }
+        }
+    },
+    "LKH3":{
+        "GeneralSettings": {
+            "MAX_TRIALS": 500,
+            "RUNS": 1,
+            "SEED": 42,
+            "TRACE_LEVEL": 0,
+            "MAX_CANDIDATES" : 5,
+            "MOVE_TYPE": 2,
+            "BACKTRACKING": false,
+            "SUBGRADIENT": false,
+            "RESTRICTED_SEARCH": true
+        },
+        "InstancesSettings":{
+        }
+    },
+    "Concorde":{
+        "GeneralSettings": {
+        },
+        "InstancesSettings":{
+        }
+    }
+
+}

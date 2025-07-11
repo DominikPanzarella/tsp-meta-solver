@@ -2,16 +2,19 @@
 #include "service/algorithm/path.h"
 #include "service/algorithm/tspsolution.h"
 
+#include "repository/configuration2/config/concordeinstancesetting.h"
+#include "repository/configuration2/config/concordegeneralsetting.h"
+
 #include <filesystem>
 #include <fstream>
 #include <sstream>
 #include <cstdlib>
 #include <iostream>
 
-ConcordeSolver::ConcordeSolver(const std::string& concordePath, const std::string& resourcesPath ,ConcordeConfig config)
+ConcordeSolver::ConcordeSolver(const std::string& concordePath, const std::string& resourcesPath ,std::shared_ptr<IGeneralSetting> concordeSetting)
     : m_concordePath(std::filesystem::absolute(concordePath)),
       m_resourcesPath(resourcesPath),
-      m_config(std::move(config)),
+      m_config(std::move(concordeSetting)),
       m_workingDir(std::filesystem::absolute("tmp_concorde"))
 {
     if(std::filesystem::exists(m_workingDir))
@@ -23,21 +26,27 @@ std::string ConcordeSolver::name() const {
     return "Concorde";
 }
 
-std::shared_ptr<ISolution> ConcordeSolver::execute(std::shared_ptr<IProblem> problem) {
+std::shared_ptr<ISolution> ConcordeSolver::execute(std::shared_ptr<IProblem> problem,std::shared_ptr<IInstanceSetting> instanceSettings) {
     std::string name = problem->getName();
     std::string tspFile = m_resourcesPath + "/" + problem->getName() + ".tsp";
 
-    m_config.PROBLEM_FILE = name + ".tsp";
-    m_config.OUTPUT_TOUR_FILE = name + ".sol";
+    std::shared_ptr<ConcordeInstanceSetting> setting = std::dynamic_pointer_cast<ConcordeInstanceSetting>(instanceSettings);
 
-    if (!runConcorde(tspFile, problem->getName())) {
+    if (!setting)
+        throw std::runtime_error("Wrong Instance Settings given as parameter");
+
+
+    setting->setProblemFile(name + ".tsp");
+    setting->setOutputTourFile(name + ".sol");
+
+    if (!runConcorde(tspFile, problem->getName(), instanceSettings)) {
         throw std::runtime_error("Concorde execution failed");
     }
 
     return readSolution(problem);
 }
 
-bool ConcordeSolver::runConcorde(const std::string& tspFile, const std::string& problemName) {
+bool ConcordeSolver::runConcorde(const std::string& tspFile, const std::string& problemName,std::shared_ptr<IInstanceSetting> instanceSettings) {
     // Copia file .tsp nella working directory
     std::string tspDest = m_workingDir + "/" + problemName + ".tsp";
 
@@ -55,15 +64,25 @@ bool ConcordeSolver::runConcorde(const std::string& tspFile, const std::string& 
     auto oldCwd = std::filesystem::current_path();
     std::filesystem::current_path(m_workingDir);
 
+
+
+    std::shared_ptr<ConcordeGeneralSetting> setting = std::dynamic_pointer_cast<ConcordeGeneralSetting>(m_config);
+    std::shared_ptr<ConcordeInstanceSetting> settingInstance = std::dynamic_pointer_cast<ConcordeInstanceSetting>(instanceSettings);
+
+
+    if(!setting)                    throw std::runtime_error("Concorde execution failed");
+    if(!settingInstance)            throw std::runtime_error("Concorde execution failed");
+
     std::stringstream cmd;
     cmd << "\"" << m_concordePath << "\""
-        << " -o \"" << m_config.OUTPUT_TOUR_FILE << "\""
-       ;
+        << " -o \"" << settingInstance->getOutputTourFile() << "\"";
 
     // Altri parametri (solo se settati)
-    if (m_config.INITIAL_TOUR_FILE) {
-        cmd << " -t \"" << *m_config.INITIAL_TOUR_FILE << "\"";
+    /*
+    if (!settingInstance->getInitialTourFile()->empty()) {
+        cmd << " -t \"" << *settingInstance->getInitialTourFile() << "\"";
     }
+
     if (m_config.RESTART_FILE) {
         cmd << " -R \"" << *m_config.RESTART_FILE << "\"";
     }
@@ -142,8 +161,8 @@ bool ConcordeSolver::runConcorde(const std::string& tspFile, const std::string& 
     if (m_config.SAVE_TOUR_AS_EDGE_FILE && *m_config.SAVE_TOUR_AS_EDGE_FILE) {
         cmd << " -f";
     }
-
-    cmd << " \"" << m_config.PROBLEM_FILE << "\"";
+    */  
+    cmd << " \"" << settingInstance->getProblemFile() << "\"";
 
     std::cout << "[Concorde] Executing: " << cmd.str() << std::endl;
 
@@ -198,11 +217,3 @@ std::shared_ptr<ISolution> ConcordeSolver::readSolution(std::shared_ptr<IProblem
     return solution;
 }
 
-
-void ConcordeSolver::resetConfig(){
-    m_config = ConcordeConfig{};
-}
-
-void ConcordeSolver::setConfig(const ConcordeConfig& config){
-    m_config = config;  
-}

@@ -2,13 +2,16 @@
 #include "service/algorithm/path.h"
 #include "service/algorithm/tspsolution.h"
 
+#include "repository/configuration2/config/lkh3instancesetting.h"
+
+
 #include <filesystem>
 
 #include <cstdlib>
 
 
-LKH3Solver::LKH3Solver(const std::string& lkhPath,  const std::string& resourcesPath, LKH3Config config) 
-: m_lkhPath(std::filesystem::absolute(lkhPath)), m_workingDir(std::filesystem::absolute("tmp_cd lkh3")), m_config{config}, m_resourcesPath(resourcesPath)
+LKH3Solver::LKH3Solver(const std::string& lkhPath,  const std::string& resourcesPath, std::shared_ptr<LKH3GeneralSetting> lkh3Setting) 
+: m_lkhPath(std::filesystem::absolute(lkhPath)), m_workingDir(std::filesystem::absolute("tmp_lkh3")), m_config{lkh3Setting}, m_resourcesPath(resourcesPath)
 {
     if(std::filesystem::exists(m_workingDir))
         std::filesystem::remove_all(m_workingDir);
@@ -19,19 +22,25 @@ std::string LKH3Solver::name() const {
     return "LKH3";
 }
 
-std::string LKH3Solver::writeParamFile(const std::string& paramFile) {
+std::string LKH3Solver::writeParamFile(const std::string& paramFile,std::shared_ptr<IInstanceSetting> instanceSettings) {
     std::ofstream out(paramFile);
 
-    // Controlli obbligatori
-    if (m_config.PROBLEM_FILE.empty())
+    std::shared_ptr<LKH3InstanceSetting> settingInstance = std::dynamic_pointer_cast<LKH3InstanceSetting>(instanceSettings);
+    std::shared_ptr<LKH3GeneralSetting> settingGeneral = std::dynamic_pointer_cast<LKH3GeneralSetting>(m_config);
+
+    if(!settingGeneral || !settingInstance)
+        throw std::runtime_error("LKH3 wrong settings ");
+
+    if (settingInstance->getProblemFile()->empty())
         throw std::invalid_argument("PROBLEM_FILE cannot be empty");
-    if (m_config.OUTPUT_TOUR_FILE.empty())
+    if (settingInstance->getOutputTourFile()->empty())
         throw std::invalid_argument("OUTPUT_TOUR_FILE cannot be empty");
 
-    out << "PROBLEM_FILE = " << m_config.PROBLEM_FILE << "\n";
-    out << "OUTPUT_TOUR_FILE = " << m_config.OUTPUT_TOUR_FILE << "\n";
+    out << "PROBLEM_FILE = " << *settingInstance->getProblemFile()<< "\n";
+    out << "OUTPUT_TOUR_FILE = " << *settingInstance->getOutputTourFile() << "\n";
 
     // Candidate edges & sets
+    /*
     if (m_config.ASCENT_CANDIDATES) out << "ASCENT_CANDIDATES = " << *m_config.ASCENT_CANDIDATES << "\n";
     if (m_config.BACKBONE_TRIALS) out << "BACKBONE_TRIALS = " << *m_config.BACKBONE_TRIALS << "\n";
     if (m_config.BACKTRACKING) out << "BACKTRACKING = " << (*m_config.BACKTRACKING ? "YES" : "NO") << "\n";
@@ -122,7 +131,7 @@ std::string LKH3Solver::writeParamFile(const std::string& paramFile) {
     // Flag special (optional)
     if (m_config.SPECIAL && *m_config.SPECIAL)
         out << "SPECIAL\n";
-        
+    */
     out.close();
     return paramFile;
 }
@@ -136,11 +145,13 @@ bool LKH3Solver::runLKH(const std::string& paramFile){
 }
 
 
-std::shared_ptr<ISolution> LKH3Solver::readSolution( std::shared_ptr<IProblem> problem) {
-    std::ifstream in(m_config.OUTPUT_TOUR_FILE);
+std::shared_ptr<ISolution> LKH3Solver::readSolution( std::shared_ptr<IProblem> problem, std::shared_ptr<IInstanceSetting> instanceSettings) {
+    std::shared_ptr<LKH3InstanceSetting> setting = std::dynamic_pointer_cast<LKH3InstanceSetting>(instanceSettings);
+
+    std::ifstream in(*setting->getOutputTourFile());
 
     if (!in.is_open()) {
-        throw std::runtime_error("Cannot open solution file (LKH3): " + m_config.OUTPUT_TOUR_FILE);
+        throw std::runtime_error("Cannot open solution file (LKH3): " + *setting->getOutputTourFile());
     }
 
     std::string line;
@@ -175,35 +186,29 @@ std::shared_ptr<ISolution> LKH3Solver::readSolution( std::shared_ptr<IProblem> p
 }
 
 
-std::shared_ptr<ISolution> LKH3Solver::execute(std::shared_ptr<IProblem> problem) {
+std::shared_ptr<ISolution> LKH3Solver::execute(std::shared_ptr<IProblem> problem, std::shared_ptr<IInstanceSetting> instanceSettings) {
     //per il momento hardcodiamo il percorso del problema
     std::string tspFile = m_resourcesPath + "/" + problem->getName() + ".tsp";
     std::string solFile = m_workingDir + "/solution_"+problem->getName()+".txt";
-    prepareForProblem(problem, tspFile, solFile);
+    
+    std::shared_ptr<LKH3InstanceSetting> setting = std::dynamic_pointer_cast<LKH3InstanceSetting>(instanceSettings);
+
+    if (!setting)
+        throw std::runtime_error("Wrong Instance Settings given as parameter");
+
+
+    setting->setProblemFile(tspFile);
+    setting->setOutputTourFile(solFile);
 
     
     std::string paramFile = m_workingDir + "/params_"+problem->getName()+".par";
 
-    writeParamFile(paramFile);
+    writeParamFile(paramFile, instanceSettings);
 
 
     if (!runLKH(paramFile)) {
         throw std::runtime_error("LKH3 execution failed");
     }
 
-    return readSolution(problem);
-}
-
-void LKH3Solver::setConfig(LKH3Config config) {
-    m_config = config;
-}
-
-void LKH3Solver::resetConfig(){
-    m_config = LKH3Config{};
-}
-
-
-void LKH3Solver::prepareForProblem(const std::shared_ptr<IProblem>& problem, std::string tspFile, std::string solFile) {
-    m_config.PROBLEM_FILE = tspFile;
-    m_config.OUTPUT_TOUR_FILE = solFile;
+    return readSolution(problem, instanceSettings);
 }

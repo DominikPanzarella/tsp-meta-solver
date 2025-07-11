@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(tsp_cli)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(tsp-meta-solver
@@ -29,10 +29,6 @@ install(TARGETS tsp-meta-solver
 add_definitions(-DLKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
 add_definitions(-DCONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
 add_definitions(-DCONFIG_PATH="${CMAKE_BINARY_DIR}/tspmetasolver.set")
-
-target_compile_definitions(tsp_tests PRIVATE LKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
-target_compile_definitions(tsp_tests PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")
-target_compile_definitions(tsp_tests PRIVATE CONFIG_PATH="${CMAKE_BINARY_DIR}/tspmetasolver.set")
 
 target_compile_definitions(tsp_backend PRIVATE LKH3_PATH="${CMAKE_BINARY_DIR}/external/LKH-3.0.13/LKH")
 target_compile_definitions(tsp_backend PRIVATE CONCORDE_PATH="${CMAKE_BINARY_DIR}/external/concorde/build/TSP/concorde")

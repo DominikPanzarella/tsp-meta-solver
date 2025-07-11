@@ -37,7 +37,7 @@ WorkStealingExecutor::~WorkStealingExecutor() {
 }
 
 void WorkStealingExecutor::add(const std::shared_ptr<IAlgorithm>& algo, 
-                              const std::shared_ptr<IProblem>& problem) {
+                              const std::shared_ptr<IProblem>& problem,const std::shared_ptr<IInstanceSetting>& setting) {
     if (m_stop.load(std::memory_order_acquire)) {
         return;  // Don't add tasks if stopping
     }
@@ -47,7 +47,7 @@ void WorkStealingExecutor::add(const std::shared_ptr<IAlgorithm>& algo,
     
     {
         std::lock_guard<std::mutex> lock(m_mutexes[targetQueue]);
-        m_queues[targetQueue].emplace_back(std::make_unique<ExecutionTask>(algo, problem));
+        m_queues[targetQueue].emplace_back(std::make_unique<ExecutionTask>(algo, problem, setting));
     }
     
     // Notify waiting workers

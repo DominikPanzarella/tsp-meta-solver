@@ -19,7 +19,7 @@ class WorkStealingExecutor : public IExecutor {
         WorkStealingExecutor(int numThreads = 4);
         ~WorkStealingExecutor();
         void add(const std::shared_ptr<IAlgorithm>& algo,
-                 const std::shared_ptr<IProblem>& problem) override;
+                 const std::shared_ptr<IProblem>& problem,const std::shared_ptr<IInstanceSetting>& setting) override;
         void run() override;
         void clear() override;
         const std::shared_ptr<ISolutionCollector>& getSolutionCollector() const override;

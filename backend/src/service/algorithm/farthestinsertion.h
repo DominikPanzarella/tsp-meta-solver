@@ -1,22 +1,19 @@
 #pragma once
 
 #include "service/algorithm/ialgorithm.h"
+#include "repository/configuration2/config/iinstancesetting.h"
 
 class FarthestInsertion : public IAlgorithm {
 public:
 
-    virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem) override;
+    virtual std::shared_ptr<ISolution> execute(std::shared_ptr<IProblem> problem,std::shared_ptr<IInstanceSetting> instanceSettings) override;
 
     virtual std::string name() const override;
 
-    FarthestInsertion(int startingNode = 0);
-
-    int getStartingNode() const;
-
-    void setStartingNode(int startingNode);
+    FarthestInsertion() =default;
 
 private:
 
-    int m_startingNode;
+
 
 };
