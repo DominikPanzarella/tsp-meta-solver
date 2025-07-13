@@ -8,8 +8,12 @@
 #include "repository/reader/georeader.h"
 #include "repository/reader/matrixreader.h"
 
+
 // ----- Including writer files
 #include "repository/writer/csvwriter.h"
+
+// ----- Including config files
+#include "repository/configuration2/configprovider.h"
 
 TspRepository::TspRepository(){
 
@@ -31,6 +35,8 @@ TspRepository::TspRepository(){
     auto csvWriter = std::make_shared<CsvWriter>();
 
     this->writer = csvWriter;       // First writer in the chain
+
+    config = ConfigProvider::getInstance();
 
 }
 

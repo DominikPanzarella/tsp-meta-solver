@@ -6,6 +6,104 @@
 #include <fstream>
 #include "service/algorithm/tspsolution.h"
 
+CsvWriter::CsvWriter(){
+    registerWriteFuncs();
+}
+
+void CsvWriter::registerWriteFuncs(){
+
+    algoWriters["NearestInsertion"] = [this](const std::string& filename, const auto& sols){
+        std::ofstream out(filename);
+
+        out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
+        for(const auto& sol : sols){
+            auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
+            if (!tspSol || !tspSol->getPath()) continue;
+    
+            out << tspSol->getProblem()->getName() << ",";
+            out << tspSol->getProblem()->getDimension() << ",";
+            out << "NearestInsertion" << ",";
+            out << tspSol->getPath()->getCost() << ",";
+            out << tspSol->getExecutionTime() << ",";
+            out << "\n";
+        }
+
+    };
+
+    algoWriters["NearestNeighbour"] = [this](const std::string& filename, const auto& sols){
+        std::ofstream out(filename);
+
+        out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
+        for(const auto& sol : sols){
+            auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
+            if (!tspSol || !tspSol->getPath()) continue;
+    
+            out << tspSol->getProblem()->getName() << ",";
+            out << tspSol->getProblem()->getDimension() << ",";
+            out << "NearestNeighbour" << ",";
+            out << tspSol->getPath()->getCost() << ",";
+            out << tspSol->getExecutionTime() << ",";
+            out << "\n";
+        }
+
+    };
+
+    algoWriters["FarthestInsertion"] = [this](const std::string& filename, const auto& sols){
+        std::ofstream out(filename);
+
+        out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
+        for(const auto& sol : sols){
+            auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
+            if (!tspSol || !tspSol->getPath()) continue;
+    
+            out << tspSol->getProblem()->getName() << ",";
+            out << tspSol->getProblem()->getDimension() << ",";
+            out << "FarthestInsertion" << ",";
+            out << tspSol->getPath()->getCost() << ",";
+            out << tspSol->getExecutionTime() << ",";
+            out << "\n";
+        }
+
+    };
+
+    algoWriters["Concorde"] = [this](const std::string& filename, const auto& sols){
+        std::ofstream out(filename);
+
+        out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
+        for(const auto& sol : sols){
+            auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
+            if (!tspSol || !tspSol->getPath()) continue;
+    
+            out << tspSol->getProblem()->getName() << ",";
+            out << tspSol->getProblem()->getDimension() << ",";
+            out << "Concorde" << ",";
+            out << tspSol->getPath()->getCost() << ",";
+            out << tspSol->getExecutionTime() << ",";
+            out << "\n";
+        }
+
+    };
+
+    algoWriters["LKH3"] = [this](const std::string& filename, const auto& sols){
+        std::ofstream out(filename);
+
+        out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
+        for(const auto& sol : sols){
+            auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
+            if (!tspSol || !tspSol->getPath()) continue;
+    
+            out << tspSol->getProblem()->getName() << ",";
+            out << tspSol->getProblem()->getDimension() << ",";
+            out << "LKH3" << ",";
+            out << tspSol->getPath()->getCost() << ",";
+            out << tspSol->getExecutionTime() << ",";
+            out << "\n";
+        }
+
+    };
+
+}
+
 bool CsvWriter::canHandle(const std::string& content) const {
     std::string lowered = content;
     std::transform(lowered.begin(), lowered.end(), lowered.begin(),
@@ -36,32 +134,13 @@ bool CsvWriter::writeFile(std::string file_path, const std::shared_ptr<ISolution
     }
 
     for(const auto& [algoName, solutions] : solutionsByAlgo) {
-        std::string filename = file_path + "/" + "results_"+algoName+".csv";
-        std::ofstream out(filename);
-
-        if(!out.is_open())
-        {
-            std::cerr << "Errore nell'apertura del file: " << filename << "\n";
-            continue;
+        std::string filename = file_path + "/" + "results_" + algoName + ".csv";
+        
+        if (algoWriters.contains(algoName)) {
+            algoWriters.at(algoName)(filename, solutions);
+        } else {
+            std::cerr << "No CSV writer for algorithm: " << algoName << "\n";
         }
-
-        out << "Problem,Dimension,Algorithm,Cost,Time(us),TourLength" << std::endl;       //the algo name is missing
-
-        for (const auto& sol : solutions) {
-            auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
-            if (!tspSol || !tspSol->getPath()) continue;
-
-            out << tspSol->getProblem()->getName() << ",";
-            out << tspSol->getProblem()->getDimension() << ",";
-            out << algoName << ",";
-            out << tspSol->getPath()->getCost() << ",";
-            out << tspSol->getExecutionTime() << ",";
-            out << tspSol->getPath()->getDimension();
-            out << "\n";
-        }
-
-        out.close();
-
     }
 
     return true;

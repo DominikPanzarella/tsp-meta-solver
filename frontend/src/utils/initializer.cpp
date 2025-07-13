@@ -112,6 +112,8 @@ void Initializer::init(int argc, char *argv[]){
             executorController->add(algorithm, problem, setting);
         }
     }
+
+    
     executorController->run();
 
 

@@ -10,10 +10,16 @@ public:
     int getHardInstancesNumberOfNodes();
     
     void setHardInstancesNumberOfNodes(int nodes);
+
+    bool getRandomStartingNode();
+
+    void setRandomStartingNode(bool value);
     
 private:
         
     // HARD INSTANCES SETTINGS
     int numberOfNodes;
+
+    bool randomStartingNode;
         
 };

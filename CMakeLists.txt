@@ -7,7 +7,7 @@ file(COPY ${CMAKE_SOURCE_DIR}/resources DESTINATION ${CMAKE_BINARY_DIR})
 
 # Aggiungi il backend sempre (è core)
 add_subdirectory(backend)
-add_subdirectory(frontend)
+    add_subdirectory(frontend)
 
 add_custom_target(copy_external ALL
   COMMAND ${CMAKE_COMMAND} -E copy_directory

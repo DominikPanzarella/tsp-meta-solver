@@ -9,6 +9,12 @@
 
 #include <cstdlib>      // for random generator
 
+
+const std::shared_ptr<ConfigProvider>& ConfigProvider::getInstance() {
+    static std::shared_ptr<ConfigProvider> mySelf(new ConfigProvider());
+    return mySelf;
+}
+
 ConfigProvider::ConfigProvider() : m_cs{std::make_unique<ComputeStartingNode>() } {
     
 }
@@ -149,7 +155,6 @@ void ConfigProvider::configureNI(std::vector<std::shared_ptr<IProblem>> problems
         auto instanceSetting = std::make_shared<NearestInsertionInstanceSetting>(startingNode);
 
         config->addInstance(problem->getName(), instanceSetting);
-        std::cout <<  "NI" <<problem->getName() << ", starting node : " << startingNode  << std::endl;
 
     }
 
@@ -184,6 +189,8 @@ void ConfigProvider::configureNN(std::vector<std::shared_ptr<IProblem>> problems
             }
 
             config->setHardInstancesNumberOfNodes(nodes);
+
+            
         }
 
     }

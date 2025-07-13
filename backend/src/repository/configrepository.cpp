@@ -3,7 +3,7 @@
 #include "repository/configuration2/configprovider.h"
 
 ConfigRepository::ConfigRepository() {
-    configProvider = std::make_shared<ConfigProvider>();
+    configProvider = ConfigProvider::getInstance();
 }
 
 

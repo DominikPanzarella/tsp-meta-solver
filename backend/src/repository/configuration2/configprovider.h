@@ -6,7 +6,7 @@
 class ConfigProvider : public IConfigProvider{
 public:
 
-    ConfigProvider();
+    static const std::shared_ptr<ConfigProvider>& getInstance();
 
     ~ConfigProvider() =default;
 
@@ -50,5 +50,7 @@ private:
     void configureCC(std::vector<std::shared_ptr<IProblem>> problems);
 
     void configureLKH3(std::vector<std::shared_ptr<IProblem>> problems);
+
+    ConfigProvider();
 
 };

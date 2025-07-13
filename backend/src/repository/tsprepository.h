@@ -3,6 +3,7 @@
 #include "service/itsprepositoy.h"
 #include "repository/reader/reader.h"
 #include "repository/writer/writer.h"
+#include "repository/configuration2/iconfigprovider.h"
 
 
 class TspRepository : public ITspRepository{
@@ -20,5 +21,7 @@ private:
     std::shared_ptr<Reader> reader;
 
     std::shared_ptr<Writer> writer;
+
+    std::shared_ptr<IConfigProvider> config;
 
 };

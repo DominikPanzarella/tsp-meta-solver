@@ -7,3 +7,11 @@ int NearestNeighbourGeneralSetting::getHardInstancesNumberOfNodes(){
 void NearestNeighbourGeneralSetting::setHardInstancesNumberOfNodes(int nodes){
     numberOfNodes = nodes;
 }
+
+bool NearestNeighbourGeneralSetting::getRandomStartingNode(){
+    return randomStartingNode;
+}
+
+void NearestNeighbourGeneralSetting::setRandomStartingNode(bool value){
+    randomStartingNode = value;
+}

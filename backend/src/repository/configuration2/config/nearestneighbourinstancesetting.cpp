@@ -8,3 +8,4 @@ NearestNeighbourInstanceSetting::NearestNeighbourInstanceSetting(int m_startingN
 int NearestNeighbourInstanceSetting::getStartingNode(){
     return m_startingNode;
 }
+
