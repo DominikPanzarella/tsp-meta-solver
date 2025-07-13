@@ -24,7 +24,7 @@ std::shared_ptr<ISolution> FarthestInsertion::execute(std::shared_ptr<IProblem> 
 
     auto setting = std::dynamic_pointer_cast<FarthestInsertionInstanceSetting>(instanceSettings);
     if (!setting)
-        throw std::runtime_error("Wrong Instance Settings given as parameter");
+        throw std::runtime_error("Wrong Instance Settings given as parameter [FI]");
 
     int startingNode = setting->getStartingNode();
     if (startingNode < 0 || startingNode >= n)

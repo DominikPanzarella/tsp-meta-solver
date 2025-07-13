@@ -5,6 +5,13 @@
 #include "repository/configuration2/config/nearestneighbourinstancesetting.h"
 #include "repository/configuration2/config/concordeinstancesetting.h"
 #include "repository/configuration2/config/lkh3instancesetting.h"
+#include "repository/configuration2/compute/computestartingnode.h"
+
+#include <cstdlib>      // for random generator
+
+ConfigProvider::ConfigProvider() : m_cs{std::make_unique<ComputeStartingNode>() } {
+    
+}
 
 JSON ConfigProvider::read(const std::string& file_path) {
     JsonParser parser;
@@ -16,15 +23,15 @@ JSON ConfigProvider::read(const std::string& file_path) {
 
 void ConfigProvider::configure(std::vector<std::shared_ptr<IProblem>> problems) {
 
-    configureNI();
+    configureNI(problems);
 
-    configureNN();
+    configureNN(problems);
 
-    configureFI();
+    configureFI(problems);
 
-    configureCC();
+    configureCC(problems);
     
-    configureLKH3();
+    configureLKH3(problems);
 
     std::vector<std::string> algorithms = getEnabledAlgorithms();
     
@@ -38,7 +45,8 @@ void ConfigProvider::configure(std::vector<std::shared_ptr<IProblem>> problems) 
                 }
             } else if (algoName == "NearestNeighbour") {
                 if (!m_nn->hasInstance(name)) {
-                    m_nn->addInstance(name, std::make_shared<NearestNeighbourInstanceSetting>());
+                    //TODO: starting node can be selected randomly
+                    m_nn->addInstance(name, std::make_shared<NearestNeighbourInstanceSetting>());      
                 }
             } else if (algoName == "FarthestInsertion") {
                 if (!m_fi->hasInstance(name)) {
@@ -78,7 +86,7 @@ std::shared_ptr<NearestInsertionGeneralSetting> ConfigProvider::getNearestInsert
     return m_ni;
 }
 
-void ConfigProvider::configureNI(){
+void ConfigProvider::configureNI(std::vector<std::shared_ptr<IProblem>> problems){
     std::shared_ptr<NearestInsertionGeneralSetting> config = std::make_shared<NearestInsertionGeneralSetting>();
 
     auto niNode = m_json["NearestInsertion"];
@@ -103,6 +111,7 @@ void ConfigProvider::configureNI(){
 
     // SINGLE INSTANCE SETTINGS
 
+    /*
     if(niNode->contains("InstancesSettings")){
         auto instanceNode = (*niNode)["InstancesSettings"];
 
@@ -121,6 +130,28 @@ void ConfigProvider::configureNI(){
             config->addInstance(instanceName, instanceSetting);
         }
     }
+    */
+
+    //starting node is chosen by picking the shortes edge
+    for(const auto& problem : problems) {
+        std::vector<std::pair<int,int>> shortestEdges = m_cs->computeShortestEdges(problem);
+        //now random pikcing
+
+
+        int randomEdge = rand() % shortestEdges.size();
+        std::pair<int,int> shortestEdge = shortestEdges.at(randomEdge);
+
+        //pick random node to start
+
+        int randomNode = rand() % 2;
+        int startingNode = (randomNode==0) ? shortestEdge.first : shortestEdge.second;
+
+        auto instanceSetting = std::make_shared<NearestInsertionInstanceSetting>(startingNode);
+
+        config->addInstance(problem->getName(), instanceSetting);
+        std::cout <<  "NI" <<problem->getName() << ", starting node : " << startingNode  << std::endl;
+
+    }
 
     m_ni = std::move(config);
 }
@@ -134,7 +165,7 @@ std::shared_ptr<NearestNeighbourGeneralSetting> ConfigProvider::getNearestNeighb
     return m_nn;
 }
 
-void ConfigProvider::configureNN(){
+void ConfigProvider::configureNN(std::vector<std::shared_ptr<IProblem>> problems){
     std::shared_ptr<NearestNeighbourGeneralSetting> config = std::make_shared<NearestNeighbourGeneralSetting>();
 
     auto niNode = m_json["NearesetNeighbour"];
@@ -189,7 +220,7 @@ std::shared_ptr<FarthestInsertionGeneralSetting> ConfigProvider::getFarthestInse
     return m_fi;
 }
 
-void ConfigProvider::configureFI(){
+void ConfigProvider::configureFI(std::vector<std::shared_ptr<IProblem>> problems){
     std::shared_ptr<FarthestInsertionGeneralSetting> config = std::make_shared<FarthestInsertionGeneralSetting>();
 
     auto niNode = m_json["FarthestInsertion"];
@@ -214,7 +245,7 @@ void ConfigProvider::configureFI(){
 
     // SINGLE INSTANCE SETTINGS
 
-    if(niNode->contains("InstancesSettings")){
+    /*if(niNode->contains("InstancesSettings")){
         auto instanceNode = (*niNode)["InstancesSettings"];
 
         for(const auto& instanceName : instanceNode->keys()){
@@ -231,7 +262,27 @@ void ConfigProvider::configureFI(){
 
             config->addInstance(instanceName, instanceSetting);
         }
-    }
+    }*/
+
+        //starting node is chosen by picking the shortes edge
+        for(const auto& problem : problems) {
+            std::vector<std::pair<int,int>> shortestEdges = m_cs->computeShortestEdges(problem);
+            //now random pikcing
+    
+    
+            int randomEdge = rand() % shortestEdges.size();
+            std::pair<int,int> shortestEdge = shortestEdges.at(randomEdge);
+    
+            //pick random node to start
+    
+            int randomNode = rand() % 2;
+            int startingNode = (randomNode==0) ? shortestEdge.first : shortestEdge.second;
+    
+            auto instanceSetting = std::make_shared<FarthestInsertionInstanceSetting>(startingNode);
+    
+            config->addInstance(problem->getName(), instanceSetting);
+    
+        }
 
     m_fi = std::move(config);
 
@@ -246,7 +297,7 @@ std::shared_ptr<ConcordeGeneralSetting> ConfigProvider::getConcordeSettings(){
     return m_cc;
 }
 
-void ConfigProvider::configureCC() {
+void ConfigProvider::configureCC(std::vector<std::shared_ptr<IProblem>> problems) {
     std::shared_ptr<ConcordeGeneralSetting> config = std::make_shared<ConcordeGeneralSetting>();
 
     auto ccNode = m_json["Concorde"];
@@ -371,7 +422,7 @@ std::shared_ptr<LKH3GeneralSetting> ConfigProvider::getLKH3Settings(){
     return m_lkh3;
 }
 
-void ConfigProvider::configureLKH3() {
+void ConfigProvider::configureLKH3(std::vector<std::shared_ptr<IProblem>> problems) {
     auto config = std::make_shared<LKH3GeneralSetting>();
 
     auto lkhNode = m_json["LKH3"];

@@ -20,7 +20,7 @@ std::shared_ptr<ISolution> NearestNeighbour::execute(std::shared_ptr<IProblem> p
 
     std::shared_ptr<NearestNeighbourInstanceSetting> setting = std::dynamic_pointer_cast<NearestNeighbourInstanceSetting>(instanceSettings);
 
-    if(setting == nullptr)      throw std::runtime_error("Wrong Instance Settings given as parameter");
+    if(setting == nullptr)      throw std::runtime_error("Wrong Instance Settings given as parameter [NN]");
 
     int current = setting->getStartingNode();
 

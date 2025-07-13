@@ -24,7 +24,7 @@ std::shared_ptr<ISolution> NearestInsertion::execute(std::shared_ptr<IProblem> p
 
     std::shared_ptr<NearestInsertionInstanceSetting> setting = std::dynamic_pointer_cast<NearestInsertionInstanceSetting>(instanceSettings);
 
-    if(setting == nullptr)      throw std::runtime_error("Wrong Instance Settings given as parameter");
+    if(setting == nullptr)      throw std::runtime_error("Wrong Instance Settings given as parameter [NI]");
 
     int startingNode = setting->getStartingNode();
 

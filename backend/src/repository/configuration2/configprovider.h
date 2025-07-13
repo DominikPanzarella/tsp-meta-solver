@@ -1,11 +1,12 @@
 #pragma once
 
 #include "repository/configuration2/iconfigprovider.h"
+#include "repository/configuration2/compute/icomputesetting.h"
 
 class ConfigProvider : public IConfigProvider{
 public:
 
-    ConfigProvider() =default;
+    ConfigProvider();
 
     ~ConfigProvider() =default;
 
@@ -28,6 +29,8 @@ public:
 private:
     JSON m_json;
 
+    std::unique_ptr<IComputeSetting> m_cs;
+
     std::shared_ptr<NearestInsertionGeneralSetting> m_ni;
 
     std::shared_ptr<NearestNeighbourGeneralSetting> m_nn;
@@ -38,14 +41,14 @@ private:
 
     std::shared_ptr<LKH3GeneralSetting> m_lkh3;
 
-    void configureNI();
+    void configureNI(std::vector<std::shared_ptr<IProblem>> problems);
 
-    void configureNN();
+    void configureNN(std::vector<std::shared_ptr<IProblem>> problems);
 
-    void configureFI();
+    void configureFI(std::vector<std::shared_ptr<IProblem>> problems);
     
-    void configureCC();
+    void configureCC(std::vector<std::shared_ptr<IProblem>> problems);
 
-    void configureLKH3();
+    void configureLKH3(std::vector<std::shared_ptr<IProblem>> problems);
 
 };

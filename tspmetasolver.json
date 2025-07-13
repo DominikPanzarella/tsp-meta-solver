@@ -7,28 +7,12 @@
             "HardInstances":{
                 "Nodes": 5
             }
-        },
-        "InstancesSettings":{
-            "a280":{
-                "StartingNode": 1
-            },
-            "att48":{
-                "StartingNode": 4
-            }
         }
     },
     "NearesetNeighbour":{
         "GeneralSettings": {
             "HardInstances":{
                 "Nodes": 10
-            }
-        },
-        "InstancesSettings":{
-            "a280":{
-                "StartingNode": 1
-            },
-            "att48":{
-                "StartingNode": 10
             }
         }
     },
