@@ -16,9 +16,14 @@ void ConfigService::read(const std::string &file_path)
     repositoryLayer->read(file_path);
 }
 
-void ConfigService::configure(std::vector<std::shared_ptr<IProblem>> problems)
+void ConfigService::configureProblems(std::vector<std::shared_ptr<IProblem>> problems)
 {
-    repositoryLayer->configure(problems);
+    repositoryLayer->configureProblems(problems);
+}
+
+void ConfigService::configureAlgorithms()
+{
+    repositoryLayer->configureAlgorithms();
 }
 
 std::vector<std::string> ConfigService::getEnabledAlgorithms()

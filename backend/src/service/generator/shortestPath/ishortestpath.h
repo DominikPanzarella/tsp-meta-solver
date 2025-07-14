@@ -5,6 +5,9 @@
 
 class IShortestPath{
 public:
+
+    ~IShortestPath() = default;
+
     // Returns shortest distances from src to all other vertices
-    virtual std::vector<std::pair<int,int>> shortestPath(std::shared_ptr<IProblem> problem, int src) const = 0;
+    virtual std::vector<std::vector<int>> shortestPath(std::vector<std::vector<int>> adj) const = 0;
 };

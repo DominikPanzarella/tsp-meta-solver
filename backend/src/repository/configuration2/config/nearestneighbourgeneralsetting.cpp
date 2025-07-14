@@ -1,11 +1,11 @@
 #include "repository/configuration2/config/nearestneighbourgeneralsetting.h"
 
-int NearestNeighbourGeneralSetting::getHardInstancesNumberOfNodes(){
-    return numberOfNodes;
+std::vector<int> NearestNeighbourGeneralSetting::getHardInstancesNumberOfNodes(){
+    return m_nodes;
 }
-
-void NearestNeighbourGeneralSetting::setHardInstancesNumberOfNodes(int nodes){
-    numberOfNodes = nodes;
+    
+void NearestNeighbourGeneralSetting::setHardInstancesNumberOfNodes(std::vector<int> nodes){
+    m_nodes = nodes;
 }
 
 bool NearestNeighbourGeneralSetting::getRandomStartingNode(){
@@ -14,4 +14,12 @@ bool NearestNeighbourGeneralSetting::getRandomStartingNode(){
 
 void NearestNeighbourGeneralSetting::setRandomStartingNode(bool value){
     randomStartingNode = value;
+}
+
+void NearestNeighbourGeneralSetting::setSeed(int seed){
+    m_seed = seed;
+}
+
+int NearestNeighbourGeneralSetting::getSeed(){
+    return m_seed;
 }

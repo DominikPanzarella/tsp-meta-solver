@@ -15,8 +15,12 @@ void ConfigController::read(const std::string &file_path){
     serviceLayer->read(file_path);
 }
 
-void ConfigController::configure(std::vector<std::shared_ptr<IProblem>> problems){ 
-    serviceLayer->configure(problems);
+void ConfigController::configureProblems(std::vector<std::shared_ptr<IProblem>> problems){ 
+    serviceLayer->configureProblems(problems);
+}
+
+void ConfigController::configureAlgorithms(){ 
+    serviceLayer->configureAlgorithms();
 }
 
 std::vector<std::string> ConfigController::getEnabledAlgorithms(){

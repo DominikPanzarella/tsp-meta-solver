@@ -1,19 +1,26 @@
 #pragma once
 
 #include "repository/configuration2/config/igeneralsetting.h"
+#include <vector>
 
 class FarthestInsertionGeneralSetting : public IGeneralSetting {
 public:
 
     FarthestInsertionGeneralSetting() =default;
 
-    int getHardInstancesNumberOfNodes();
+    std::vector<int> getHardInstancesNumberOfNodes();
 
-    void setHardInstancesNumberOfNodes(int nodes);
+    void setHardInstancesNumberOfNodes(std::vector<int> nodes);
+
+    void setSeed(int seed);
+
+    int getSeed();
 
 private:
     
     // HARD INSTANCES SETTINGS
-    int numberOfNodes;
+    std::vector<int> m_nodes;
+
+    int m_seed;
     
 };

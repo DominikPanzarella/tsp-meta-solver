@@ -16,7 +16,9 @@ public:
 
     virtual void read(const std::string& file_path) =0 ;
 
-    virtual void configure(std::vector<std::shared_ptr<IProblem>> problems) =0;
+    virtual void configureProblems(std::vector<std::shared_ptr<IProblem>> problems) = 0;
+
+    virtual void configureAlgorithms() = 0;
 
     virtual std::vector<std::string> getEnabledAlgorithms() =0;
 

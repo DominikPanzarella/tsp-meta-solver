@@ -4,27 +4,25 @@
     },
     "NearestInsertion":{
         "GeneralSettings": {
+            "SEED" : 50,
             "HardInstances":{
-                "Nodes": 5
+                "Nodes": [8,15]
             }
         }
     },
     "NearesetNeighbour":{
         "GeneralSettings": {
+            "SEED" : 50,
             "HardInstances":{
-                "Nodes": 10
+                "Nodes": [10]
             }
         }
     },
     "FarthestInsertion":{
         "GeneralSettings": {
+            "SEED" : 50,
             "HardInstances":{
-                "Nodes": 7
-            }
-        },
-        "InstancesSettings":{
-            "a280":{
-                "StartingNode": 2
+                "Nodes": [5]
             }
         }
     },

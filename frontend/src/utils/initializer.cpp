@@ -4,6 +4,7 @@
 #include "controller/executorcontroller.h"
 #include "controller/tspcontroller.h"
 #include "controller/configcontroller.h"
+#include "controller/constructioncontroller.h"
 
 // --- Including algorithms 
 #include "service/algorithm/concordesolver.h"
@@ -18,6 +19,8 @@
 #include "repository/configuration2/config/concordegeneralsetting.h"
 #include "repository/configuration2/config/lkh3generalsetting.h"
 #include "repository/configuration2/config/farthestinsertiongeneralsetting.h"
+
+#include "service/generator/shortestPath/floydwarshall.h"
 
 
 
@@ -34,8 +37,31 @@ void Initializer::init(int argc, char *argv[]){
     // --- Controller setup ---
     std::cout << "Initialization ......" << std::endl;
 
-    const std::shared_ptr<ExecutorController>& executorController = ExecutorController::getInstance();
+    const std::shared_ptr<ConfigController>& provider = ConfigController::getInstance();
+    provider->read("../tspmetasolver.json");
 
+    const std::shared_ptr<ConstructionController> constructionController = ConstructionController::getInstance();
+
+
+    // ########################################################
+    // # Configure Algorithms                                #
+    // ########################################################
+    provider->configureAlgorithms();
+    std::shared_ptr<NearestInsertionGeneralSetting> ni   = provider->getNearestInsertionSettings();
+    std::shared_ptr<NearestNeighbourGeneralSetting> nn   = provider->getNearestNeighbourSettings();
+    std::shared_ptr<FarthestInsertionGeneralSetting> fi  = provider->getFarthestInsertionSettings();
+    std::shared_ptr<ConcordeGeneralSetting> cc           = provider->getConcordeSettings();
+    std::shared_ptr<LKH3GeneralSetting> lkh3             = provider->getLKH3Settings();
+
+
+    for(auto dim : ni->getHardInstancesNumberOfNodes()){
+        std::vector<std::vector<int>> adj = constructionController->generateNI(dim, FloydWarshall::getInstance());
+        std::string filename = "ni" + std::to_string(dim) + "_hard";
+        constructionController->construct(argv[1], filename , adj);
+    }
+
+
+    const std::shared_ptr<ExecutorController>& executorController = ExecutorController::getInstance();
     const std::shared_ptr<TspController>& tspController = TspController::getInstance();
 
 
@@ -53,20 +79,11 @@ void Initializer::init(int argc, char *argv[]){
         problems.push_back(problem);
     }
 
-
-    const std::shared_ptr<ConfigController>& provider = ConfigController::getInstance();
-
-    provider->read("../tspmetasolver.json");
-
-    provider->configure(problems);
+    provider->configureProblems(problems);
 
     std::vector<std::shared_ptr<IAlgorithm>> algorithms;
 
-    std::shared_ptr<NearestInsertionGeneralSetting> ni   = provider->getNearestInsertionSettings();
-    std::shared_ptr<NearestNeighbourGeneralSetting> nn   = provider->getNearestNeighbourSettings();
-    std::shared_ptr<FarthestInsertionGeneralSetting> fi  = provider->getFarthestInsertionSettings();
-    std::shared_ptr<ConcordeGeneralSetting> cc           = provider->getConcordeSettings();
-    std::shared_ptr<LKH3GeneralSetting> lkh3             = provider->getLKH3Settings();
+
     
     for(const std::string& algo : provider->getEnabledAlgorithms())
     {

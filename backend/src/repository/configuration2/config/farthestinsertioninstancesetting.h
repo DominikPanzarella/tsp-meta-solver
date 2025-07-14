@@ -8,6 +8,7 @@ public:
     FarthestInsertionInstanceSetting(int m_startingNode = 0);
 
     int getStartingNode();
+    
 
 private:
     int m_startingNode;

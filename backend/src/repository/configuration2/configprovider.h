@@ -12,7 +12,9 @@ public:
 
     virtual JSON read(const std::string& file_path) override ;
 
-    virtual void configure(std::vector<std::shared_ptr<IProblem>> problems) override;
+    virtual void configureProblems(std::vector<std::shared_ptr<IProblem>> problems) override;
+
+    virtual void configureAlgorithms() override;
 
     virtual std::vector<std::string> getEnabledAlgorithms() override;
 
@@ -41,15 +43,17 @@ private:
 
     std::shared_ptr<LKH3GeneralSetting> m_lkh3;
 
-    void configureNI(std::vector<std::shared_ptr<IProblem>> problems);
+    void configureNI();
 
-    void configureNN(std::vector<std::shared_ptr<IProblem>> problems);
+    void configureNN();
 
-    void configureFI(std::vector<std::shared_ptr<IProblem>> problems);
+    void configureFI();
     
-    void configureCC(std::vector<std::shared_ptr<IProblem>> problems);
+    void configureCC();
 
-    void configureLKH3(std::vector<std::shared_ptr<IProblem>> problems);
+    void configureLKH3();
+
+    bool algoConfigure;
 
     ConfigProvider();
 

@@ -12,7 +12,9 @@ public:
 
     virtual void read(const std::string& file_path) override ;
 
-    virtual void configure(std::vector<std::shared_ptr<IProblem>> problems) override;
+    virtual void configureProblems(std::vector<std::shared_ptr<IProblem>> problems) override;
+
+    virtual void configureAlgorithms() override;
 
     virtual std::vector<std::string> getEnabledAlgorithms() override;
 

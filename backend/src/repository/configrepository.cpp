@@ -11,8 +11,12 @@ void ConfigRepository::read(const std::string& file_path){
     configProvider->read(file_path);
 }
 
-void ConfigRepository::configure(std::vector<std::shared_ptr<IProblem>> problems){
-    configProvider->configure(problems);
+void ConfigRepository::configureProblems(std::vector<std::shared_ptr<IProblem>> problems){
+    configProvider->configureProblems(problems);
+}
+
+void ConfigRepository::configureAlgorithms(){
+    configProvider->configureAlgorithms();
 }
 
 std::vector<std::string> ConfigRepository::getEnabledAlgorithms(){
