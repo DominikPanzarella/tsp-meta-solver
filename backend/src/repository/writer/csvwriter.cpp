@@ -15,7 +15,7 @@ void CsvWriter::registerWriteFuncs(){
     algoWriters["NearestInsertion"] = [this](const std::string& filename, const auto& sols){
         std::ofstream out(filename);
 
-        out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
+        out << "Problem,Dimension,Algorithm,Cost,Time(us),St\n";
         for(const auto& sol : sols){
             auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
             if (!tspSol || !tspSol->getPath()) continue;
@@ -111,7 +111,7 @@ bool CsvWriter::canHandle(const std::string& content) const {
     return lowered == "csv";
 }
 
-bool CsvWriter::writeFile(std::string file_path, const std::shared_ptr<ISolutionCollector>& solutionCollector) const {
+bool CsvWriter::writeFile(std::string file_path, const std::shared_ptr<ISolutionCollector>& solutionCollector,const std::shared_ptr<IConfigProvider>& configProvider) const {
     namespace fs = std::filesystem;
 
     const auto& solutionsByAlgo = solutionCollector->getSolutions();

@@ -17,7 +17,7 @@ protected:
 
     virtual bool canHandle(const std::string& content) const override;
 
-    virtual bool writeFile(std::string file_path, const std::shared_ptr<ISolutionCollector>& solutionCollector) const override;
+    virtual bool writeFile(std::string file_path, const std::shared_ptr<ISolutionCollector>& solutionCollector, const std::shared_ptr<IConfigProvider>& configProvider) const override;
 
 
     void registerWriteFuncs();

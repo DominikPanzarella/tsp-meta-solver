@@ -46,5 +46,5 @@ std::shared_ptr<IProblem> TspRepository::read(const std::string& file_path){
 
 
 bool TspRepository::write(std::string file_path, std::string extension, const std::shared_ptr<ISolutionCollector>& solutionCollector){
-    return writer->write(file_path, extension, solutionCollector);
+    return writer->write(file_path, extension, solutionCollector, config);
 }

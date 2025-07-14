@@ -18,6 +18,15 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(json)
 
+# === GTEST ===
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+)
+
+set(gtest_force_shared_crt OFF CACHE BOOL "" FORCE) # Per Windows
+FetchContent_MakeAvailable(googletest)
+
 # === HEADER GLOBALI ===
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/resources)
@@ -55,4 +64,31 @@ add_custom_command(TARGET tsp_backend POST_BUILD
     ${CMAKE_SOURCE_DIR}/resources
     ${CMAKE_CURRENT_BINARY_DIR}/resources
 )
+
+# === TEST ===
+enable_testing()
+
+file(GLOB_RECURSE BACKEND_TESTS
+    "${CMAKE_CURRENT_SOURCE_DIR}/test/*.cpp"
+)
+
+if(BACKEND_TESTS)  # se la lista non è vuota
+  add_executable(tsp_tests ${BACKEND_TESTS})
+
+  target_include_directories(tsp_tests PRIVATE
+      ${CMAKE_CURRENT_SOURCE_DIR}/src
+      ${CMAKE_CURRENT_SOURCE_DIR}/test
+  )
+
+  target_link_libraries(tsp_tests
+      PRIVATE
+      tsp_backend
+      GTest::gtest_main
+  )
+
+  include(GoogleTest)
+  gtest_discover_tests(tsp_tests)
+else()
+  message(WARNING "No test source files found in ${CMAKE_CURRENT_SOURCE_DIR}/test")
+endif()
 

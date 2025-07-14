@@ -6,7 +6,7 @@
 class FileWriter : public Writer {
 public:
     //template meethod
-    virtual bool write(std::string file_path, std::string extension, const std::shared_ptr<ISolutionCollector>& solutionCollector) const override;
+    virtual bool write(std::string file_path, std::string extension, const std::shared_ptr<ISolutionCollector>& solutionCollector,const std::shared_ptr<IConfigProvider>& configProvider ) const override;
 
     void setSuccessor(std::shared_ptr<FileWriter> next);
 
@@ -23,5 +23,5 @@ protected:
 
     virtual bool canHandle(const std::string& content) const =0;
 
-    virtual bool writeFile(std::string file_path, const std::shared_ptr<ISolutionCollector>& solutionCollector) const = 0;
+    virtual bool writeFile(std::string file_path, const std::shared_ptr<ISolutionCollector>& solutionCollector, const std::shared_ptr<IConfigProvider>& configProvider) const = 0;
 };
