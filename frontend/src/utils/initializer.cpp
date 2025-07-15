@@ -56,7 +56,13 @@ void Initializer::init(int argc, char *argv[]){
 
     for(auto dim : ni->getHardInstancesNumberOfNodes()){
         std::vector<std::vector<int>> adj = constructionController->generateNI(dim, FloydWarshall::getInstance());
-        std::string filename = "ni" + std::to_string(dim) + "_hard";
+        std::string filename = "ni" + std::to_string(dim) + "_generated";
+        constructionController->construct(argv[1], filename , adj);
+    }
+
+    for(auto dim : nn->getHardInstancesNumberOfNodes()){
+        std::vector<std::vector<int>> adj = constructionController->generateNN(dim, FloydWarshall::getInstance());
+        std::string filename = "nn" + std::to_string(dim) + "_generated";
         constructionController->construct(argv[1], filename , adj);
     }
 
@@ -147,34 +153,14 @@ void Initializer::init(int argc, char *argv[]){
 std::vector<std::string> Initializer::collectTspInstances(const std::string& dir) {
     std::vector<std::string> paths;
     static const std::unordered_set<std::string> exclude = {
-        "brd14051.tsp",
-        "d15112.tsp",
-        "d18512.tsp",
-        "pla33810.tsp",
-        "pla85900.tsp",
-        "rl11849.tsp",
-        "usa13509.tsp",
-        "brd14051.tsp",
-        "pla7397.tsp",
-        "rl5934.tsp",
-        "rl5915.tsp",
-        "fnl4461.tsp",
-        "fl3795.tsp",
-        "pcb3038.tsp",
-        "u2319.tsp",
-        "u2152.tsp",
-        "d2103.tsp",
-        "rl1889.tsp",
-        "u1817.tsp",
-        "d1291.tsp",
-        "fl1400.tsp",
-        "fl1577.tsp",
-        "vm1748.tsp",
-        "rl1323.tsp",
-
+        "brd14051.tsp", "d15112.tsp", "d18512.tsp", "pla33810.tsp", "pla85900.tsp",
+        "rl11849.tsp", "usa13509.tsp", "brd14051.tsp", "pla7397.tsp", "rl5934.tsp",
+        "rl5915.tsp", "fnl4461.tsp", "fl3795.tsp", "pcb3038.tsp", "u2319.tsp",
+        "u2152.tsp", "d2103.tsp", "rl1889.tsp", "u1817.tsp", "d1291.tsp",
+        "fl1400.tsp", "fl1577.tsp", "vm1748.tsp", "rl1323.tsp"
     };
 
-    if(!std::filesystem::exists(dir)){
+    if (!std::filesystem::exists(dir)) {
         std::cerr << "Directory requested: " << std::filesystem::absolute(dir) << std::endl;
         throw std::runtime_error("Directory '" + dir + "' does not exist.");
     }
@@ -184,13 +170,18 @@ std::vector<std::string> Initializer::collectTspInstances(const std::string& dir
     for (const auto& entry : std::filesystem::directory_iterator(dir)) {
         if (entry.path().extension() == ".tsp") {
             const std::string filename = entry.path().filename().string();
-            if(exclude.find(filename) == exclude.end())
+
+            // Esclude file se sono nella lista exclude o contengono "_hard"
+            if (exclude.find(filename) == exclude.end() && filename.find("_hard") == std::string::npos) {
                 paths.push_back(entry.path().string());
+            }
         }
     }
+
     std::sort(paths.begin(), paths.end());
     return paths;
 }
+
 
 Initializer::Initializer(const std::string resourcesPath, const std::string resultsPath, const std::string format)
 {

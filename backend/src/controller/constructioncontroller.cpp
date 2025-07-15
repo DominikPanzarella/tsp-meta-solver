@@ -2,10 +2,12 @@
 #include "service/constructionservice.h"
 #include "service/generatorservice.h"
 #include "service/generator/nigenerator.h"
+#include "service/generator/nngenerator.h"
 
 ConstructionController::ConstructionController(){
     serviceLayer = ConstructionService::getInstance();
     ni_service = GeneratorService::getInstance(NIGenerator::getInstance());
+    nn_service = GeneratorService::getInstance(NNGenerator::getInstance());
 }
 
 
