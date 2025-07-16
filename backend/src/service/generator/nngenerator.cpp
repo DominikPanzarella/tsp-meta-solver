@@ -9,6 +9,11 @@ const std::shared_ptr<NNGenerator> &NNGenerator::getInstance()
     return mySelf;
 }
 
+std::vector<std::vector<int>> NNGenerator::generate(int a, int b, int c,const std::shared_ptr<IShortestPath> &shortestPathSolver) const{
+    throw std::logic_error("NNGenerator doesn't require parameters a, b, c.");
+}
+
+
 NNGenerator::SubgraphInfo NNGenerator::buildFi(int i, std::vector<std::vector<int>> &adjMatrix, int &nextNode) const
 {
     const int INF = std::numeric_limits<int>::max();
@@ -57,21 +62,17 @@ NNGenerator::SubgraphInfo NNGenerator::buildFi(int i, std::vector<std::vector<in
         adjMatrix.resize(newSize, std::vector<int>(newSize, INF));
     }
 
-    int li = getLi(i-1);
+    int li = 1000 * getLi(i-1);
 
-    // Arco left.right ↔ d
     adjMatrix[d][left.right] = cost3;
     adjMatrix[left.right][d] = cost3;
 
-    // Arco right.start ↔ d
     adjMatrix[d][right.start] = cost3;
     adjMatrix[right.start][d] = cost3;
 
-    // Arco right.middle ↔ d
     adjMatrix[d][right.middle] = li;
     adjMatrix[right.middle][d] = li;
 
-    // Arco left.middle ↔ right.start
     adjMatrix[left.middle][right.start] = li;
     adjMatrix[right.start][left.middle] = li;
 
@@ -89,18 +90,18 @@ std::vector<std::vector<int>> NNGenerator::generate(int n, const std::shared_ptr
 
     SubgraphInfo info = buildFi(n, adjMatrix, nextNode);
 
-    // Arco middle ↔ start con peso li(n - 1)
     if (n > 1)
     {
-        int li_minus1 = getLi(n-1) - 1;
-        
+        int li_minus1 = 1000 * (getLi(n) - 1);
+        std::cout << "n -> " << n << std::endl;
+        std::cout << "l_i ->" << getLi(n) << std::endl ;
         adjMatrix[info.start][info.middle] = li_minus1;
         adjMatrix[info.middle][info.start] = li_minus1;
         adjMatrix[info.start][info.right] = cost1;
         adjMatrix[info.right][info.start] = cost1;
 
         std::vector<std::vector<int>> distances = shortestPathSolver->shortestPath(adjMatrix);
-
+        
         for (int i = 0; i < adjMatrix.size(); ++i)
         {
             for (int j = 0; j < adjMatrix.size(); ++j)

@@ -4,6 +4,10 @@
 #include "utils/testutils.cpp"
 #include "service/generator/shortestPath/floydwarshall.h"
 #include "service/generator/nngenerator.h"
+#include "service/algorithm/nearestneighbour.h"
+#include "controller/constructioncontroller.h"
+#include "controller/tspcontroller.h"
+#include "controller/configcontroller.h"
 
 #include <filesystem>
 #include <memory>
@@ -77,6 +81,14 @@ TEST(NNGeneratorTest, GenerateMatrixWith8Nodes) {
         }
         std::cout << "\n";
     }
+
+    const std::shared_ptr<ConfigController>& provider = ConfigController::getInstance();
+    provider->read("../tspmetasolver.json");
+    const std::shared_ptr<ConstructionController> constructionController = ConstructionController::getInstance();
+    provider->configureAlgorithms();
+    std::shared_ptr<NearestNeighbourGeneralSetting> nn   = provider->getNearestNeighbourSettings();
+
+
 
     // Puoi anche aggiungere asserzioni se vuoi:
 }

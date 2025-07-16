@@ -8,6 +8,10 @@ const std::shared_ptr<NIGenerator>& NIGenerator::getInstance(){
     return mySelf;
 }
 
+std::vector<std::vector<int>> NIGenerator::generate(int a, int b, int c,const std::shared_ptr<IShortestPath> &shortestPathSolver) const{
+    throw std::logic_error("NIGenerator doesn't require parameters a, b, c.");
+}
+
 std::vector<std::vector<int>> NIGenerator::generate(int n,const std::shared_ptr<IShortestPath>& shortestPathSolver) const {
 
     int INF = std::numeric_limits<int>::max();

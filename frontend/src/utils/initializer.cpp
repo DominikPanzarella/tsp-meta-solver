@@ -157,8 +157,15 @@ std::vector<std::string> Initializer::collectTspInstances(const std::string& dir
         "rl11849.tsp", "usa13509.tsp", "brd14051.tsp", "pla7397.tsp", "rl5934.tsp",
         "rl5915.tsp", "fnl4461.tsp", "fl3795.tsp", "pcb3038.tsp", "u2319.tsp",
         "u2152.tsp", "d2103.tsp", "rl1889.tsp", "u1817.tsp", "d1291.tsp",
-        "fl1400.tsp", "fl1577.tsp", "vm1748.tsp", "rl1323.tsp"
+        "fl1400.tsp", "fl1577.tsp", "vm1748.tsp", "rl1323.tsp",
+        "Tnm118.tsp", "Tnm121.tsp", "Tnm124.tsp", "Tnm127.tsp", "Tnm130.tsp",
+        "Tnm133.tsp", "Tnm136.tsp", "Tnm139.tsp", "Tnm142.tsp", "Tnm145.tsp",
+        "Tnm148.tsp", "Tnm151.tsp", "Tnm154.tsp", "Tnm157.tsp", "Tnm160.tsp",
+        "Tnm163.tsp", "Tnm166.tsp", "Tnm169.tsp", "Tnm172.tsp", "Tnm175.tsp",
+        "Tnm178.tsp", "Tnm181.tsp", "Tnm184.tsp", "Tnm187.tsp", "Tnm190.tsp",
+        "Tnm193.tsp", "Tnm196.tsp", "Tnm199.tsp"
     };
+    
 
     if (!std::filesystem::exists(dir)) {
         std::cerr << "Directory requested: " << std::filesystem::absolute(dir) << std::endl;

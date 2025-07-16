@@ -12,6 +12,9 @@ public:
 
     virtual std::vector<std::vector<int>> generate(int n,const std::shared_ptr<IShortestPath>& shortestPathSolver) const override;
 
+    virtual std::vector<std::vector<int>> generate(int a, int b, int c,const std::shared_ptr<IShortestPath> &shortestPathSolver) const override;
+
+
 protected:
     NNGenerator() =default;
 
@@ -24,7 +27,7 @@ protected:
         int sign = pow(-1,i);
     
         int val = ( (4 * pow2i) - sign + 3) / 6;
-        return 1000 * val;
+        return val;
     }
     
 
