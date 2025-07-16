@@ -13,29 +13,42 @@ NNGenerator::SubgraphInfo NNGenerator::buildFi(int i, std::vector<std::vector<in
 {
     const int INF = std::numeric_limits<int>::max();
 
+    int eps = 1;
+    int cost1 = 1000;                  
+    int cost2 = 1000 - eps;   
+    int cost3 = 1000 + eps;                 
+
     if (i == 1)
     {
-        int a = nextNode++; // A: start
-        int b = nextNode++; // B: middle
-        int c = nextNode++; // C: right
+        int a = nextNode++; // A -_> left
+        int b = nextNode++; // B --> middle
+        int c = nextNode++; // C --> right
 
         for (auto &row : adjMatrix)
             row.resize(nextNode, INF);
         adjMatrix.resize(nextNode, std::vector<int>(nextNode, INF));
 
-        adjMatrix[a][b] = adjMatrix[b][a] = 1000;
-        adjMatrix[b][c] = adjMatrix[c][b] = 1000;
-        adjMatrix[a][c] = adjMatrix[c][a] = 999;
+        adjMatrix[a][b] = cost1;
+        adjMatrix[b][a] = cost1;
+    
+        adjMatrix[b][c] = cost1;
+        adjMatrix[c][b] = cost1;
+
+        adjMatrix[a][c] = cost2;
+        adjMatrix[c][a] = cost2;
+
 
         return {a, b, c};
     }
 
     SubgraphInfo left = buildFi(i - 1, adjMatrix, nextNode);
-    int d = nextNode++; // new middle
+
+    int d = nextNode++; 
+
     SubgraphInfo right = buildFi(i - 1, adjMatrix, nextNode);
 
     int oldSize = adjMatrix.size();
-    int newSize = nextNode; // dopo aver incrementato nextNode
+    int newSize = nextNode;
 
     if (newSize > oldSize)
     {
@@ -44,15 +57,15 @@ NNGenerator::SubgraphInfo NNGenerator::buildFi(int i, std::vector<std::vector<in
         adjMatrix.resize(newSize, std::vector<int>(newSize, INF));
     }
 
-    int li = getLi(i);
+    int li = getLi(i-1);
 
     // Arco left.right ↔ d
-    adjMatrix[d][left.right] = 1001;
-    adjMatrix[left.right][d] = 1001;
+    adjMatrix[d][left.right] = cost3;
+    adjMatrix[left.right][d] = cost3;
 
     // Arco right.start ↔ d
-    adjMatrix[d][right.start] = 1001;
-    adjMatrix[right.start][d] = 1001;
+    adjMatrix[d][right.start] = cost3;
+    adjMatrix[right.start][d] = cost3;
 
     // Arco right.middle ↔ d
     adjMatrix[d][right.middle] = li;
@@ -71,21 +84,20 @@ std::vector<std::vector<int>> NNGenerator::generate(int n, const std::shared_ptr
     std::vector<std::vector<int>> adjMatrix;
     int nextNode = 0;
 
+    int eps = 1;
+    int cost1 = 1000;    
+
     SubgraphInfo info = buildFi(n, adjMatrix, nextNode);
 
     // Arco middle ↔ start con peso li(n - 1)
     if (n > 1)
     {
-        int li_minus1 = getLi(n) - 1;
-        // adjMatrix[info.middle][info.start] = adjMatrix[info.start][info.middle] = li_minus1;
+        int li_minus1 = getLi(n-1) - 1;
+        
         adjMatrix[info.start][info.middle] = li_minus1;
         adjMatrix[info.middle][info.start] = li_minus1;
-        adjMatrix[info.start][info.right] = 1000;
-        adjMatrix[info.right][info.start] = 1000;
-
-        // Set diagonale a 0
-        for (int i = 0; i < adjMatrix.size(); ++i)
-            adjMatrix[i][i] = 0;
+        adjMatrix[info.start][info.right] = cost1;
+        adjMatrix[info.right][info.start] = cost1;
 
         std::vector<std::vector<int>> distances = shortestPathSolver->shortestPath(adjMatrix);
 
@@ -100,6 +112,10 @@ std::vector<std::vector<int>> NNGenerator::generate(int n, const std::shared_ptr
             }
         }
     }
+
+    // Set diagonale a 0
+    for (int i = 0; i < adjMatrix.size(); ++i)
+        adjMatrix[i][i] = 0;
 
     return adjMatrix;
 }

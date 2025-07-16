@@ -62,5 +62,21 @@ TEST(NNGeneratorTest, GenerateMatrixWith8Nodes) {
         std::cout << "\n";
     }
 
+    n = 4;
+
+    matrix = generator->generate(n, solver);
+
+    // stampa la matrice
+    std::cout << "Generated adjacency matrix (" << matrix.size() << "x" << matrix.size() << "):\n";
+    for (const auto& row : matrix) {
+        for (int val : row) {
+            if (val == std::numeric_limits<int>::max())
+                std::cout << "INF ";
+            else
+                std::cout << val << " ";
+        }
+        std::cout << "\n";
+    }
+
     // Puoi anche aggiungere asserzioni se vuoi:
 }
