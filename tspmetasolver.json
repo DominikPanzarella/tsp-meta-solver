@@ -43,6 +43,10 @@
     },
     "Concorde":{
         "GeneralSettings": {
+            "IntegralityGap": [
+                [3,2,3],
+                [4,5,6]
+            ]
         },
         "InstancesSettings":{
         }

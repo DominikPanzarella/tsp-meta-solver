@@ -151,3 +151,10 @@ std::optional<bool> ConcordeGeneralSetting::getSaveTourAsEdgeFile() const {
 void ConcordeGeneralSetting::setSaveTourAsEdgeFile(std::optional<bool> value) {
     save_tour_as_edge_file = value;
 }
+
+std::vector<std::vector<int>> ConcordeGeneralSetting::getIntegralityGap() const{
+    return integralityGaps;
+}
+void ConcordeGeneralSetting::setIntegralityGap(std::vector<std::vector<int>> iG){
+    integralityGaps = iG;
+}

@@ -465,6 +465,32 @@ void ConfigProvider::configureCC()
         {
             config->setSaveTourAsEdgeFile((*generalSetting)["SaveTourAsEdgeFile"]->get<bool>());
         }
+        if(generalSetting->contains("IntegralityGap")){
+            auto gapArray = (*generalSetting)["IntegralityGap"];
+            std::vector<std::vector<int>> nodes;
+
+            if (gapArray && gapArray->is_array())
+            {
+                const auto &triples = gapArray->impl_->data;
+
+                for (const auto &triple : triples)
+                {
+                    if(triple.is_array() && triple.size() == 3){
+                        std::vector<int> vec;
+                        vec.push_back(triple[0].get<int>());
+                        vec.push_back(triple[1].get<int>());
+                        vec.push_back(triple[2].get<int>());
+                        nodes.push_back(vec);
+                    }
+                    else
+                    {
+                        std::cerr << "Invalid integrality gap triple format" << std::endl;
+                    }
+                }
+
+                config->setIntegralityGap(triples);
+            }
+        }
     }
 
     // INSTANCES SETTINGS

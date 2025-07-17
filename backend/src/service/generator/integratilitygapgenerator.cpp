@@ -17,7 +17,6 @@ std::vector<std::vector<int>> IntegralityGapGenerator::generate(int n, const std
 }
 
 std::vector<std::vector<int>> IntegralityGapGenerator::generate(int a, int b, int c,const std::shared_ptr<IShortestPath> &shortestPathSolver) const{
-
     int INF = std::numeric_limits<int>::max();
 
     int nodes_a = a + 1;

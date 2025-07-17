@@ -47,6 +47,7 @@ void Initializer::init(int argc, char *argv[]){
     // # Configure Algorithms                                #
     // ########################################################
     provider->configureAlgorithms();
+
     std::shared_ptr<NearestInsertionGeneralSetting> ni   = provider->getNearestInsertionSettings();
     std::shared_ptr<NearestNeighbourGeneralSetting> nn   = provider->getNearestNeighbourSettings();
     std::shared_ptr<FarthestInsertionGeneralSetting> fi  = provider->getFarthestInsertionSettings();
@@ -56,13 +57,20 @@ void Initializer::init(int argc, char *argv[]){
 
     for(auto dim : ni->getHardInstancesNumberOfNodes()){
         std::vector<std::vector<int>> adj = constructionController->generateNI(dim, FloydWarshall::getInstance());
-        std::string filename = "ni" + std::to_string(dim) + "_generated";
+        std::string filename = "NearestInsertion_HardInstance_" + std::to_string(dim) + "_Generated";
         constructionController->construct(argv[1], filename , adj);
     }
 
     for(auto dim : nn->getHardInstancesNumberOfNodes()){
         std::vector<std::vector<int>> adj = constructionController->generateNN(dim, FloydWarshall::getInstance());
-        std::string filename = "nn" + std::to_string(dim) + "_generated";
+        std::string filename = "NearestNeighbour_HardInstance_" + std::to_string(dim) + "_Generated";
+        constructionController->construct(argv[1], filename , adj);
+    }
+
+    
+    for(std::vector<int> triplet : cc->getIntegralityGap()){
+        std::vector<std::vector<int>> adj = constructionController->generateIG(triplet[0],triplet[1],triplet[2], FloydWarshall::getInstance());
+        std::string filename = "IntegralityGap_HardInstane_a" + std::to_string(triplet[0]) + "_b" + std::to_string(triplet[1]) + "_c" + std::to_string(triplet[2]) + "_Generated";
         constructionController->construct(argv[1], filename , adj);
     }
 

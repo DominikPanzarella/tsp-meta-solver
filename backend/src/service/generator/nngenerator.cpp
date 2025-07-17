@@ -93,8 +93,6 @@ std::vector<std::vector<int>> NNGenerator::generate(int n, const std::shared_ptr
     if (n > 1)
     {
         int li_minus1 = 1000 * (getLi(n) - 1);
-        std::cout << "n -> " << n << std::endl;
-        std::cout << "l_i ->" << getLi(n) << std::endl ;
         adjMatrix[info.start][info.middle] = li_minus1;
         adjMatrix[info.middle][info.start] = li_minus1;
         adjMatrix[info.start][info.right] = cost1;

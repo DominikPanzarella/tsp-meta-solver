@@ -1,6 +1,7 @@
 #pragma once
 
 #include <optional>
+#include <vector>
 #include "repository/configuration2/config/igeneralsetting.h"
 
 class ConcordeGeneralSetting : public IGeneralSetting {
@@ -64,6 +65,9 @@ public:
     std::optional<bool> getSaveTourAsEdgeFile() const;
     void setSaveTourAsEdgeFile(std::optional<bool> value);
 
+    std::vector<std::vector<int>> getIntegralityGap() const;
+    void setIntegralityGap(std::vector<std::vector<int>> iG);
+
 private:
     std::optional<bool> branching;
     std::optional<bool> dfs_branching;
@@ -88,4 +92,6 @@ private:
     std::optional<int> distance_norm;
     std::optional<bool> delete_temp_files;
     std::optional<bool> save_tour_as_edge_file;
+
+    std::vector<std::vector<int>> integralityGaps;
 };

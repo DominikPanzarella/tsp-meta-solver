@@ -18,6 +18,8 @@ public:
 
     std::vector<std::vector<int>> generateFI(int n,const std::shared_ptr<IShortestPath>& shortestPathSolver) const;
 
+    std::vector<std::vector<int>> generateIG(int a, int b, int c, const std::shared_ptr<IShortestPath>& shortestPathSolver) const;
+
  private:
     std::shared_ptr<IConstructionService> serviceLayer;
 
@@ -26,6 +28,8 @@ public:
     std::shared_ptr<IGeneratorService> fi_service;
 
     std::shared_ptr<IGeneratorService> nn_service;
+
+    std::shared_ptr<IGeneratorService> cc_service;
 
     ConstructionController();
 

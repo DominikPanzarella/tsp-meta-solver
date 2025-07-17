@@ -3,11 +3,14 @@
 #include "service/generatorservice.h"
 #include "service/generator/nigenerator.h"
 #include "service/generator/nngenerator.h"
+#include "service/generator/integratilitygapgenerator.h"
+#include <iostream>
 
 ConstructionController::ConstructionController(){
     serviceLayer = ConstructionService::getInstance();
-    ni_service = GeneratorService::getInstance(NIGenerator::getInstance());
-    nn_service = GeneratorService::getInstance(NNGenerator::getInstance());
+    ni_service = std::make_shared<GeneratorService>(NIGenerator::getInstance());
+    nn_service = std::make_shared<GeneratorService>(NNGenerator::getInstance());
+    cc_service = std::make_shared<GeneratorService>(IntegralityGapGenerator::getInstance());
 }
 
 
@@ -30,4 +33,8 @@ std::vector<std::vector<int>> ConstructionController::generateNN(int n,const std
 
 std::vector<std::vector<int>> ConstructionController::generateFI(int n,const std::shared_ptr<IShortestPath>& shortestPathSolver) const{
     return fi_service->generate(n, shortestPathSolver);
+}
+
+std::vector<std::vector<int>> ConstructionController::generateIG(int a, int b, int c, const std::shared_ptr<IShortestPath>& shortestPathSolver) const{
+    return cc_service->generate(a,b,c,shortestPathSolver);
 }
