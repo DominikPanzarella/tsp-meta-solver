@@ -186,10 +186,14 @@ std::vector<std::string> Initializer::collectTspInstances(const std::string& dir
         if (entry.path().extension() == ".tsp") {
             const std::string filename = entry.path().filename().string();
 
-            // Esclude file se sono nella lista exclude o contengono "_hard"
-            if (exclude.find(filename) == exclude.end() && filename.find("_hard") == std::string::npos) {
+            if (
+                exclude.find(filename) == exclude.end() &&           // non è nella lista esclusa
+                filename.find("_hard") == std::string::npos &&       // non contiene "_hard"
+                filename.rfind("Tnm", 0) != 0                         // non inizia con "Tnm"
+            ) {
                 paths.push_back(entry.path().string());
             }
+            
         }
     }
 

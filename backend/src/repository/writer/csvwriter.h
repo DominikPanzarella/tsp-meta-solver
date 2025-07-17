@@ -22,7 +22,7 @@ protected:
 
     void registerWriteFuncs();
 
-    using WriteFunc = std::function<void(const std::string&, const std::vector<std::shared_ptr<ISolution>>&)>;
+    using WriteFunc = std::function<void(const std::string&, const std::vector<std::shared_ptr<ISolution>>&,const std::shared_ptr<IConfigProvider>&)>;
 
     std::unordered_map<std::string, WriteFunc> algoWriters;
 

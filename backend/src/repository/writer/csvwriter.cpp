@@ -5,6 +5,13 @@
 #include <filesystem>
 #include <fstream>
 #include "service/algorithm/tspsolution.h"
+#include "repository/configuration2/config/nearestinsertiongeneralsetting.h"
+#include "repository/configuration2/config/nearestinsertioninstancesetting.h"
+#include "repository/configuration2/config/nearestneighbourgeneralsetting.h"
+#include "repository/configuration2/config/nearestneighbourinstancesetting.h"
+#include "repository/configuration2/config/farthestinsertiongeneralsetting.h"
+#include "repository/configuration2/config/farthestinsertioninstancesetting.h"
+
 
 CsvWriter::CsvWriter(){
     registerWriteFuncs();
@@ -12,48 +19,60 @@ CsvWriter::CsvWriter(){
 
 void CsvWriter::registerWriteFuncs(){
 
-    algoWriters["NearestInsertion"] = [this](const std::string& filename, const auto& sols){
+    algoWriters["NearestInsertion"] = [this](const std::string& filename, const auto& sols, const auto& configProvider){
         std::ofstream out(filename);
 
-        out << "Problem,Dimension,Algorithm,Cost,Time(us),St\n";
+        out << "Problem,Dimension,Algorithm,Cost,Time(us),StartingNode\n";
         for(const auto& sol : sols){
             auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
+            auto ni_setting = std::dynamic_pointer_cast<NearestInsertionGeneralSetting>(configProvider->getNearestInsertionSettings());
             if (!tspSol || !tspSol->getPath()) continue;
-    
             out << tspSol->getProblem()->getName() << ",";
             out << tspSol->getProblem()->getDimension() << ",";
             out << "NearestInsertion" << ",";
             out << tspSol->getPath()->getCost() << ",";
             out << tspSol->getExecutionTime() << ",";
+
+            auto problem_setting = std::dynamic_pointer_cast<NearestInsertionInstanceSetting>(configProvider->getNearestInsertionSettings()->getInstance(tspSol->getProblem()->getName()));
+            out << problem_setting->getStartingNode();
             out << "\n";
         }
 
     };
 
-    algoWriters["NearestNeighbour"] = [this](const std::string& filename, const auto& sols){
+    algoWriters["NearestNeighbour"] = [this](const std::string& filename, const auto& sols, const auto& configProvider){
         std::ofstream out(filename);
 
-        out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
+        out << "Problem,Dimension,Algorithm,Cost,Time(us),StartingNode\n";
         for(const auto& sol : sols){
             auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
             if (!tspSol || !tspSol->getPath()) continue;
     
+            auto nn_setting = std::dynamic_pointer_cast<NearestNeighbourGeneralSetting>(configProvider->getNearestNeighbourSettings());
+
             out << tspSol->getProblem()->getName() << ",";
             out << tspSol->getProblem()->getDimension() << ",";
             out << "NearestNeighbour" << ",";
             out << tspSol->getPath()->getCost() << ",";
             out << tspSol->getExecutionTime() << ",";
+
+            auto problem_setting = std::dynamic_pointer_cast<NearestNeighbourInstanceSetting>(configProvider->getNearestNeighbourSettings()->getInstance(tspSol->getProblem()->getName()));
+            out << problem_setting->getStartingNode();
             out << "\n";
         }
 
     };
 
-    algoWriters["FarthestInsertion"] = [this](const std::string& filename, const auto& sols){
+    algoWriters["FarthestInsertion"] = [this](const std::string& filename, const auto& sols, const auto& configProvider){
         std::ofstream out(filename);
 
-        out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
+        out << "Problem,Dimension,Algorithm,Cost,Time(us),StartingNode\n";
         for(const auto& sol : sols){
             auto tspSol = std::dynamic_pointer_cast<TspSolution>(sol);
+
+            auto nn_setting = std::dynamic_pointer_cast<FarthestInsertionGeneralSetting>(configProvider->getFarthestInsertionSettings());
+
+
             if (!tspSol || !tspSol->getPath()) continue;
     
             out << tspSol->getProblem()->getName() << ",";
@@ -61,12 +80,16 @@ void CsvWriter::registerWriteFuncs(){
             out << "FarthestInsertion" << ",";
             out << tspSol->getPath()->getCost() << ",";
             out << tspSol->getExecutionTime() << ",";
+
+            auto problem_setting = std::dynamic_pointer_cast<FarthestInsertionInstanceSetting>(configProvider->getFarthestInsertionSettings()->getInstance(tspSol->getProblem()->getName()));
+            out << problem_setting->getStartingNode();
+
             out << "\n";
         }
 
     };
 
-    algoWriters["Concorde"] = [this](const std::string& filename, const auto& sols){
+    algoWriters["Concorde"] = [this](const std::string& filename, const auto& sols, const auto& configProvider){
         std::ofstream out(filename);
 
         out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
@@ -84,7 +107,7 @@ void CsvWriter::registerWriteFuncs(){
 
     };
 
-    algoWriters["LKH3"] = [this](const std::string& filename, const auto& sols){
+    algoWriters["LKH3"] = [this](const std::string& filename, const auto& sols, const auto& configProvider){
         std::ofstream out(filename);
 
         out << "Problem,Dimension,Algorithm,Cost,Time(us)\n";
@@ -137,7 +160,7 @@ bool CsvWriter::writeFile(std::string file_path, const std::shared_ptr<ISolution
         std::string filename = file_path + "/" + "results_" + algoName + ".csv";
         
         if (algoWriters.contains(algoName)) {
-            algoWriters.at(algoName)(filename, solutions);
+            algoWriters.at(algoName)(filename, solutions, configProvider);
         } else {
             std::cerr << "No CSV writer for algorithm: " << algoName << "\n";
         }
