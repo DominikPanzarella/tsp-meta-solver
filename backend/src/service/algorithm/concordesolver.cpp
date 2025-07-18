@@ -26,24 +26,101 @@ std::string ConcordeSolver::name() const {
     return "Concorde";
 }
 
-std::shared_ptr<ISolution> ConcordeSolver::execute(std::shared_ptr<IProblem> problem,std::shared_ptr<IInstanceSetting> instanceSettings) {
+double ConcordeSolver::parseUpperBoundFromLog(const std::string& logFile){
+    std::ifstream in(logFile);
+    if (!in) return 1e200; // impossibile leggere -> upperbound invalido
+
+    std::string line;
+    double lastUpperBound = 1e200;
+
+    while (std::getline(in, line)) {
+        // TOUR FOUND - upperbound is 239301.00
+        auto pos1 = line.find("TOUR FOUND - upperbound is");
+        if (pos1 != std::string::npos) {
+            std::stringstream ss(line.substr(pos1));
+            std::string dummy;
+            double val;
+            // salta parole fino a "is" e leggi il double
+            while (ss >> dummy) {
+                if (dummy == "is" && (ss >> val)) {
+                    lastUpperBound = val;
+                    break;
+                }
+            }
+        }
+
+        // Optimal Solution: 6528.00
+        auto pos2 = line.find("Optimal Solution:");
+        if (pos2 != std::string::npos) {
+            std::stringstream ss(line.substr(pos2));
+            std::string dummy;
+            double val;
+            ss >> dummy >> dummy >> val; // legge "Optimal Solution: val"
+            lastUpperBound = val;
+        }
+
+        if (line.find("Final lower bound") != std::string::npos && line.find("upper bound") != std::string::npos) {
+            size_t pos = line.find("upper bound");
+            std::string substr = line.substr(pos);
+            std::stringstream ss(substr);
+            std::string word;
+            double val = 1e200;
+            // trova la prima double dopo "upper bound"
+            while (ss >> word) {
+                try {
+                    val = std::stod(word);
+                    lastUpperBound = val;
+                    break;
+                } catch (...) {
+                    // continua a leggere fino a trovare un double
+                }
+            }
+        }
+    }
+
+    return lastUpperBound;
+}
+
+std::shared_ptr<ISolution> ConcordeSolver::execute(std::shared_ptr<IProblem> problem, std::shared_ptr<IInstanceSetting> instanceSettings) {
     std::string name = problem->getName();
-    std::string tspFile = m_resourcesPath + "/" + problem->getName() + ".tsp";
+    std::string tspFile = m_resourcesPath + "/" + name + ".tsp";
 
     std::shared_ptr<ConcordeInstanceSetting> setting = std::dynamic_pointer_cast<ConcordeInstanceSetting>(instanceSettings);
-
     if (!setting)
         throw std::runtime_error("Wrong Instance Settings given as parameter");
-
 
     setting->setProblemFile(name + ".tsp");
     setting->setOutputTourFile(name + ".sol");
 
-    if (!runConcorde(tspFile, problem->getName(), instanceSettings)) {
-        throw std::runtime_error("Concorde execution failed");
+    try {
+        runConcorde(tspFile, name, instanceSettings);
+    }
+    catch (...) {
+        std::cerr << "[Concorde] Execution failed for " << name << ", trying to recover partial solution..." << std::endl;
+
+        std::string logFile = m_workingDir + "/" + name + ".log";
+        double partialUpperBound = parseUpperBoundFromLog(logFile);
+        std::vector<int> empty;
+        auto path = std::make_shared<Path>(empty, partialUpperBound);
+        auto solution = std::make_shared<TspSolution>(path, problem);
+        return solution;
     }
 
-    return readSolution(problem);
+    // Se runConcorde è andato a buon fine, prova a leggere la soluzione
+    try {
+        return readSolution(problem);
+    }
+    catch (const std::exception& e) {
+        std::cerr << "[Concorde] Could not read solution file after successful run: " << e.what() << std::endl;
+
+        std::string logFile = m_workingDir + "/" + name + ".log";
+        double partialUpperBound = parseUpperBoundFromLog(logFile);
+        std::vector<int> empty;
+
+        auto path = std::make_shared<Path>(empty, partialUpperBound);
+        auto solution = std::make_shared<TspSolution>(path, problem);
+        return solution;
+    }
 }
 
 bool ConcordeSolver::runConcorde(const std::string& tspFile, const std::string& problemName, std::shared_ptr<IInstanceSetting> instanceSettings) {

@@ -27,4 +27,6 @@ private:
 
     std::shared_ptr<ISolution> readSolution(std::shared_ptr<IProblem> problem);
 
+    double parseUpperBoundFromLog(const std::string& logFile);
+
 };
