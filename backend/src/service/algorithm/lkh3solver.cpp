@@ -130,10 +130,13 @@ std::string LKH3Solver::writeParamFile(const std::string& paramFile, std::shared
     return paramFile;
 }
 
-
-bool LKH3Solver::runLKH(const std::string& paramFile){
+//TODO: in caso di crash -_> guardare in .log --> * 1: Cost = 1960, Time = 0.01 sec.
+bool LKH3Solver::runLKH(const std::string& paramFile,const std::string& problemName){
     std::stringstream cmd;
     cmd << "\"" << m_lkhPath << "\" \"" << paramFile << "\"";
+    cmd << " > \"" << problemName << ".log\" 2>&1"; // log stdout/stderr
+
+    std::cout << "[LKH3] Executing: " << cmd.str() << std::endl;
     int ret = std::system(cmd.str().c_str());
     return ret == 0;
 }
@@ -199,10 +202,53 @@ std::shared_ptr<ISolution> LKH3Solver::execute(std::shared_ptr<IProblem> problem
 
     writeParamFile(paramFile, instanceSettings);
 
-
-    if (!runLKH(paramFile)) {
-        throw std::runtime_error("LKH3 execution failed");
+    try{
+        runLKH(paramFile, m_workingDir + "/" + problem->getName());
+    }
+    catch(...){
+        std::cerr << "[LKH3] Execution failed for " << problem->getName() << ", trying to recover partial solution..." << std::endl;
+        std::string logFile = m_workingDir + "/" + problem->getName() + ".log";
+        double partialUpperBound = parseCostFromFile(logFile);
+        std::vector<int> empty;
+        auto path = std::make_shared<Path>(empty, partialUpperBound);
+        auto solution = std::make_shared<TspSolution>(path, problem);
+        return solution;
     }
 
-    return readSolution(problem, instanceSettings);
+    try{
+        return readSolution(problem, instanceSettings);
+    }
+    catch(const std::exception& e){
+        std::cerr << "[LKH3] Could not read solution file after successful run: " << e.what() << std::endl;
+        std::string logFile = m_workingDir + "/" + problem->getName() + ".log";
+        double partialUpperBound = parseCostFromFile(logFile);
+        std::vector<int> empty;
+        auto path = std::make_shared<Path>(empty, partialUpperBound);
+        auto solution = std::make_shared<TspSolution>(path, problem);
+        return solution;
+    }
+
+}
+
+double LKH3Solver::parseCostFromFile(const std::string& logFile) {
+    std::ifstream in(logFile);
+    if (!in) return 1e200; // impossibile leggere -> upperbound invalido
+
+    std::string line;
+    double lastUpperBound = 1e200;
+
+    while (std::getline(in, line)) {
+        auto pos = line.find("Cost = ");
+        if (pos != std::string::npos) {
+            // Estrae il numero dopo "Cost = "
+            std::istringstream iss(line.substr(pos + 7)); // salta "Cost = "
+            double cost;
+            iss >> cost;
+            if (!iss.fail()) {
+                lastUpperBound = cost;
+            }
+        }
+    }
+
+    return lastUpperBound;
 }

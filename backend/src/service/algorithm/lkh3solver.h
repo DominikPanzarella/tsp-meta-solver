@@ -29,9 +29,11 @@ private:
 
     std::string writeParamFile(const std::string& paramFile,std::shared_ptr<IInstanceSetting> instanceSettings);
 
-    bool runLKH(const std::string& paramFile);
+    bool runLKH(const std::string& paramFile, const std::string& problemName);
 
     std::shared_ptr<ISolution> readSolution(std::shared_ptr<IProblem> problem, std::shared_ptr<IInstanceSetting> instanceSettings);
+
+    double parseCostFromFile(const std::string& logFile);
 
 };
 

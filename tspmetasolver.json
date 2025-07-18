@@ -30,11 +30,14 @@
         "GeneralSettings": {
             "MAX_TRIALS": 500,
             "RUNS": 1,
-            "SEED": 42,
-            "TRACE_LEVEL": 0,
+            "SEED": 12345,
+            "TRACE_LEVEL": 1,
             "MAX_CANDIDATES" : 5,
-            "MOVE_TYPE": 2,
-            "BACKTRACKING": false,
+            "PATCHING_C": 3,
+            "PATCHING_A":2,
+            "MOVE_TYPE": 5,
+            "BACKBONE_TRIALS":1000,
+            "GAIN23": true,
             "SUBGRADIENT": false,
             "RESTRICTED_SEARCH": true
         },

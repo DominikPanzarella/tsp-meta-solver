@@ -201,6 +201,8 @@ bool ConcordeSolver::runConcorde(const std::string& tspFile, const std::string& 
 
     // File TSP finale
     cmd << " \"" << settingInstance->getProblemFile() << "\"";
+    cmd << " > \"" << problemName << ".log\" 2>&1"; // log stdout/stderr
+
 
     std::cout << "[Concorde] Executing: " << cmd.str() << std::endl;
 
