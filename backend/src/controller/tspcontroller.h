@@ -1,6 +1,10 @@
 #pragma once
 
 #include "controller/itspservice.h"
+#include <memory>
+#include "service/problem/iproblem.h"
+#include <string>
+#include "service/algorithm/isolutioncollector.h"
 
 class TspController {
 public:

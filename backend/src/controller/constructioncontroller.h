@@ -3,6 +3,10 @@
 #include "controller/iconstructionservice.h"
 #include "service/generator/shortestPath/ishortestpath.h"
 #include "controller/igeneratorservice.h"
+#include <memory>
+#include <vector>
+#include <string>
+
 
 class ConstructionController{
 public:

@@ -2,6 +2,9 @@
 
 #include "controller/igeneratorservice.h"
 #include "service/generator/igenerator.h"
+#include <memory>
+#include "service/generator/shortestPath/ishortestpath.h"
+
 
 class GeneratorService : public IGeneratorService {
 public:

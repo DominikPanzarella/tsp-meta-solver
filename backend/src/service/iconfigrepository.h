@@ -7,6 +7,9 @@
 #include "repository/configuration2/config/lkh3generalsetting.h"
 #include "repository/configuration2/config/farthestinsertiongeneralsetting.h"
 #include "service/problem/iproblem.h"
+#include <memory>
+#include <string>
+
 
 
 class IConfigRepository{

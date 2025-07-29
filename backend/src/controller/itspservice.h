@@ -2,6 +2,8 @@
 
 #include "service/algorithm/isolutioncollector.h"
 #include "service/problem/iproblem.h"
+#include <memory>
+#include <string>
 
 
 class ITspService {

@@ -2,6 +2,9 @@
 
 #include "repository/construction/instanceconstruction.h"
 #include "service/iconstructionrepository.h"
+#include <memory>
+#include <vector>
+#include <string>
 
 
 class ConstructionRepository : public IConstructionRepository {

@@ -2,6 +2,9 @@
 
 #include "service/problem/iproblem.h"
 #include "service/algorithm/isolutioncollector.h"
+#include <memory>
+#include <vector>
+
 
 class ITspRepository{
 public:

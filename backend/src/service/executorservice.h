@@ -2,6 +2,12 @@
 
 #include "controller/iexecutorservice.h"
 #include "service/executor/iexecutor.h"
+#include <memory>
+#include "service/algorithm/ialgorithm.h"
+#include "service/problem/iproblem.h"
+#include "repository/configuration2/config/iinstancesetting.h"
+#include "service/algorithm/isolutioncollector.h"
+
 
 class ExecutorService : public IExecutorService {
 public:

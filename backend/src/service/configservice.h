@@ -2,6 +2,15 @@
 
 #include "controller/iconfigservice.h"
 #include "service/iconfigrepository.h"
+#include <string>
+#include <memory>
+#include <vector>
+#include "repository/configuration2/config/nearestinsertiongeneralsetting.h"
+#include "repository/configuration2/config/nearestneighbourgeneralsetting.h"
+#include "repository/configuration2/config/farthestinsertiongeneralsetting.h"
+#include "repository/configuration2/config/concordegeneralsetting.h"
+#include "repository/configuration2/config/lkh3generalsetting.h"
+
 
 
 class ConfigService : public IConfigService{

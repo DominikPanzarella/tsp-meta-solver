@@ -3,6 +3,8 @@
 #include "service/algorithm/ialgorithm.h"
 #include "service/algorithm/isolutioncollector.h"
 #include "repository/configuration2/config/iinstancesetting.h"
+#include <memory>
+#include "service/problem/iproblem.h"
 
 class IExecutorService{
 public: 

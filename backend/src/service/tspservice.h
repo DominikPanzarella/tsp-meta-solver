@@ -2,6 +2,11 @@
 
 #include "controller/itspservice.h"
 #include "service/itsprepositoy.h"
+#include <memory>
+
+#include "service/algorithm/isolutioncollector.h"
+#include <string>
+
 
 class TspService : public ITspService {
 public:

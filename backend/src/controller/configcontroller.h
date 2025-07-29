@@ -1,6 +1,16 @@
 #pragma once
 
 #include "controller/iconfigservice.h"
+#include <memory>
+#include <vector>
+#include <string>
+#include "service/problem/iproblem.h"
+#include "repository/configuration2/config/nearestinsertiongeneralsetting.h"
+#include "repository/configuration2/config/nearestneighbourgeneralsetting.h"
+#include "repository/configuration2/config/farthestinsertiongeneralsetting.h"
+#include "repository/configuration2/config/concordegeneralsetting.h"
+#include "repository/configuration2/config/lkh3generalsetting.h"
+
 
 class ConfigController
 {

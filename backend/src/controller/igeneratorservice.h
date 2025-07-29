@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
-
-
+#include <memory>
 #include "service/generator/shortestPath/ishortestpath.h"
 class IGeneratorService {
 public:

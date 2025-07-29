@@ -4,6 +4,9 @@
 #include "repository/reader/reader.h"
 #include "repository/writer/writer.h"
 #include "repository/configuration2/iconfigprovider.h"
+#include <memory>
+#include <vector>
+#include <string>
 
 
 class TspRepository : public ITspRepository{
