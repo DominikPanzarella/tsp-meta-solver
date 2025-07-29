@@ -2,6 +2,7 @@
 
 #include "service/generator/shortestPath/ishortestpath.h"
 #include <vector>
+#include <memory>
 
 class IGenerator {
 public:

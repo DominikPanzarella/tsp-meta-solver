@@ -2,6 +2,7 @@
 
 #include "service/generator/shortestPath/ishortestpath.h"
 
+
 class FloydWarshall : public IShortestPath {
 public:
 

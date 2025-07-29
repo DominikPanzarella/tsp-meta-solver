@@ -13,18 +13,18 @@ void SymmetricGraph::init(int n_nodes) {
 }
 
 void SymmetricGraph::setEdge(int x, int y, int weight) {
-    if(x<0 || x>=n_nodes)   throw new std::invalid_argument("SymmetricGraph::setEdge() x parameter not valid");
+    if(x<0 || x>=n_nodes)   throw std::invalid_argument("SymmetricGraph::setEdge() x parameter not valid");
 
-    if(y<0 || y>=n_nodes)   throw new std::invalid_argument("SymmetricGraph::setEdge() y parameter not valid");
+    if(y<0 || y>=n_nodes)   throw std::invalid_argument("SymmetricGraph::setEdge() y parameter not valid");
 
     adjacencyMatrix[x][y] = weight;
     adjacencyMatrix[y][x] = weight;
 }
 
 int SymmetricGraph::getEdge(int x, int y) const {
-    if(x<0 || x>=n_nodes)   throw new std::invalid_argument("SymmetricGraph::getEdge() x parameter not valid");
+    if(x<0 || x>=n_nodes)   throw std::invalid_argument("SymmetricGraph::getEdge() x parameter not valid");
     
-    if(y<0 || y>=n_nodes)   throw new std::invalid_argument("SymmetricGraph::getEdge() y parameter not valid");
+    if(y<0 || y>=n_nodes)   throw std::invalid_argument("SymmetricGraph::getEdge() y parameter not valid");
 
     return adjacencyMatrix[x][y];
 }

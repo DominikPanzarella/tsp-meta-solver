@@ -2,6 +2,9 @@
 
 #include <vector>
 #include "service/problem/iproblem.h"
+#include <limits>
+#include <memory>
+
 
 class IShortestPath{
 public:
