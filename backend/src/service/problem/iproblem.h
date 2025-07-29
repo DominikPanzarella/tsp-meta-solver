@@ -17,6 +17,7 @@
 #include "edgeweightformat.h"
 #include "edgedataformat.h"
 #include "nodecoordtype.h"
+#include <memory>
 
 class IProblem {
 public:
