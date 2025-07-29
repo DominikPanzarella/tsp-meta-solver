@@ -1,4 +1,3 @@
-#pragma once
 
 #include "service/generator/integratilitygapgenerator.h"
 #include <limits>
