@@ -1,6 +1,7 @@
 #pragma once
 
 #include "repository/construction/instanceconstruction.h"
+#include <memory>
 
 class TspConstruction : public InstanceConstruction{
 
