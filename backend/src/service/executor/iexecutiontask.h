@@ -4,6 +4,7 @@
 #include "service/algorithm/isolution.h"
 #include "service/algorithm/ialgorithm.h"
 #include "repository/configuration2/config/iinstancesetting.h"
+#include <chrono>
 
 class IExecutionTask{
 public:
