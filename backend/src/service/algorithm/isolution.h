@@ -2,6 +2,7 @@
 
 #include "service/problem/iproblem.h"
 #include "service/algorithm/ipath.h"
+#include <memory>
 
 class ISolution{
 public:

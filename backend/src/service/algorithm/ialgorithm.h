@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <sstream>
 #include <fstream>
+#include <memory>
 
 //Algorithm Interface
 class IAlgorithm{
