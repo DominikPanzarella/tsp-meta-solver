@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-
+#include <cmath>
 struct Node {
     int id;
     double x;
