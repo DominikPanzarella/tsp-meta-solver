@@ -54,24 +54,31 @@ void Initializer::init(int argc, char *argv[]){
     std::shared_ptr<ConcordeGeneralSetting> cc           = provider->getConcordeSettings();
     std::shared_ptr<LKH3GeneralSetting> lkh3             = provider->getLKH3Settings();
 
+    std::cout << "Creating Instances ......" << std::endl;
 
     for(auto dim : ni->getHardInstancesNumberOfNodes()){
         std::vector<std::vector<int>> adj = constructionController->generateNI(dim, FloydWarshall::getInstance());
         std::string filename = "NearestInsertion_HardInstance_" + std::to_string(dim) + "_Generated";
+        std::cout << "[INFO] Creating NI Insstance: " << filename << std::endl;
         constructionController->construct(argv[1], filename , adj);
+        std::cout << "[INFO] Created " << filename << "instance."<< std::endl;
     }
 
     for(auto dim : nn->getHardInstancesNumberOfNodes()){
         std::vector<std::vector<int>> adj = constructionController->generateNN(dim, FloydWarshall::getInstance());
         std::string filename = "NearestNeighbour_HardInstance_" + std::to_string(dim) + "_Generated";
+        std::cout << "[INFO] Creating NN Insstance: " << filename << std::endl;
         constructionController->construct(argv[1], filename , adj);
+        std::cout << "[INFO] Created " << filename << "instance."<< std::endl;
     }
 
     
     for(std::vector<int> triplet : cc->getIntegralityGap()){
         std::vector<std::vector<int>> adj = constructionController->generateIG(triplet[0],triplet[1],triplet[2], FloydWarshall::getInstance());
         std::string filename = "IntegralityGap_HardInstane_a" + std::to_string(triplet[0]) + "_b" + std::to_string(triplet[1]) + "_c" + std::to_string(triplet[2]) + "_Generated";
+        std::cout << "[INFO] Creating IG Insstance: " << filename << std::endl;
         constructionController->construct(argv[1], filename , adj);
+        std::cout << "[INFO] Created " << filename << "instance."<< std::endl;
     }
 
 
